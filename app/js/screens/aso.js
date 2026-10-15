@@ -281,13 +281,13 @@ Play offline, anytime.`;
           const add = SHOTS.max - list.length;
           const fresh = pool.filter((src) => !used.has(src));
           for (let n = 0; n < add; n += 1) list.push({ state: "making", wide, src: fresh[n] || pool[(list.length + n) % pool.length] });
-          charge(t("as.shots"), AGENT.art.cost * add, 1600 + add * 200);
+          charge(t("as.shots"), AGENT.art.cost * add, 2000);
           list.forEach((x, n) => {
             if (x.state === "making") later(() => {
               x.state = "done";
               keep();
               if (list.every((y) => y.state === "done")) toast(t("as.made", { name: t("as.shots") }));
-            }, 1200 + n * 200);
+            }, Math.min(2000, 1200 + n * 100));
           });
         }
         return keep();

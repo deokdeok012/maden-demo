@@ -959,14 +959,14 @@ const REFINE = (() => {
         toast(t("notEnough", { have: num(store.credits) }));
         return;
       }
-      spend(`${tr(e.name)} · ${g.name}`, UI_COST, 2800);
+      spend(`${tr(e.name)} · ${g.name}`, UI_COST, 2000);
       s.gen[k] = { busy: true };
       draw(g);
       setTimeout(() => {
         s.gen[k] = { cands: candsOf(e) };
         if (document.querySelector(".rf")) draw(g);
         toast(t("ri.made", { name: tr(e.name) }));
-      }, 2800);
+      }, 2000);
     } });
   }
   const CW = 220, CH = Math.round(CW * 19.5 / 9), GX = 90, GY = 150;

@@ -496,7 +496,7 @@ const LAUNCH = (() => {
       <div class="lc-creatives">${tiles}${add}</div>`;
   }
   const CV_STEPS = ["plan", "gen", "build"];
-  const CV_TIME = { plan: 1e3, gen: 1800, build: 1100 };
+  const CV_TIME = { plan: 500, gen: 900, build: 600 };
   function advance(g, c) {
     if (c.step >= CV_STEPS.length) {
       c.ready = true;
