@@ -780,15 +780,24 @@ const LAUNCH = (() => {
     const x1 = a.right - base.left + 6;
     const y1 = a.top + a.height / 2 - base.top;
     svg.setAttribute("viewBox", `0 0 ${base.width} ${base.height}`);
-    svg.innerHTML = [...box.querySelectorAll("[data-node]")].map((node, i) => {
+    const nodes = [...box.querySelectorAll("[data-node]")];
+    const stacked = nodes.length && nodes[0].getBoundingClientRect().top > a.bottom;
+    const cx = a.left + a.width / 2 - base.left;
+    let prev = box.querySelector(".lc-from").getBoundingClientRect().bottom - base.top + 8;
+    svg.classList.toggle("stack", !!stacked);
+    svg.innerHTML = nodes.map((node, i) => {
       const b = node.getBoundingClientRect();
       const x2 = b.left - base.left - 6;
       const y2 = b.top + b.height / 2 - base.top;
       const bend = (x2 - x1) * 0.55;
-      const d = `M${x1} ${y1} C${x1 + bend} ${y1} ${x2 - bend} ${y2} ${x2} ${y2}`;
+      let d = `M${x1} ${y1} C${x1 + bend} ${y1} ${x2 - bend} ${y2} ${x2} ${y2}`;
+      if (stacked) {
+        d = `M${cx} ${prev} V${b.top - base.top - 4}`;
+        prev = b.bottom - base.top + 4;
+      }
       const flowing = node.classList.contains("now");
       const state = flowing ? "now" : node.classList.contains("done") ? "done" : "todo";
-      const dots = flowing ? [0, 0.42, 0.84].map((delay) => `<circle r="4.5"><animateMotion dur="1.26s" begin="-${(delay + i * 0.11).toFixed(2)}s" repeatCount="indefinite" path="${d}"/></circle>`).join("") : "";
+      const dots = flowing ? (stacked ? [0] : [0, 0.42, 0.84]).map((delay) => `<circle r="4.5"><animateMotion dur="1.26s" begin="-${(delay + i * 0.11).toFixed(2)}s" repeatCount="indefinite" path="${d}"/></circle>`).join("") : "";
       return `<g class="${state}"><path d="${d}"/>${dots}</g>`;
     }).join("");
   }

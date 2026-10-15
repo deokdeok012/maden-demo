@@ -213,7 +213,7 @@
 .pl-stage { --pl-h: clamp(440px, calc(100vh - 252px), 680px); position: relative; display: flex; flex-direction: column; height: var(--pl-h); border-radius: var(--r-xl) var(--r-xl) 0 0; overflow: hidden; background: #14161B; isolation: isolate; }
 .pl-backdrop { position: absolute; inset: -40px; width: calc(100% + 80px); height: calc(100% + 80px); object-fit: cover; filter: blur(36px) saturate(1.15) brightness(.62); z-index: -1; }
 .pl-view { flex: 1; min-height: 0; display: grid; place-items: center; padding: var(--s-4) var(--s-4) 0; }
-.pl-stage .shot { height: 100%; width: auto; max-width: 100%; aspect-ratio: 9 / 16; border-radius: var(--r-l); background: #000; box-shadow: 0 0 0 1px rgba(255, 255, 255, .14), 0 24px 48px -12px rgba(0, 0, 0, .5); }
+.pl-stage .shot { height: 100%; width: auto; max-width: 100%; aspect-ratio: var(--device); border-radius: var(--r-l); background: #000; box-shadow: 0 0 0 1px rgba(255, 255, 255, .14), 0 24px 48px -12px rgba(0, 0, 0, .5); }
 .pl-stage .shot::after { display: none; }
 .pl-stage[data-wide] .shot { width: 100%; height: auto; max-height: 100%; aspect-ratio: 16 / 9; }
 .pl-stage .shot > [data-cover] { object-fit: contain; }

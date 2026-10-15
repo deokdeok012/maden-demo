@@ -16,6 +16,7 @@
 .gen-sub h3 { margin: 0; font-size: var(--f-m); flex: 1; display: flex; align-items: baseline; gap: 8px; }
 .gen-sub h3 .count { font-size: var(--f-s); color: var(--ink-3); font-weight: 600; font-variant-numeric: tabular-nums; }
 .gen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(124px, 1fr)); gap: 16px 12px; }
+.gen-grid.k-ui .gen-media { aspect-ratio: 9 / 19.5; }
 .gen-grid.k-icon { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); }
 .gen-grid.k-feature, .gen-grid.k-shot:has(.gen-ref.wide) { grid-template-columns: repeat(auto-fill, minmax(196px, 1fr)); }
 .gen-ref { display: grid; gap: 8px; align-content: start; text-align: left; min-width: 0; }

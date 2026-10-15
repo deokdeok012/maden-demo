@@ -29,7 +29,12 @@ addStrings({
     "gen.st.feature": "Feature",
     "gen.st.caption": "Big caption",
     "gen.st.character": "Character",
-    "gen.st.keyart": "Key art"
+    "gen.st.keyart": "Key art",
+    "gen.st.keepArt": "Same art style",
+    "gen.st.gloss": "Glossy",
+    "gen.st.wood": "Wood",
+    "gen.st.simple": "Simple",
+    "gen.st.bold": "Bold outline"
   },
   ko: {
     "gen.ask": "어떤 스타일로 만들까요?",
@@ -61,7 +66,12 @@ addStrings({
     "gen.st.feature": "기능 소개",
     "gen.st.caption": "문구 강조",
     "gen.st.character": "캐릭터",
-    "gen.st.keyart": "키 아트"
+    "gen.st.keyart": "키 아트",
+    "gen.st.keepArt": "지금 아트 그대로",
+    "gen.st.gloss": "광택",
+    "gen.st.wood": "나무 질감",
+    "gen.st.simple": "심플",
+    "gen.st.bold": "굵은 외곽선"
   }
 });
 const GEN = /* @__PURE__ */ (() => {
@@ -70,7 +80,8 @@ const GEN = /* @__PURE__ */ (() => {
     video: ["fail", "hand", "progress", "beforeAfter", "satisfy", "choice", "ugc", "endcard"],
     icon: ["face", "object", "logo", "scene", "3d", "flat"],
     shot: ["gameplay", "feature", "caption", "beforeAfter", "progress", "character"],
-    feature: ["keyart", "gameplay", "character", "logo"]
+    feature: ["keyart", "gameplay", "character", "logo"],
+    ui: ["keepArt", "gloss", "flat", "3d", "wood", "simple", "bold"]
   };
   const MAX = 3;
   const short = (n) => lang === "ko" ? n >= 1e8 ? `${(n / 1e8).toFixed(1).replace(/\.0$/, "")}억` : `${Math.round(n / 1e4).toLocaleString()}만` : n >= 1e6 ? `${(n / 1e6).toFixed(1).replace(/\.0$/, "")}M` : `${Math.round(n / 1e3)}K`;

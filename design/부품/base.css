@@ -91,6 +91,7 @@ p { margin: 0; }
 .full { position: fixed; inset: 0; background: var(--bg); z-index: 60; display: grid; place-items: center; padding: var(--s-5); overflow: auto; }
 .build { display: grid; grid-template-columns: auto minmax(0, 400px); gap: var(--s-8); align-items: center; }
 .build .device { width: 300px; }
+.build .device .shot { aspect-ratio: var(--device); }
 .build-side { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s-5); }
 .build .sub { color: var(--ink-2); margin-top: -12px; line-height: 1.5; }
 .build .sub b { color: var(--ink); font-weight: 650; }

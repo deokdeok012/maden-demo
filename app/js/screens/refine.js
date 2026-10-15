@@ -115,7 +115,112 @@ addStrings({
     "rf.o.asked": "As requested",
     "rf.o.askedW": "Make the change as written.",
     "rf.o.trial": "Try on one screen first",
-    "rf.o.trialW": "Change one screen, then decide."
+    "rf.o.trialW": "Change one screen, then decide.",
+    "rf.t.q": "Select (Q)",
+    "rf.t.w": "Move (W)",
+    "rf.t.e": "Rotate (E)",
+    "rf.t.r": "Scale (R)",
+    "rf.t.t": "Rect (T)",
+    "ri.hide": "Hide",
+    "ri.show": "Show",
+    "ri.position": "Position",
+    "ri.size": "Size",
+    "ri.amin": "Anchor Min",
+    "ri.amax": "Anchor Max",
+    "ri.rect": "Rect Transform",
+    "ri.posX": "Pos X",
+    "ri.posY": "Pos Y",
+    "ri.posZ": "Pos Z",
+    "ri.width": "Width",
+    "ri.height": "Height",
+    "ri.anchors": "Anchors",
+    "ri.min": "Min",
+    "ri.max": "Max",
+    "ri.pivot": "Pivot",
+    "ri.rotation": "Rotation",
+    "ri.scale": "Scale",
+    "ri.preset": "Anchor Presets",
+    "ri.custom": "Custom",
+    "ri.a.l": "left",
+    "ri.a.c": "center",
+    "ri.a.r": "right",
+    "ri.a.t": "top",
+    "ri.a.m": "middle",
+    "ri.a.b": "bottom",
+    "ri.a.s": "stretch",
+    "ri.image": "Image",
+    "ri.source": "Source Image",
+    "ri.color": "Color",
+    "ri.material": "Material",
+    "ri.raycast": "Raycast Target",
+    "ri.maskable": "Maskable",
+    "ri.imgType": "Image Type",
+    "ri.preserve": "Preserve Aspect",
+    "ri.native": "Set Native Size",
+    "ri.aiChange": "Change with AI",
+    "ri.upload": "Upload",
+    "ri.making": "Generating 3 images",
+    "ri.original": "Original",
+    "ri.made": "{name}: 3 images ready.",
+    "ri.uploaded": "{name} uploaded.",
+    "ri.uiAsk": "Change {name}",
+    "ri.text": "TextMeshPro - Text (UI)",
+    "ri.textIn": "Text Input",
+    "ri.font": "Font Asset",
+    "ri.matPreset": "Material Preset",
+    "ri.fstyle": "Font Style",
+    "ri.fsize": "Font Size",
+    "ri.auto": "Auto Size",
+    "ri.vcolor": "Vertex Color",
+    "ri.cs": "Character Spacing",
+    "ri.ls": "Line Spacing",
+    "ri.align": "Alignment",
+    "ri.wrap": "Wrapping",
+    "ri.overflow": "Overflow",
+    "ri.button": "Button",
+    "ri.interact": "Interactable",
+    "ri.transition": "Transition",
+    "ri.target": "Target Graphic",
+    "ri.normal": "Normal Color",
+    "ri.hl": "Highlighted Color",
+    "ri.pressed": "Pressed Color",
+    "ri.selected": "Selected Color",
+    "ri.disabledC": "Disabled Color",
+    "ri.mult": "Color Multiplier",
+    "ri.fade": "Fade Duration",
+    "ri.hlS": "Highlighted Sprite",
+    "ri.pressedS": "Pressed Sprite",
+    "ri.selectedS": "Selected Sprite",
+    "ri.disabledS": "Disabled Sprite",
+    "ri.trigger": "{s} Trigger",
+    "ri.nav": "Navigation",
+    "ri.onClick": "On Click ()",
+    "ri.openScreen": "Open screen",
+    "ri.cg": "Canvas Group",
+    "ri.alpha": "Alpha",
+    "ri.blocks": "Blocks Raycasts",
+    "ri.ignore": "Ignore Parent Groups",
+    "ri.add": "Add Component",
+    "ri.remove": "Remove Component",
+    "ri.shadow": "Shadow",
+    "ri.outline": "Outline",
+    "ri.layout": "Layout Element",
+    "ri.fitter": "Content Size Fitter",
+    "ri.aspect": "Aspect Ratio Fitter",
+    "ri.mask": "Rect Mask 2D",
+    "ri.effColor": "Effect Color",
+    "ri.effDist": "Effect Distance",
+    "ri.useAlpha": "Use Graphic Alpha",
+    "ri.ignoreLayout": "Ignore Layout",
+    "ri.minSize": "Min Size",
+    "ri.prefSize": "Preferred Size",
+    "ri.flexSize": "Flexible Size",
+    "ri.hFit": "Horizontal Fit",
+    "ri.vFit": "Vertical Fit",
+    "ri.aMode": "Aspect Mode",
+    "ri.ratio": "Aspect Ratio",
+    "ri.padding": "Padding",
+    "ri.softness": "Softness"
   },
   ko: {
     "rf.screens": "화면",
@@ -233,7 +338,112 @@ addStrings({
     "rf.o.asked": "요청 그대로",
     "rf.o.askedW": "적은 대로 바꿉니다.",
     "rf.o.trial": "화면 하나로 먼저 시험",
-    "rf.o.trialW": "화면 하나만 바꿔 보고 정합니다."
+    "rf.o.trialW": "화면 하나만 바꿔 보고 정합니다.",
+    "rf.t.q": "선택 (Q)",
+    "rf.t.w": "이동 (W)",
+    "rf.t.e": "회전 (E)",
+    "rf.t.r": "크기 (R)",
+    "rf.t.t": "사각형 (T)",
+    "ri.hide": "숨기기",
+    "ri.show": "보이기",
+    "ri.position": "위치",
+    "ri.size": "크기",
+    "ri.amin": "앵커 최소",
+    "ri.amax": "앵커 최대",
+    "ri.rect": "Rect Transform",
+    "ri.posX": "Pos X",
+    "ri.posY": "Pos Y",
+    "ri.posZ": "Pos Z",
+    "ri.width": "너비",
+    "ri.height": "높이",
+    "ri.anchors": "앵커",
+    "ri.min": "최소",
+    "ri.max": "최대",
+    "ri.pivot": "피벗",
+    "ri.rotation": "회전",
+    "ri.scale": "스케일",
+    "ri.preset": "앵커 프리셋",
+    "ri.custom": "사용자 지정",
+    "ri.a.l": "왼쪽",
+    "ri.a.c": "가운데",
+    "ri.a.r": "오른쪽",
+    "ri.a.t": "위",
+    "ri.a.m": "중간",
+    "ri.a.b": "아래",
+    "ri.a.s": "늘이기",
+    "ri.image": "이미지",
+    "ri.source": "소스 이미지",
+    "ri.color": "색상",
+    "ri.material": "머티리얼",
+    "ri.raycast": "레이캐스트 타깃",
+    "ri.maskable": "마스킹 허용",
+    "ri.imgType": "이미지 타입",
+    "ri.preserve": "비율 유지",
+    "ri.native": "원본 크기로",
+    "ri.aiChange": "AI 변경",
+    "ri.upload": "업로드",
+    "ri.making": "이미지 3개 생성 중",
+    "ri.original": "원본",
+    "ri.made": "{name}: 이미지 3개가 준비됐습니다.",
+    "ri.uploaded": "{name} 올렸습니다.",
+    "ri.uiAsk": "{name} 바꾸기",
+    "ri.text": "TextMeshPro - Text (UI)",
+    "ri.textIn": "텍스트 입력",
+    "ri.font": "폰트 에셋",
+    "ri.matPreset": "머티리얼 프리셋",
+    "ri.fstyle": "폰트 스타일",
+    "ri.fsize": "폰트 크기",
+    "ri.auto": "자동 크기",
+    "ri.vcolor": "버텍스 색상",
+    "ri.cs": "자간",
+    "ri.ls": "행간",
+    "ri.align": "정렬",
+    "ri.wrap": "줄바꿈",
+    "ri.overflow": "넘침",
+    "ri.button": "버튼",
+    "ri.interact": "상호작용",
+    "ri.transition": "전환",
+    "ri.target": "타깃 그래픽",
+    "ri.normal": "기본 색상",
+    "ri.hl": "강조 색상",
+    "ri.pressed": "누름 색상",
+    "ri.selected": "선택 색상",
+    "ri.disabledC": "비활성 색상",
+    "ri.mult": "색상 배수",
+    "ri.fade": "페이드 시간",
+    "ri.hlS": "강조 스프라이트",
+    "ri.pressedS": "누름 스프라이트",
+    "ri.selectedS": "선택 스프라이트",
+    "ri.disabledS": "비활성 스프라이트",
+    "ri.trigger": "{s} 트리거",
+    "ri.nav": "내비게이션",
+    "ri.onClick": "On Click ()",
+    "ri.openScreen": "화면 이동",
+    "ri.cg": "캔버스 그룹",
+    "ri.alpha": "알파",
+    "ri.blocks": "레이캐스트 차단",
+    "ri.ignore": "상위 그룹 무시",
+    "ri.add": "컴포넌트 추가",
+    "ri.remove": "컴포넌트 제거",
+    "ri.shadow": "그림자",
+    "ri.outline": "외곽선",
+    "ri.layout": "레이아웃 요소",
+    "ri.fitter": "콘텐츠 크기 맞춤",
+    "ri.aspect": "비율 맞춤",
+    "ri.mask": "Rect Mask 2D",
+    "ri.effColor": "효과 색상",
+    "ri.effDist": "효과 거리",
+    "ri.useAlpha": "그래픽 알파 사용",
+    "ri.ignoreLayout": "레이아웃 무시",
+    "ri.minSize": "최소 크기",
+    "ri.prefSize": "기본 크기",
+    "ri.flexSize": "가변 크기",
+    "ri.hFit": "가로 맞춤",
+    "ri.vFit": "세로 맞춤",
+    "ri.aMode": "비율 모드",
+    "ri.ratio": "비율",
+    "ri.padding": "패딩",
+    "ri.softness": "부드러움"
   }
 });
 const REFINE = (() => {
@@ -265,100 +475,517 @@ const REFINE = (() => {
   };
   const STEPS = ["read", "plan", "make", "build", "check"];
   const states = {};
+  const SCR = (g) => g.real && g.real.length ? g.real : g.screens;
   const shotOf = (id) => MODULE[id].img;
   const layersOf = (id) => {
     const m = MODULE[id];
+    if (m.layers) return m.layers;
     const hit = Object.keys(BY_IMG).find((k) => (m.img || "").includes(`/${k}.`));
     return hit ? BY_IMG[hit] : BY_KIND[m.kind] || BY_KIND[m.group === "gameplay" ? "gameplay" : "other"];
   };
   const elOf = (id, key) => layersOf(id).find((x) => x.key === key);
   const st = (g) => {
-    states[g.id] ||= { view: null, past: [], future: [], screen: g.screens[0], el: null, open: /* @__PURE__ */ new Set([g.screens[0]]), tool: "select", moves: {}, texts: {}, log: [], tasks: [], n: 0, thinking: false, ask: null, thread: null };
-    return states[g.id];
+    states[g.id] ||= { view: null, past: [], future: [], screen: SCR(g)[0], el: null, frame: null, fpos: {}, gz: "q", open: /* @__PURE__ */ new Set([SCR(g)[0]]), tool: "select", moves: {}, texts: {}, props: {}, fold: /* @__PURE__ */ new Set(), gen: {}, anchorPick: false, log: [], tasks: [], n: 0, thinking: false, ask: null, thread: null };
+    const s0 = states[g.id];
+    if (!SCR(g).includes(s0.screen)) {
+      s0.screen = SCR(g)[0];
+      s0.el = null;
+      s0.open = /* @__PURE__ */ new Set([s0.screen]);
+    }
+    return s0;
   };
   const keyOf = (id, k) => `${id}|${k}`;
   const boxNow = (s, id, e) => {
     const mv = s.moves[keyOf(id, e.key)] || {};
     const [x, y, w, h] = e.box;
-    return [x + (mv.dx || 0), y + (mv.dy || 0), w * (mv.s || 1), h * (mv.s || 1)];
+    return [x + (mv.dx || 0), y + (mv.dy || 0), w * (mv.s || 1) * (mv.sw || 1), h * (mv.s || 1) * (mv.sh || 1)];
   };
   const snap = (s) => {
-    s.past.push(JSON.stringify({ moves: s.moves, texts: s.texts }));
+    s.past.push(JSON.stringify({ moves: s.moves, texts: s.texts, props: s.props }));
     if (s.past.length > 60) s.past.shift();
     s.future = [];
   };
   const swapHist = (s, from, to) => {
     if (!from.length) return false;
-    to.push(JSON.stringify({ moves: s.moves, texts: s.texts }));
-    Object.assign(s, JSON.parse(from.pop()));
+    to.push(JSON.stringify({ moves: s.moves, texts: s.texts, props: s.props }));
+    Object.assign(s, { props: {} }, JSON.parse(from.pop()));
     return true;
   };
-  const pending = (s) => Object.keys(s.moves).length + Object.keys(s.texts).length;
-  const changedOn = (s, id) => Object.keys({ ...s.moves, ...s.texts }).filter((k) => k.startsWith(`${id}|`)).length;
-  function edits(s, id) {
+  const changedKeys = (s) => /* @__PURE__ */ new Set([...Object.keys(s.moves), ...Object.keys(s.texts), ...Object.keys(s.props)]);
+  const pending = (s) => changedKeys(s).size;
+  const changedOn = (s, id) => [...changedKeys(s)].filter((k) => k.startsWith(`${id}|`)).length;
+  const touched = (s, k) => !!(s.moves[k] || s.texts[k] != null || s.props[k]);
+  const REF = [1080, 2340];
+  const BTNISH = ["play", "start", "next", "level", "ok"];
+  const compsOf = (e) => e.type === "image" ? ["image"] : e.type === "button" ? ["image", "button"] : e.type === "group" ? ["image", "cg"] : BTNISH.includes(e.key) ? ["image", "button", "text"] : ["text"];
+  const FONTS = { "Lilita One SDF": "'Lilita One'", "Fredoka SDF": "'Fredoka'", "Baloo 2 SDF": "'Baloo 2'", "Luckiest Guy SDF": "'Luckiest Guy'", "Noto Sans KR SDF": "'Noto Sans KR'" };
+  const EXTRA = ["shadow", "outline", "layout", "fitter", "aspect", "mask"];
+  function defOf(g, id, e) {
+    const [, , w, h] = e.box;
+    const firstPlay = SCR(g).find((x) => MODULE[x].group === "gameplay");
+    const click = ["play", "start", "level"].includes(e.key) ? firstPlay || "" : "";
+    return {
+      active: true,
+      posZ: 0,
+      rot: [0, 0, 0],
+      scale: [1, 1, 1],
+      amin: [0.5, 0.5],
+      amax: [0.5, 0.5],
+      pivot: [0.5, 0.5],
+      imgOn: true,
+      color: "#ffffff",
+      alpha: 100,
+      material: "None (Material)",
+      raycast: true,
+      maskable: true,
+      imgType: "Simple",
+      preserve: false,
+      src: null,
+      srcName: null,
+      txtOn: true,
+      font: "Lilita One SDF",
+      mat: "Material",
+      fstyle: ["b"],
+      fsize: Math.round(h * REF[1] / 100 * 0.45),
+      auto: false,
+      tcolor: "#ffffff",
+      cs: 0,
+      ls: 0,
+      align: "center",
+      valign: "middle",
+      wrap: "Enabled",
+      overflow: "Overflow",
+      btnOn: true,
+      interact: true,
+      transition: "Color Tint",
+      cNormal: "#ffffff",
+      cHl: "#f5f5f5",
+      cPressed: "#c8c8c8",
+      cSel: "#f5f5f5",
+      cDis: "#c8c8c8",
+      mult: 1,
+      fade: 0.1,
+      nav: "Automatic",
+      click,
+      cgAlpha: 1,
+      cgInter: true,
+      cgBlocks: true,
+      cgIgnore: false,
+      comps: [],
+      shOn: true,
+      shColor: "#000000",
+      shAlpha: 50,
+      shDist: [6, -6],
+      shUse: true,
+      olOn: true,
+      olColor: "#000000",
+      olAlpha: 50,
+      olDist: [3, -3],
+      olUse: true,
+      leIgnore: false,
+      leMin: [0, 0],
+      lePref: [Math.round(w * REF[0] / 100), Math.round(h * REF[1] / 100)],
+      leFlex: [0, 0],
+      hFit: "Unconstrained",
+      vFit: "Unconstrained",
+      aMode: "None",
+      ratio: Number((w * 9 / (h * 19.5)).toFixed(2)),
+      maskPad: [0, 0, 0, 0],
+      maskSoft: [0, 0]
+    };
+  }
+  const full = (g, s, id, e) => ({ ...defOf(g, id, e), ...s.props[keyOf(id, e.key)] || {} });
+  const VIS = ["active", "rot", "scale", "pivot", "imgOn", "color", "alpha", "src", "cgAlpha", "comps", "shOn", "shColor", "shAlpha", "shDist", "olOn", "olColor", "olAlpha", "olDist"];
+  const TXT = ["txtOn", "font", "mat", "fstyle", "fsize", "tcolor", "cs", "ls", "align", "valign", "wrap"];
+  const SECTION = {
+    rect: ["posZ", "rot", "scale", "amin", "amax", "pivot"],
+    image: ["imgOn", "color", "alpha", "material", "raycast", "maskable", "imgType", "preserve", "src", "srcName"],
+    text: TXT.concat(["auto", "overflow"]),
+    button: ["btnOn", "interact", "transition", "cNormal", "cHl", "cPressed", "cSel", "cDis", "mult", "fade", "nav", "click"],
+    cg: ["cgAlpha", "cgInter", "cgBlocks", "cgIgnore"],
+    shadow: ["shOn", "shColor", "shAlpha", "shDist", "shUse"],
+    outline: ["olOn", "olColor", "olAlpha", "olDist", "olUse"],
+    layout: ["leIgnore", "leMin", "lePref", "leFlex"],
+    fitter: ["hFit", "vFit"],
+    aspect: ["aMode", "ratio"],
+    mask: ["maskPad", "maskSoft"]
+  };
+  const rgba = (hex, a) => `rgba(${parseInt(hex.slice(1, 3), 16)}, ${parseInt(hex.slice(3, 5), 16)}, ${parseInt(hex.slice(5, 7), 16)}, ${a / 100})`;
+  const drawBox = (g, s, id, e) => {
+    const [x, y, w, h] = boxNow(s, id, e);
+    const [sx, sy] = full(g, s, id, e).scale.map((v) => Math.abs(v));
+    return [x + (w - w * sx) / 2, y + (h - h * sy) / 2, w * sx, h * sy];
+  };
+  const turn = (P) => `perspective(900px) rotateX(${P.rot[0]}deg) rotateY(${P.rot[1]}deg) rotateZ(${-P.rot[2]}deg) scale(${Math.sign(P.scale[0]) || 1}, ${Math.sign(P.scale[1]) || 1})`;
+  const origin = (P) => `${P.pivot[0] * 100}% ${(1 - P.pivot[1]) * 100}%`;
+  const fx = (P) => {
+    const out = [];
+    const u = (v) => `${v / REF[0] * 100}cqw`;
+    if (P.comps.includes("shadow") && P.shOn) out.push(`drop-shadow(${u(P.shDist[0])} ${u(-P.shDist[1])} 0 ${rgba(P.shColor, P.shAlpha)})`);
+    if (P.comps.includes("outline") && P.olOn) {
+      const [a, b] = P.olDist.map(Math.abs);
+      [[a, b], [-a, b], [a, -b], [-a, -b]].forEach(([x, y]) => out.push(`drop-shadow(${u(x)} ${u(y)} 0 ${rgba(P.olColor, P.olAlpha)})`));
+    }
+    return out.length ? `filter:${out.join(" ")};` : "";
+  };
+  const cropAt = (id, [x0, y0, w0, h0]) => {
+    const bx = w0 >= 100 ? 0 : x0 / (100 - w0) * 100;
+    const by = h0 >= 100 ? 0 : y0 / (100 - h0) * 100;
+    return `background-image:url('${shotOf(id)}');background-size:${100 / w0 * 100}% ${100 / h0 * 100}%;background-position:${bx}% ${by}%`;
+  };
+  const crop = (id, e) => cropAt(id, e.box);
+  const erase = (id, e) => {
+    const [x0, y0, w0, h0] = e.box;
+    const px = Math.max(1.5, w0 * 0.14), py = Math.max(0.8, h0 * 0.22);
+    const x = Math.max(0, x0 - px), y = Math.max(0, y0 - py);
+    const w = Math.min(100 - x, w0 + px * 2), h = Math.min(100 - y, h0 + py * 2);
+    const at = `left:${x}%;top:${y}%;width:${w}%;height:${h}%`;
+    if (w >= 98 || h >= 60) return `<span class="rf-patch" style="${at}"></span>`;
+    const hit = ([sx, sy]) => layersOf(id).filter((o) => o !== e).reduce((n, o) => {
+      const [ox, oy, ow, oh] = o.box;
+      return n + Math.max(0, Math.min(sx + w, ox + ow) - Math.max(sx, ox)) * Math.max(0, Math.min(sy + h, oy + oh) - Math.max(sy, oy));
+    }, 0);
+    const from = [[x, y - h], [x, y + h], [x - w, y], [x + w, y]].filter(([sx, sy]) => sx >= 0 && sy >= 0 && sx + w <= 100 && sy + h <= 100).sort((a, b) => hit(a) - hit(b))[0] || [x, Math.max(0, y - h)];
+    return `<span class="rf-patch" style="${at}"></span><span class="rf-fill" style="${at};${cropAt(id, [from[0], from[1], w, h])}"></span>`;
+  };
+  const picOf = (id, e, P) => P.src ? `background-image:url('${P.src}');background-size:${P.preserve ? "contain" : "100% 100%"};background-position:center` : crop(id, e);
+  const labelCss = (P) => `font-family:${FONTS[P.font] || "inherit"}, var(--font-display);font-size:clamp(4px, ${P.fsize / REF[1] * 100}cqh, 400px);color:${P.tcolor};font-weight:${P.fstyle.includes("b") ? 800 : 500};font-style:${P.fstyle.includes("i") ? "italic" : "normal"};text-decoration:${[P.fstyle.includes("u") && "underline", P.fstyle.includes("s") && "line-through"].filter(Boolean).join(" ") || "none"};text-transform:${P.fstyle.includes("AB") ? "uppercase" : P.fstyle.includes("ab") ? "lowercase" : "none"};letter-spacing:${P.cs / 100}em;line-height:${1.05 + P.ls / 100};text-align:${P.align === "justified" ? "justify" : P.align};white-space:${P.wrap === "Enabled" ? "normal" : "nowrap"};${P.mat === "Outline" ? "-webkit-text-stroke:.09em rgba(0,0,0,.55);paint-order:stroke fill;" : ""}${P.mat === "Drop Shadow" ? "text-shadow:0 .12em 0 rgba(0,0,0,.45), 0 .2em .3em rgba(0,0,0,.35);" : ""}`;
+  const PLACE = { left: "start", center: "center", right: "end", justified: "stretch", top: "start", middle: "center", bottom: "end" };
+  function edits(s, id, g = s.g) {
     return layersOf(id).map((e) => {
       const k = keyOf(id, e.key);
-      if (!s.moves[k] && s.texts[k] == null) return "";
-      const [x0, y0, w0, h0] = e.box;
-      const [x, y, w, h] = boxNow(s, id, e);
-      const bx = w0 >= 100 ? 0 : x0 / (100 - w0) * 100;
-      const by = h0 >= 100 ? 0 : y0 / (100 - h0) * 100;
-      const patch = `<span class="rf-patch" style="left:${x0}%;top:${y0}%;width:${w0}%;height:${h0}%"></span>`;
-      const label = s.texts[k] != null ? `<span class="rf-plate"></span><span class="rf-label" style="--h:${h}">${esc(s.texts[k])}</span>` : "";
-      const sprite = `<span class="rf-sprite ${label ? "text" : ""}" style="left:${x}%;top:${y}%;width:${w}%;height:${h}%;background-image:url('${shotOf(id)}');background-size:${100 / w0 * 100}% ${100 / h0 * 100}%;background-position:${bx}% ${by}%">${label}</span>`;
+      const p = s.props[k] || {};
+      const vis = VIS.some((n) => n in p);
+      const hasText = e.text != null || s.texts[k] != null;
+      const textOn = hasText && (s.texts[k] != null || TXT.some((n) => n in p) || "src" in p && compsOf(e).includes("text"));
+      if (!s.moves[k] && !textOn && !vis) return "";
+      const P = full(g, s, id, e);
+      const patch = erase(id, e);
+      if (!P.active) return patch;
+      const [x, y, w, h] = drawBox(g, s, id, e);
+      const pic = P.imgOn ? picOf(id, e, P) : "";
+      const mask = pic && P.color !== "#ffffff" ? `<span class="rf-tint" style="background:${P.color};${pic.replace(/background-/g, "-webkit-mask-")};${pic.replace(/background-/g, "mask-")}"></span>` : "";
+      const label = textOn && P.txtOn ? `${P.src ? "" : '<span class="rf-plate"></span>'}<span class="rf-label" style="${labelCss(P)}">${esc(s.texts[k] ?? tr(e.text))}</span>` : textOn && !P.src ? '<span class="rf-plate"></span>' : "";
+      const sprite = `<span class="rf-sprite ${label ? "text" : ""}" style="left:${x}%;top:${y}%;width:${w}%;height:${h}%;${pic};opacity:${P.alpha / 100 * P.cgAlpha};transform:${turn(P)};transform-origin:${origin(P)};justify-items:${PLACE[P.align]};align-items:${PLACE[P.valign]};${fx(P)}">${mask}${label}</span>`;
       return patch + sprite;
     }).join("");
   }
-  const GIZMO = `${["tl", "tr", "bl", "br"].map((c) => `<i class="rf-h ${c}" data-rf-grip></i>`).join("")}<span class="rf-gz"><i class="rf-ax x" data-rf-axis="x"></i><i class="rf-ax y" data-rf-axis="y"></i><i class="rf-gc" data-rf-axis="xy"></i></span>`;
+  const GZ_DEFS = `<defs><linearGradient id="rf-gx" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF9A8C"/><stop offset=".45" stop-color="#E8402F"/><stop offset="1" stop-color="#8E1B10"/></linearGradient>
+    <linearGradient id="rf-gy" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9F79A"/><stop offset=".45" stop-color="#6FC22B"/><stop offset="1" stop-color="#3B7410"/></linearGradient>
+    <linearGradient id="rf-gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7FB0FF" stop-opacity=".75"/><stop offset="1" stop-color="#2F6FE6" stop-opacity=".45"/></linearGradient></defs>`;
+  const cube = (x, y, r, cls = "") => `<path class="f1 ${cls}" d="M${x} ${y - r} L${x + r * 0.9} ${y - r / 2} L${x} ${y} L${x - r * 0.9} ${y - r / 2} Z"/><path class="f2 ${cls}" d="M${x - r * 0.9} ${y - r / 2} L${x} ${y} L${x} ${y + r} L${x - r * 0.9} ${y + r / 2} Z"/><path class="f3 ${cls}" d="M${x + r * 0.9} ${y - r / 2} L${x} ${y} L${x} ${y + r} L${x + r * 0.9} ${y + r / 2} Z"/>`;
+  const GIZMOS = {
+    q: "",
+    w: `<span class="rf-gz"><svg class="rf-gzs" viewBox="-22 -104 130 130" width="130" height="130" aria-hidden="true">${GZ_DEFS}
+      <g class="rf-ga x" data-rf-axis="x"><line class="hit" x1="8" y1="0" x2="90" y2="0"/><line class="shaft" x1="9" y1="0" x2="66" y2="0"/><path class="cone" d="M64 -8.5 L90 0 L64 8.5 Z"/><ellipse class="base" cx="64" cy="0" rx="3.2" ry="8.5"/></g>
+      <g class="rf-ga y" data-rf-axis="y"><line class="hit" x1="0" y1="-8" x2="0" y2="-90"/><line class="shaft" x1="0" y1="-9" x2="0" y2="-66"/><path class="cone" d="M-8.5 -64 L0 -90 L8.5 -64 Z"/><ellipse class="base" cx="0" cy="-64" rx="8.5" ry="3.2"/></g>
+      <g class="rf-ga p" data-rf-axis="xy"><path class="plane" d="M14 -14 H34 V-34 H14 Z"/></g>
+      <g class="rf-ga c" data-rf-axis="xy">${cube(0, 0, 10)}</g></svg></span>`,
+    e: `<span class="rf-gz"><svg class="rf-gzs rot" viewBox="-72 -72 144 144" width="144" height="144" aria-hidden="true">
+      <ellipse class="ring x" rx="20" ry="56"/><ellipse class="ring y" rx="56" ry="20"/>
+      <g class="rf-ga z" data-rf-rot><circle class="hit" r="56"/><circle class="ring zr" r="56"/></g>
+      <circle class="ring o" r="66"/><circle class="dot" r="3"/></svg></span>`,
+    r: `<span class="rf-gz"><svg class="rf-gzs" viewBox="-22 -104 130 130" width="130" height="130" aria-hidden="true">
+      <g class="rf-ga x" data-rf-scale="x"><line class="hit" x1="8" y1="0" x2="84" y2="0"/><line class="shaft" x1="9" y1="0" x2="66" y2="0"/>${cube(72, 0, 8, "sx")}</g>
+      <g class="rf-ga y" data-rf-scale="y"><line class="hit" x1="0" y1="-8" x2="0" y2="-84"/><line class="shaft" x1="0" y1="-9" x2="0" y2="-66"/>${cube(0, -72, 8, "sy")}</g>
+      <g class="rf-ga c" data-rf-scale="xy">${cube(0, 0, 11)}</g></svg></span>`,
+    t: `${["tl", "tr", "bl", "br"].map((c) => `<i class="rf-h ${c}" data-rf-grip></i>`).join("")}<i class="rf-pivot"></i>`
+  };
+  const TOOLS = ["q", "w", "e", "r", "t"];
+  const TOOL_SVG = {
+    q: '<svg viewBox="0 0 24 24"><path d="M6 3l12 8.5-5.2 1.1 3.1 6.2-2.4 1.2-3.1-6.3L6 17z"/></svg>',
+    w: '<svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M12 2l-3 3M12 2l3 3M12 22l-3-3M12 22l3-3M2 12l3-3M2 12l3 3M22 12l-3-3M22 12l-3 3"/></svg>',
+    e: '<svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 3v4h-4"/></svg>',
+    r: '<svg viewBox="0 0 24 24"><rect x="3" y="11" width="10" height="10" rx="1"/><path d="M13 11l8-8M15 3h6v6"/></svg>',
+    t: '<svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="1"/><circle cx="5" cy="5" r="1.8"/><circle cx="19" cy="5" r="1.8"/><circle cx="5" cy="19" r="1.8"/><circle cx="19" cy="19" r="1.8"/></svg>'
+  };
   function boxes(s, id) {
     if (id !== s.screen || s.tool !== "select") return "";
+    const g = s.g;
     return layersOf(id).map((e) => {
-      const [x, y, w, h] = boxNow(s, id, e);
       const on = s.el === e.key;
-      return `<span class="rf-box ${on ? "on" : ""}" data-rf-box="${e.key}" style="left:${x}%;top:${y}%;width:${w}%;height:${h}%"><b>${tr(e.name)}</b>${on ? GIZMO : ""}</span>`;
+      const P = full(g, s, id, e);
+      if (!P.active && !on) return "";
+      const [x, y, w, h] = drawBox(g, s, id, e);
+      return `<span class="rf-box ${on ? "on" : ""} ${P.active ? "" : "off"}" data-rf-box="${e.key}" style="left:${x}%;top:${y}%;width:${w}%;height:${h}%;${P.rot[2] ? `transform:rotate(${-P.rot[2]}deg);transform-origin:${origin(P)};` : ""}"><b>${tr(e.name)}</b>${on ? GIZMOS[s.gz || "q"] : ""}</span>`;
     }).join("");
   }
   function screenView(g, id, { pins = true } = {}) {
     const s = st(g);
+    s.g = g;
     const m = MODULE[id];
     const taskPins = pins ? s.tasks.filter((x) => x.screen === id).map((x) => TEAM.ui.pin({ id: x.id, who: "me", at: x.at, text: x.text, task: x.task }, `left:${x.x}%;top:${x.y}%`, s.thread === x.id)).join("") : "";
     const thread = pins && s.thread && s.tasks.find((x) => x.id === s.thread && x.screen === id);
     if (s.el && id === s.screen && !elOf(id, s.el)) s.el = null;
-    return `<div class="rf-shot" data-rf-shot="${id}">${shot(m.img)}${edits(s, id)}${boxes(s, id)}${taskPins}
+    const frame = pins && s.frame === id ? `${["tl", "tr", "bl", "br"].map((c) => `<i class="rf-fh ${c}"></i>`).join("")}<span class="rf-fsize">${REF[0]} × ${REF[1]}</span>` : "";
+    return `<div class="rf-shot" data-rf-shot="${id}">${shot(m.img)}${edits(s, id, g)}${boxes(s, id)}${frame}${taskPins}
       ${thread ? threadOf(g, thread) : ""}
       ${s.ask && s.ask.screen === id ? `<form class="rf-asked" style="left:${s.ask.x}%;top:${s.ask.y}%"><span class="tm-pin-b">${TEAM.ui.face("me")}</span><span class="tm-rin"><input placeholder="${t("rf.here")}" aria-label="${t("rf.here")}"><button class="tm-send" type="submit" aria-label="${t("send")}" disabled>${TEAM.ui.ICONS.send}</button></span></form>` : ""}</div>`;
   }
+  const EYE = '<svg viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg>';
+  const EYE_OFF = '<svg viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 20L20 4"/></svg>';
   function tree(g) {
     const s = st(g);
-    const insp = () => {
-      const e = s.el && elOf(s.screen, s.el);
-      if (!e) return "";
-      const [x, y, w, h] = boxNow(s, s.screen, e).map((v) => Math.round(v));
-      const k = keyOf(s.screen, e.key);
-      const num2 = (f, v) => `<label><span>${t(`rf.${f}`)}</span><input type="number" step="1" value="${v}" data-rf-num="${f}"></label>`;
-      return `<div class="rf-insp"><header><span class="rf-ti">${TYPE_ICON[e.type]}</span><b>${tr(e.name)}</b><span class="sp"></span>${s.moves[k] || s.texts[k] != null ? `<button class="btn small" data-rf-undo>${t("rf.reset")}</button>` : ""}</header>
-        <div class="rf-grid"><span class="g">${t("rf.position")}</span>${num2("x", x)}${num2("y", y)}<span class="g">${t("rf.size")}</span>${num2("w", w)}${num2("h", h)}</div>
-        ${e.text ? `<label class="rf-tx"><span class="g">${t("rf.text")}</span><input class="input" value="${esc(s.texts[k] ?? tr(e.text))}" data-rf-text></label>` : ""}</div>`;
-    };
+    s.g = g;
     return `<aside class="rf-tree">
-      <header class="rf-th"><h2>${t("rf.screens")}</h2><span class="count">${g.screens.length}</span></header>
-      <div class="rf-acc">${g.screens.map((id) => {
+      <header class="rf-th"><h2>${t("rf.screens")}</h2><span class="count">${SCR(g).length}</span></header>
+      <div class="rf-acc">${SCR(g).map((id) => {
       const m = MODULE[id];
       const open = s.open.has(id);
       const n = changedOn(s, id);
       return `<section class="rf-node ${id === s.screen ? "on" : ""}"><button class="rf-sh" data-rf-screen="${id}" aria-expanded="${open}"><i class="rf-chev">${ICON.next}</i><span class="rf-thumb">${shot(m.img)}</span><span class="n">${tr(m.name)}</span>${n ? `<span class="rf-dot">${n}</span>` : ""}</button>
           ${open ? `<ul>${layersOf(id).map((e) => {
         const k = keyOf(id, e.key);
-        return `<li><button class="rf-el ${id === s.screen && s.el === e.key ? "on" : ""}" data-rf-el="${id}|${e.key}"><span class="rf-ti">${TYPE_ICON[e.type]}</span><span>${tr(e.name)}</span>${s.moves[k] || s.texts[k] != null ? '<i class="rf-mark"></i>' : ""}</button></li>`;
+        const live = full(g, s, id, e).active;
+        return `<li class="${live ? "" : "off"}"><button class="rf-el ${id === s.screen && s.el === e.key ? "on" : ""}" data-rf-el="${id}|${e.key}"><span class="rf-ti">${TYPE_ICON[e.type]}</span><span class="n">${tr(e.name)}</span>${touched(s, k) ? '<i class="rf-mark"></i>' : ""}</button><button class="rf-eye" data-rf-eye="${id}|${e.key}" aria-pressed="${!live}" title="${t(live ? "ri.hide" : "ri.show")}" aria-label="${t(live ? "ri.hide" : "ri.show")}">${live ? EYE : EYE_OFF}</button></li>`;
       }).join("")}</ul>` : ""}</section>`;
     }).join("")}</div>
-      ${insp()}
     </aside>`;
+  }
+  const CI = {
+    rect: '<svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="1.5"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg>',
+    image: TYPE_ICON.image,
+    text: TYPE_ICON.text,
+    button: TYPE_ICON.button,
+    cg: '<svg viewBox="0 0 24 24"><rect x="3" y="7" width="12" height="12" rx="2"/><path d="M8 4h11a2 2 0 0 1 2 2v11"/></svg>',
+    shadow: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="13" height="13" rx="2"/><path d="M19 8v11H8"/></svg>',
+    outline: '<svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="2" y="2" width="20" height="20" rx="4" stroke-dasharray="2 3"/></svg>',
+    layout: '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M10 10v10"/></svg>',
+    fitter: '<svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>',
+    aspect: '<svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10v4h4"/></svg>',
+    mask: '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="12" r="5"/></svg>'
+  };
+  const ALIGN_IC = {
+    left: '<svg viewBox="0 0 24 24"><path d="M4 6h16M4 10h10M4 14h16M4 18h10"/></svg>',
+    center: '<svg viewBox="0 0 24 24"><path d="M4 6h16M7 10h10M4 14h16M7 18h10"/></svg>',
+    right: '<svg viewBox="0 0 24 24"><path d="M4 6h16M10 10h10M4 14h16M10 18h10"/></svg>',
+    justified: '<svg viewBox="0 0 24 24"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>',
+    top: '<svg viewBox="0 0 24 24"><path d="M4 4h16M9 8h6M9 12h6"/></svg>',
+    middle: '<svg viewBox="0 0 24 24"><path d="M4 12h16M9 8h6M9 16h6"/></svg>',
+    bottom: '<svg viewBox="0 0 24 24"><path d="M4 20h16M9 12h6M9 16h6"/></svg>'
+  };
+  const ROWS = ["t", "m", "b", "s"], COLS = ["l", "c", "r", "s"];
+  const presetOf = (P) => {
+    const axis = (a, b, i, keys) => a[i] === 0 && b[i] === 1 ? "s" : a[i] !== b[i] ? null : keys[[0, 0.5, 1].indexOf(a[i])] || null;
+    const c = axis(P.amin, P.amax, 0, ["l", "c", "r"]);
+    const r = axis(P.amin, P.amax, 1, ["b", "m", "t"]);
+    return c && r ? `${r}${c}` : null;
+  };
+  const anchorIc = (pre) => {
+    const pos = { l: 5, c: 14, r: 23, t: 5, m: 14, b: 23 };
+    if (!pre) return '<svg class="ri-aic" viewBox="0 0 28 28"><rect class="o" x="3" y="3" width="22" height="22"/><rect class="i" x="9" y="9" width="10" height="10"/></svg>';
+    const [r, c] = pre;
+    const inner = `<rect class="i" x="${c === "s" ? 5 : pos[c] - 4}" y="${r === "s" ? 5 : pos[r] - 4}" width="${c === "s" ? 18 : 8}" height="${r === "s" ? 18 : 8}"/>`;
+    const marks = `${c === "s" ? '<path class="a" d="M3 14h22M3 11v6M25 11v6"/>' : `<path class="a" d="M${pos[c]} 1v4"/>`}${r === "s" ? '<path class="a" d="M14 3v22M11 3h6M11 25h6"/>' : `<path class="a" d="M1 ${pos[r]}h4"/>`}`;
+    return `<svg class="ri-aic" viewBox="0 0 28 28"><rect class="o" x="3" y="3" width="22" height="22"/>${inner}${marks}</svg>`;
+  };
+  const SET_OF = { logo: "logo", settings: "settings", play: "cta", start: "cta", next: "cta", level: "cta", ok: "cta", skip: "cta", wallet: "bar", coins: "bar", lives: "bar", progress: "bar", loading: "bar", hud: "bar", noads: "noads", rewards: "rewards", race: "race", gift: "gift", offers: "offers", boostL: "booster", boostR: "booster", boosters: "booster", cannon: "cannon", hero: "hero", picker: "panel", panel: "panel", reward: "panel", header: "bar", tabs: "bar", nodes: "panel", board: "panel" };
+  const candsOf = (e) => {
+    const set = SET_OF[e.key] || (e.type === "group" ? "panel" : e.type === "text" ? "cta" : "icon");
+    return [1, 2, 3].map((i) => ({ src: gen(`ui/${set}-${i}.webp`), name: `${set}_${i}.png` }));
+  };
+  const fileOf = (e) => `${{ image: "img", button: "btn", group: "bg", text: "btn" }[e.type]}_${/^u\d+$/.test(e.key) ? tr(e.name).replace(/\s+/g, "_") : e.key.replace(/[A-Z]/g, (c) => `_${c.toLowerCase()}`)}.png`;
+  const UI_COST = 6;
+  const fitOf = (e) => {
+    const a = e.box[2] * 9 / (e.box[3] * 19.5);
+    return a >= 1 ? `width:100%;height:${(100 / a).toFixed(1)}%` : `height:100%;width:${(a * 100).toFixed(1)}%`;
+  };
+  function insp(g) {
+    if (st(g).anchorFor !== `${st(g).screen}|${st(g).el}`) {
+      st(g).anchorPick = false;
+      st(g).anchorFor = `${st(g).screen}|${st(g).el}`;
+    }
+    const s = st(g);
+    const e = s.el && elOf(s.screen, s.el);
+    if (!e) return '<aside class="rf-insp2" aria-hidden="true"></aside>';
+    const id = s.screen;
+    const k = keyOf(id, e.key);
+    const P = full(g, s, id, e);
+    const comps = [...compsOf(e), "cg"].filter((c, i, a) => a.indexOf(c) === i && (c !== "cg" || e.type === "group" || P.comps.includes("cg")));
+    const [x, y, w, h] = boxNow(s, id, e);
+    const px = [Math.round((x + w / 2 - 50) * REF[0] / 100), Math.round((50 - y - h / 2) * REF[1] / 100)];
+    const size = [Math.round(w * REF[0] / 100), Math.round(h * REF[1] / 100)];
+    const fmt = (v) => Number.isInteger(v) ? v : Number(v.toFixed(2));
+    const ck = (name, on) => `<button class="ri-ck" role="checkbox" aria-checked="${on}" data-rf-prop="${name}">${ICON.check}</button>`;
+    const num2 = (name, v, step = 1) => `<input class="ri-num" type="number" step="${step}" value="${fmt(v)}" data-rf-prop="${name}">`;
+    const vec = (name, vals, labels, step = 1) => `<span class="ri-vec n${vals.length}">${vals.map((v, i) => `<label><span data-rf-scrub>${labels[i]}</span><input type="number" step="${step}" value="${fmt(v)}" data-rf-prop="${name}.${i}"></label>`).join("")}</span>`;
+    const sel = (name, v, opts) => `<span class="ri-sel"><select data-rf-prop="${name}">${opts.map((o) => Array.isArray(o) ? o : [o, o]).map(([val, label]) => `<option value="${esc(val)}" ${val === v ? "selected" : ""}>${esc(label)}</option>`).join("")}</select></span>`;
+    const col = (name, v, a = null) => `<span class="ri-col"><label class="sw" style="--c:${a == null ? v : rgba(v, a)}"><input type="color" value="${v}" data-rf-prop="${name}"></label><span class="hex">${v.slice(1).toUpperCase()}</span>${a != null ? `<label class="a"><span data-rf-scrub>A</span><input type="number" min="0" max="100" step="1" value="${a}" data-rf-prop="${name === "color" ? "alpha" : name.replace("Color", "Alpha")}"></label>` : ""}</span>`;
+    const obj = (label) => `<span class="ri-obj"><i></i>${esc(label)}</span>`;
+    const row = (label, ctl, scrub = false, cls = "") => `<div class="ri-row ${cls}"><span class="ri-l" ${scrub ? "data-rf-scrub" : ""}>${label}</span><span class="ri-c">${ctl}</span></div>`;
+    const sec = (key, title, body2, toggle = null) => {
+      const open = !s.fold.has(key);
+      return `<section class="ri-sec ${open ? "open" : ""}" data-sec="${key}"><header><button class="ri-fold" data-rf-fold="${key}" aria-expanded="${open}"><i class="rf-chev">${ICON.next}</i></button><span class="ri-ci">${CI[key]}</span>${toggle ? ck(toggle, P[toggle]) : ""}<b>${title}</b><span class="sp"></span><button class="icon-btn flat ri-more" data-rf-more="${key}" aria-label="${t("more")}">${ICON.more}</button></header>${open ? `<div class="ri-in">${body2}</div>` : ""}</section>`;
+    };
+    const pre = presetOf(P);
+    const rect = `${row(t("ri.position"), vec("pos", [px[0], px[1], P.posZ], ["X", "Y", "Z"]))}
+      ${row(t("ri.size"), vec("size", size, ["W", "H"]))}
+      <div class="ri-row ri-anc sep"><span class="ri-l">${t("ri.anchors")}</span><span class="ri-c"><button class="ri-anchor" data-rf-anchor aria-expanded="${s.anchorPick}" title="${t("ri.preset")}">${anchorIc(pre)}<span>${pre ? `${t(`ri.a.${pre[1]}`)} · ${t(`ri.a.${pre[0]}`)}` : t("ri.custom")}</span><i class="ri-caret"></i></button></span>
+        ${s.anchorPick ? `<div class="ri-pre" role="dialog" aria-label="${t("ri.preset")}"><b>${t("ri.preset")}</b><div class="ri-pre-g"><span></span>${COLS.map((c) => `<span class="ri-pre-c">${t(`ri.a.${c}`)}</span>`).join("")}${ROWS.map((r) => `<span class="ri-pre-r">${t(`ri.a.${r}`)}</span>${COLS.map((c) => `<button data-rf-preset="${r}${c}" aria-pressed="${pre === `${r}${c}`}" title="${t(`ri.a.${r}`)} · ${t(`ri.a.${c}`)}">${anchorIc(`${r}${c}`)}</button>`).join("")}`).join("")}</div></div>` : ""}</div>
+      ${row(t("ri.amin"), vec("amin", P.amin, ["X", "Y"], 0.1))}
+      ${row(t("ri.amax"), vec("amax", P.amax, ["X", "Y"], 0.1))}
+      ${row(t("ri.pivot"), vec("pivot", P.pivot, ["X", "Y"], 0.1), false, "sep")}
+      ${row(t("ri.rotation"), vec("rot", P.rot, ["X", "Y", "Z"]))}
+      ${row(t("ri.scale"), vec("scale", P.scale, ["X", "Y", "Z"], 0.1))}`;
+    const g8 = s.gen[k];
+    const image = `<div class="ri-src"><span class="ri-l">${t("ri.source")}</span>
+        <div class="ri-srcbox"><span class="ri-thumb"><span style="${picOf(id, e, P)};${fitOf(e)}"></span></span><span class="ri-fn">${esc(P.srcName || fileOf(e))}</span></div>
+        <div class="ri-res"><button class="btn small primary" data-rf-ai ${g8?.busy ? "disabled" : ""}>${t("ri.aiChange")}</button><button class="btn small" data-rf-up>${t("ri.upload")}</button><input type="file" accept="image/*" hidden data-rf-file></div>
+        ${g8?.busy ? `<div class="ri-making"><i></i>${t("ri.making")}</div>` : ""}
+        ${g8?.cands ? `<div class="ri-cands"><button data-rf-cand="-1" aria-pressed="${!P.src}"><span style="${crop(id, e)};${fitOf(e)}"></span><em>${t("ri.original")}</em></button>${g8.cands.map((c, i) => `<button data-rf-cand="${i}" aria-pressed="${P.src === c.src}"><span style="background-image:url('${c.src}')"></span></button>`).join("")}</div>` : ""}</div>
+      ${row(t("ri.color"), col("color", P.color, P.alpha))}
+      ${row(t("ri.material"), sel("material", P.material, ["None (Material)", "UI/Default", "UI/Additive", "Sprites/Default"]))}
+      ${row(t("ri.raycast"), ck("raycast", P.raycast))}
+      ${row(t("ri.maskable"), ck("maskable", P.maskable))}
+      ${row(t("ri.imgType"), sel("imgType", P.imgType, ["Simple", "Sliced", "Tiled", "Filled"]))}
+      ${P.imgType === "Simple" ? row(t("ri.preserve"), ck("preserve", P.preserve)) : ""}
+      <div class="ri-end"><button class="btn small" data-rf-native>${t("ri.native")}</button></div>`;
+    const styleBtn = (v, label) => `<button class="${v.length === 1 ? "f-" + v : ""}" data-rf-prop="fstyle" data-v="${v}" aria-pressed="${P.fstyle.includes(v)}">${label}</button>`;
+    const text = `${e.text != null ? `<div class="ri-tin"><span class="ri-l">${t("ri.textIn")}</span><textarea class="input" rows="2" data-rf-text>${esc(s.texts[k] ?? tr(e.text))}</textarea></div>` : ""}
+      ${row(t("ri.font"), sel("font", P.font, Object.keys(FONTS)))}
+      ${row(t("ri.matPreset"), sel("mat", P.mat, [["Material", `${P.font.replace(" SDF", "")} SDF Material`], ["Outline", `${P.font.replace(" SDF", "")} SDF Outline`], ["Drop Shadow", `${P.font.replace(" SDF", "")} SDF Drop Shadow`]]))}
+      ${row(t("ri.fstyle"), `<span class="ri-seg">${styleBtn("b", "B")}${styleBtn("i", "I")}${styleBtn("u", "U")}${styleBtn("s", "S")}${styleBtn("ab", "ab")}${styleBtn("AB", "AB")}</span>`)}
+      ${row(t("ri.fsize"), num2("fsize", P.fsize), true)}
+      ${row(t("ri.auto"), ck("auto", P.auto))}
+      ${row(t("ri.vcolor"), col("tcolor", P.tcolor))}
+      ${row(t("ri.cs"), num2("cs", P.cs), true)}
+      ${row(t("ri.ls"), num2("ls", P.ls), true)}
+      ${row(t("ri.align"), `<span class="ri-seg ic">${["left", "center", "right", "justified"].map((a) => `<button data-rf-prop="align" data-v="${a}" aria-pressed="${P.align === a}" aria-label="${a}">${ALIGN_IC[a]}</button>`).join("")}</span><span class="ri-seg ic">${["top", "middle", "bottom"].map((a) => `<button data-rf-prop="valign" data-v="${a}" aria-pressed="${P.valign === a}" aria-label="${a}">${ALIGN_IC[a]}</button>`).join("")}</span>`, false, "stack")}
+      ${row(t("ri.wrap"), sel("wrap", P.wrap, ["Enabled", "Disabled"]))}
+      ${row(t("ri.overflow"), sel("overflow", P.overflow, ["Overflow", "Ellipsis", "Masking", "Truncate", "Scroll Rect", "Page", "Linked"]))}`;
+    const states2 = [["cNormal", "ri.normal"], ["cHl", "ri.hl"], ["cPressed", "ri.pressed"], ["cSel", "ri.selected"], ["cDis", "ri.disabledC"]];
+    const button = `${row(t("ri.interact"), ck("interact", P.interact))}
+      ${row(t("ri.transition"), sel("transition", P.transition, ["None", "Color Tint", "Sprite Swap", "Animation"]))}
+      ${P.transition === "None" ? "" : row(t("ri.target"), obj(`${tr(e.name)} (Image)`))}
+      ${P.transition === "Color Tint" ? `${states2.map(([n, l]) => row(t(l), col(n, P[n]))).join("")}${row(t("ri.mult"), num2("mult", P.mult, 0.1), true)}${row(t("ri.fade"), num2("fade", P.fade, 0.05), true)}` : ""}
+      ${P.transition === "Sprite Swap" ? ["ri.hlS", "ri.pressedS", "ri.selectedS", "ri.disabledS"].map((l) => row(t(l), obj("None (Sprite)"))).join("") : ""}
+      ${P.transition === "Animation" ? ["Normal", "Highlighted", "Pressed", "Selected", "Disabled"].map((n) => row(t("ri.trigger", { s: n }), `<span class="ri-obj plain">${n}</span>`)).join("") : ""}
+      ${row(t("ri.nav"), sel("nav", P.nav, ["None", "Horizontal", "Vertical", "Automatic", "Explicit"]))}
+      <div class="ri-click"><span class="ri-l">${t("ri.onClick")}</span><div class="ri-ev"><span class="ri-obj plain">Runtime Only</span>${sel("click", P.click, [["", "No Function"], ...SCR(g).filter((x2) => x2 !== id).map((x2) => [x2, `${t("ri.openScreen")} · ${tr(MODULE[x2].name)}`])])}</div></div>`;
+    const cg = `${row(t("ri.alpha"), `<span class="ri-range"><input type="range" min="0" max="1" step="0.01" value="${P.cgAlpha}" data-rf-prop="cgAlpha"><input type="number" min="0" max="1" step="0.05" value="${P.cgAlpha}" data-rf-prop="cgAlpha"></span>`)}
+      ${row(t("ri.interact"), ck("cgInter", P.cgInter))}${row(t("ri.blocks"), ck("cgBlocks", P.cgBlocks))}${row(t("ri.ignore"), ck("cgIgnore", P.cgIgnore))}`;
+    const effect = (pfx) => `${row(t("ri.effColor"), col(`${pfx}Color`, P[`${pfx}Color`], P[`${pfx}Alpha`]))}${row(t("ri.effDist"), vec(`${pfx}Dist`, P[`${pfx}Dist`], ["X", "Y"]))}${row(t("ri.useAlpha"), ck(`${pfx}Use`, P[`${pfx}Use`]))}`;
+    const extra = {
+      shadow: () => sec("shadow", t("ri.shadow"), effect("sh"), "shOn"),
+      outline: () => sec("outline", t("ri.outline"), effect("ol"), "olOn"),
+      layout: () => sec("layout", t("ri.layout"), `${row(t("ri.ignoreLayout"), ck("leIgnore", P.leIgnore))}${row(t("ri.minSize"), vec("leMin", P.leMin, ["W", "H"]))}${row(t("ri.prefSize"), vec("lePref", P.lePref, ["W", "H"]))}${row(t("ri.flexSize"), vec("leFlex", P.leFlex, ["W", "H"]))}`),
+      fitter: () => sec("fitter", t("ri.fitter"), `${row(t("ri.hFit"), sel("hFit", P.hFit, ["Unconstrained", "Min Size", "Preferred Size"]))}${row(t("ri.vFit"), sel("vFit", P.vFit, ["Unconstrained", "Min Size", "Preferred Size"]))}`),
+      aspect: () => sec("aspect", t("ri.aspect"), `${row(t("ri.aMode"), sel("aMode", P.aMode, ["None", "Width Controls Height", "Height Controls Width", "Fit In Parent", "Envelope Parent"]))}${row(t("ri.ratio"), num2("ratio", P.ratio, 0.01), true)}`),
+      mask: () => sec("mask", t("ri.mask"), `${row(t("ri.padding"), vec("maskPad", P.maskPad, ["L", "B", "R", "T"]))}${row(t("ri.softness"), vec("maskSoft", P.maskSoft, ["X", "Y"]))}`),
+      cg: () => sec("cg", t("ri.cg"), cg)
+    };
+    const body = [
+      sec("rect", t("ri.rect"), rect),
+      comps.includes("image") ? sec("image", t("ri.image"), image, "imgOn") : "",
+      comps.includes("text") ? sec("text", t("ri.text"), text, "txtOn") : "",
+      comps.includes("button") ? sec("button", t("ri.button"), button, "btnOn") : "",
+      comps.includes("cg") ? extra.cg() : "",
+      ...P.comps.filter((c) => c !== "cg").map((c) => extra[c]())
+    ].join("");
+    return `<aside class="rf-insp2" data-rf-insp>
+      <header class="ri-head"><span class="rf-ti">${TYPE_ICON[e.type]}</span><b>${tr(e.name)}</b><span class="sp"></span>
+        ${touched(s, k) ? `<button class="btn small" data-rf-elreset>${t("rf.reset")}</button>` : ""}
+        <button class="icon-btn flat ri-eye" data-rf-eye="${id}|${e.key}" aria-pressed="${!P.active}" title="${t(P.active ? "ri.hide" : "ri.show")}" aria-label="${t(P.active ? "ri.hide" : "ri.show")}">${P.active ? EYE : EYE_OFF}</button>
+        <button class="icon-btn flat" data-rf-close aria-label="${t("close")}">${ICON.x}</button></header>
+      <div class="ri-path"><span class="rf-thumb">${shot(MODULE[id].img)}</span><span>${tr(MODULE[id].name)}</span><i>›</i><b>${tr(e.name)}</b></div>
+      <div class="ri-body">${body}<div class="ri-addrow"><button class="btn ri-add" data-rf-addc>${t("ri.add")}</button></div></div>
+    </aside>`;
+  }
+  function setField(g, name, val, { redraw = true, history = true } = {}) {
+    const s = st(g);
+    const id = s.screen;
+    const e = elOf(id, s.el);
+    if (!e) return;
+    const k = keyOf(id, e.key);
+    if (history) snap(s);
+    if (name === "pos.2") name = "posZ";
+    if (/^(pos|size)\./.test(name)) {
+      const [x0, y0, w0, h0] = e.box;
+      const mv = { ...s.moves[k] || {} };
+      const [x, y, w, h] = boxNow(s, id, e);
+      const v = Number(val) || 0;
+      if (name === "pos.0") mv.dx = 50 + v * 100 / REF[0] - w / 2 - x0;
+      if (name === "pos.1") mv.dy = 50 - v * 100 / REF[1] - h / 2 - y0;
+      if (name === "size.0") {
+        mv.sw = Math.max(0.05, v * 100 / REF[0] / (w0 * (mv.s || 1)));
+        mv.dx = x + w / 2 - w0 * (mv.s || 1) * mv.sw / 2 - x0;
+      }
+      if (name === "size.1") {
+        mv.sh = Math.max(0.05, v * 100 / REF[1] / (h0 * (mv.s || 1)));
+        mv.dy = y + h / 2 - h0 * (mv.s || 1) * mv.sh / 2 - y0;
+      }
+      const tiny = (n, one = 0) => n == null || Math.abs(n - one) < 1e-4;
+      if (tiny(mv.dx) && tiny(mv.dy) && tiny(mv.s, 1) && tiny(mv.sw, 1) && tiny(mv.sh, 1)) delete s.moves[k];
+      else s.moves[k] = mv;
+    } else {
+      const [base, idx] = name.split(".");
+      const d = defOf(g, id, e);
+      const cur = { ...d, ...s.props[k] || {} };
+      let v = val;
+      if (idx != null) {
+        v = [...cur[base]];
+        v[Number(idx)] = Number(val) || 0;
+      }
+      if (base === "fstyle") v = (cur.fstyle.includes(val) ? cur.fstyle.filter((x) => x !== val) : [...cur.fstyle.filter((x) => !(["ab", "AB"].includes(val) && ["ab", "AB"].includes(x))), val]).sort();
+      if (typeof d[base] === "number" && idx == null) v = Number(val) || 0;
+      const p = { ...s.props[k] || {} };
+      const same = JSON.stringify(Array.isArray(v) ? [...v] : v) === JSON.stringify(Array.isArray(d[base]) ? base === "fstyle" ? [...d[base]].sort() : d[base] : d[base]);
+      if (same) delete p[base];
+      else p[base] = v;
+      if (Object.keys(p).length) s.props[k] = p;
+      else delete s.props[k];
+    }
+    if (redraw) draw(g);
+  }
+  function resetSection(g, key) {
+    const s = st(g);
+    const k = keyOf(s.screen, s.el);
+    snap(s);
+    if (key === "rect") delete s.moves[k];
+    if (key === "text") delete s.texts[k];
+    const p = { ...s.props[k] || {} };
+    (SECTION[key] || []).forEach((n) => delete p[n]);
+    if (Object.keys(p).length) s.props[k] = p;
+    else delete s.props[k];
+    draw(g);
+  }
+  function aiChange(g) {
+    const s = st(g);
+    const id = s.screen;
+    const e = elOf(id, s.el);
+    const k = keyOf(id, e.key);
+    GEN.open({ kind: "ui", group: GEN.groupOf(g), cost: UI_COST, title: t("ri.uiAsk", { name: tr(e.name) }), styles: ["keepArt"], onMake: () => {
+      if (store.credits < UI_COST) {
+        toast(t("notEnough", { have: num(store.credits) }));
+        return;
+      }
+      spend(`${tr(e.name)} · ${g.name}`, UI_COST, 2800);
+      s.gen[k] = { busy: true };
+      draw(g);
+      setTimeout(() => {
+        s.gen[k] = { cands: candsOf(e) };
+        if (document.querySelector(".rf")) draw(g);
+        toast(t("ri.made", { name: tr(e.name) }));
+      }, 2800);
+    } });
   }
   const CW = 220, CH = Math.round(CW * 19.5 / 9), GX = 90, GY = 150;
   function layout(g) {
     const m = (id) => MODULE[id];
-    const ids = g.screens;
+    const ids = SCR(g);
+    const moved = (L2) => {
+      Object.entries(st(g).fpos).forEach(([id, p]) => {
+        if (L2.pos[id]) L2.pos[id] = { ...p };
+      });
+      return L2;
+    };
+    if (g.real && g.real.length) {
+      const pos2 = {};
+      ids.forEach((id, i) => {
+        pos2[id] = { x: i * (CW + GX), y: 0 };
+      });
+      return moved({ pos: pos2, box: { l: -60, t: -80, r: (ids.length - 1) * (CW + GX) + CW + 60, b: CH + 70 }, edges: ids.slice(1).map((id, i) => [ids[i], id, "path"]), hub: ids.find((id) => m(id).home) || ids[0] });
+    }
     const first = (fn) => ids.find((id) => fn(m(id)));
     const entry = first((x) => x.kind === "titlescreen");
     const lobby = first((x) => x.kind === "lobby") || first((x) => x.group === "home" && !["titlescreen", "levelmap"].includes(x.kind));
@@ -379,7 +1006,7 @@ const REFINE = (() => {
     const ys = Object.values(pos).map((p) => p.y);
     const box2 = { l: Math.min(...xs) - 60, t: Math.min(...ys) - 80, r: Math.max(...xs) + CW + 60, b: Math.max(...ys) + CH + 70 };
     const edges = [...path.slice(1).map((id, i) => [path[i], id, "path"]), ...rest.map((id) => [hub, id, "menu"])];
-    return { pos, box: box2, edges, hub };
+    return moved({ pos, box: box2, edges, hub });
   }
   function wires(L2) {
     return L2.edges.map(([a, b, kind]) => {
@@ -398,13 +1025,14 @@ const REFINE = (() => {
     const unit = t(`unit.${TUNE.plan(g).kind}`);
     return `<section class="rf-board">
       ${n ? `<div class="rf-tools"><span class="sp"></span><span class="g">${t("rf.changes", { n })}</span><button class="btn small" data-rf-resetall>${t("rf.reset")}</button><button class="btn primary small" data-rf-applyui>${t("rf.apply")}</button></div>` : ""}
+      <div class="rf-gtools" role="toolbar">${TOOLS.map((k) => `<button class="icon-btn flat" data-rf-gz="${k}" aria-pressed="${(s.gz || "q") === k}" title="${t(`rf.t.${k}`)}" aria-label="${t(`rf.t.${k}`)}">${TOOL_SVG[k]}<i>${k.toUpperCase()}</i></button>`).join("")}</div>
       <div class="rf-stage ${s.tool === "prompt" ? "prompting" : ""}" data-rf-stage>
         <div class="rf-canvas" style="width:${L2.box.r - L2.box.l}px;height:${L2.box.b - L2.box.t}px">
           <svg class="rf-wires" viewBox="${L2.box.l} ${L2.box.t} ${L2.box.r - L2.box.l} ${L2.box.b - L2.box.t}" style="width:${L2.box.r - L2.box.l}px;height:${L2.box.b - L2.box.t}px"><defs><marker id="rf-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1.5L8 5L1 8.5" fill="none" stroke="context-stroke" stroke-width="1.6"/></marker></defs>${wires(L2)}</svg>
-          ${g.screens.map((id) => {
+          ${SCR(g).map((id) => {
       const p = L2.pos[id];
       const m2 = MODULE[id];
-      return `<figure class="rf-scr ${id === s.screen ? "on" : ""} ${id === L2.hub ? "hub" : ""}" data-rf-scr="${id}" style="left:${p.x - L2.box.l}px;top:${p.y - L2.box.t}px;width:${CW}px"><figcaption>${tr(m2.name)}${m2.group === "gameplay" ? `<span class="rf-lv">${unit} ${num(lv)}</span>` : ""}${m2.added ? `<span class="rf-new">${t("rf.added")}</span>` : ""}</figcaption>${screenView(g, id)}</figure>`;
+      return `<figure class="rf-scr ${id === s.screen ? "on" : ""} ${id === L2.hub ? "hub" : ""} ${s.frame === id ? "sel" : ""}" data-rf-scr="${id}" style="left:${p.x - L2.box.l}px;top:${p.y - L2.box.t}px;width:${CW}px"><figcaption data-rf-cap="${id}">${tr(m2.name)}${m2.group === "gameplay" ? `<span class="rf-lv">${unit} ${num(lv)}</span>` : ""}${m2.added ? `<span class="rf-new">${t("rf.added")}</span>` : ""}</figcaption>${screenView(g, id)}</figure>`;
     }).join("")}
         </div>
       </div>
@@ -495,17 +1123,23 @@ const REFINE = (() => {
   function draw(g) {
     const root = document.querySelector(".rf");
     if (!root) return;
-    const y = { log: root.querySelector(".rf-log")?.scrollTop, acc: root.querySelector(".rf-acc")?.scrollTop };
+    const y = { log: root.querySelector(".rf-log")?.scrollTop, acc: root.querySelector(".rf-acc")?.scrollTop, insp: root.querySelector(".ri-body")?.scrollTop };
     const stick = (() => {
       const l = root.querySelector(".rf-log");
       return !l || l.scrollHeight - l.scrollTop - l.clientHeight < 40;
     })();
+    const was = root.querySelector(".rf-insp2 .ri-head b")?.textContent;
     root.querySelector(".rf-tree").outerHTML = tree(g);
+    root.querySelector(".rf-insp2").outerHTML = insp(g);
     root.querySelector(".rf-board").outerHTML = board(g);
     root.querySelector(".rf-ai").outerHTML = panel(g);
+    if (st(g).el && !root.classList.contains("insp-on")) void root.offsetWidth;
+    root.classList.toggle("insp-on", !!st(g).el);
     const log = root.querySelector(".rf-log");
     log.scrollTop = stick ? log.scrollHeight : y.log;
     root.querySelector(".rf-acc").scrollTop = y.acc || 0;
+    const body = root.querySelector(".ri-body");
+    if (body && was === root.querySelector(".rf-insp2 .ri-head b")?.textContent) body.scrollTop = y.insp || 0;
     bind(root, g);
   }
   const push = (g, m) => st(g).log.push({ at: Date.now(), ...m });
@@ -569,7 +1203,7 @@ const REFINE = (() => {
     };
     const finish = () => {
       task.task = "done";
-      task.preview = task.screen ? [task.screen] : task.ui ? task.ui : [g.screens.find((id) => MODULE[id].group === "gameplay") || s.screen];
+      task.preview = task.screen ? [task.screen] : task.ui ? task.ui : [SCR(g).find((id) => MODULE[id].group === "gameplay") || s.screen];
       push(g, { who: "ai", kind: "done", task: task.id });
       draw(g);
     };
@@ -596,7 +1230,7 @@ const REFINE = (() => {
   }
   function applyUi(g) {
     const s = st(g);
-    const ids = g.screens.filter((id) => changedOn(s, id));
+    const ids = SCR(g).filter((id) => changedOn(s, id));
     const n = pending(s);
     const task = { id: ++s.n, text: t("rf.uiTask", { n }), at: Date.now(), task: "req", ui: ids };
     task.recs = [{ name: t("rf.uiTask", { n }), what: t("rf.uiLead", { n: ids.length }), images: ids.length, cost: ids.length * 4, minutes: Math.max(1, ids.length) }];
@@ -610,18 +1244,18 @@ const REFINE = (() => {
     let i = 0;
     const node = el('<div class="full rf-play"></div>');
     const paint = () => {
-      const id = g.screens[i];
+      const id = SCR(g)[i];
       const m = MODULE[id];
       node.innerHTML = `<div class="rf-pwrap"><header><b>${esc(g.name)}</b><span class="sp"></span>${g.play ? "" : `<button class="btn small" data-rf-restart>${t("rf.restart")}</button>`}<button class="icon-btn" data-rf-close aria-label="${t("close")}">${ICON.x}</button></header>
         <div class="rf-phone">${g.play ? `<span class="shot play"><iframe src="${g.play}" sandbox="allow-scripts" title="${t("play")}"></iframe></span>` : `<button class="rf-proto" data-rf-next aria-label="${t("rf.tapNext")}"><span class="rf-shot">${shot(m.img, { video: m.group === "gameplay" ? m.video : null })}${edits(st(g), id)}</span></button>`}</div>
-        ${g.play ? "" : `<footer><span class="rf-pdots">${g.screens.map((x, k) => `<i class="${k === i ? "on" : ""}"></i>`).join("")}</span><span class="g">${tr(m.name)} · ${t("rf.tapNext")}</span></footer>`}</div>`;
+        ${g.play ? "" : `<footer><span class="rf-pdots">${SCR(g).map((x, k) => `<i class="${k === i ? "on" : ""}"></i>`).join("")}</span><span class="g">${tr(m.name)} · ${t("rf.tapNext")}</span></footer>`}</div>`;
       node.querySelector("[data-rf-close]").addEventListener("click", () => dismiss(node));
       node.querySelector("[data-rf-restart]")?.addEventListener("click", () => {
         i = 0;
         paint();
       });
       node.querySelector("[data-rf-next]")?.addEventListener("click", () => {
-        i = (i + 1) % g.screens.length;
+        i = (i + 1) % SCR(g).length;
         paint();
       });
     };
@@ -641,6 +1275,7 @@ const REFINE = (() => {
     const s = st(g);
     const on = (sel, fn) => root.querySelectorAll(sel).forEach((b) => b.addEventListener("click", (e) => fn(b, e)));
     on("[data-rf-screen]", (b) => {
+      s.frame = null;
       const id = b.dataset.rfScreen;
       if (s.screen === id) {
         if (!s.open.delete(id)) s.open.add(id);
@@ -654,6 +1289,7 @@ const REFINE = (() => {
     });
     on("[data-rf-el]", (b) => {
       const [id, k] = b.dataset.rfEl.split("|");
+      s.frame = null;
       s.screen = id;
       s.el = k;
       s.tool = "select";
@@ -665,24 +1301,23 @@ const REFINE = (() => {
       s.ask = null;
       draw(g);
     });
-    on("[data-rf-chip]", (b) => ask(g, b.textContent));
-    on(".rf-insp [data-rf-undo]", () => {
-      snap(s);
-      const k = keyOf(s.screen, s.el);
-      delete s.moves[k];
-      delete s.texts[k];
+    on("[data-rf-gz]", (b) => {
+      s.gz = b.dataset.rfGz;
+      s.tool = "select";
       draw(g);
     });
+    on("[data-rf-chip]", (b) => ask(g, b.textContent));
     on(".rf-zoom [data-rf-undo]", () => {
       if (swapHist(s, s.past, s.future)) draw(g);
     });
-    on("[data-rf-redo]", () => {
+    on(".rf-zoom [data-rf-redo]", () => {
       if (swapHist(s, s.future, s.past)) draw(g);
     });
     on("[data-rf-resetall]", () => {
       snap(s);
       s.moves = {};
       s.texts = {};
+      s.props = {};
       draw(g);
     });
     on("[data-rf-applyui]", () => applyUi(g));
@@ -709,8 +1344,8 @@ const REFINE = (() => {
       draw(g);
     });
     on("[data-rf-apply]", (b) => apply(g, s.tasks.find((x) => x.id === Number(b.dataset.rfApply))));
-    on("[data-rf-undo]", (b) => undo(g, s.tasks.find((x) => x.id === Number(b.dataset.rfUndo))));
-    on("[data-rf-redo]", (b) => {
+    on("[data-rf-undo]:not(.rf-zoom *)", (b) => undo(g, s.tasks.find((x) => x.id === Number(b.dataset.rfUndo))));
+    on("[data-rf-redo]:not(.rf-zoom *)", (b) => {
       const task = s.tasks.find((x) => x.id === Number(b.dataset.rfRedo));
       task.task = "req";
       task.choice = null;
@@ -740,22 +1375,146 @@ const REFINE = (() => {
       e.preventDefault();
       if (area.value.trim()) ask(g, area.value.trim());
     });
-    root.querySelectorAll("[data-rf-num]").forEach((input) => input.addEventListener("change", () => {
-      const e = elOf(s.screen, s.el);
-      const k = keyOf(s.screen, e.key);
-      const [x0, y0, w0] = e.box;
-      const mv = { ...s.moves[k] || {} };
-      const v = Number(input.value);
-      if (input.dataset.rfNum === "x") mv.dx = v - x0;
-      if (input.dataset.rfNum === "y") mv.dy = v - y0;
-      if (input.dataset.rfNum === "w") mv.s = Math.max(0.2, v / w0);
-      if (input.dataset.rfNum === "h") mv.s = Math.max(0.2, v / e.box[3]);
-      snap(s);
-      if (!mv.dx && !mv.dy && (!mv.s || mv.s === 1)) delete s.moves[k];
-      else s.moves[k] = mv;
+    on("[data-rf-eye]", (b, ev) => {
+      ev.stopPropagation();
+      const [id, k] = b.dataset.rfEye.split("|");
+      const keep = [s.screen, s.el];
+      s.screen = id;
+      s.el = k;
+      setField(g, "active", !full(g, s, id, elOf(id, k)).active, { redraw: false });
+      [s.screen, s.el] = keep;
       draw(g);
+    });
+    on("[data-rf-close]", () => {
+      s.el = null;
+      s.anchorPick = false;
+      draw(g);
+    });
+    on("[data-rf-elreset]", () => {
+      snap(s);
+      const k = keyOf(s.screen, s.el);
+      delete s.moves[k];
+      delete s.texts[k];
+      delete s.props[k];
+      draw(g);
+    });
+    on("[data-rf-fold]", (b) => {
+      const k = b.dataset.rfFold;
+      if (!s.fold.delete(k)) s.fold.add(k);
+      draw(g);
+    });
+    on("[data-rf-anchor]", () => {
+      s.anchorPick = !s.anchorPick;
+      draw(g);
+    });
+    on("[data-rf-preset]", (b) => {
+      const [r, c] = b.dataset.rfPreset;
+      const ax = { l: [0, 0], c: [0.5, 0.5], r: [1, 1], s: [0, 1] }[c];
+      const ay = { b: [0, 0], m: [0.5, 0.5], t: [1, 1], s: [0, 1] }[r];
+      s.anchorPick = false;
+      const k = keyOf(s.screen, s.el);
+      const e = elOf(s.screen, s.el);
+      const d = defOf(g, s.screen, e);
+      snap(s);
+      const p = { ...s.props[k] || {}, amin: [ax[0], ay[0]], amax: [ax[1], ay[1]] };
+      if (JSON.stringify(p.amin) === JSON.stringify(d.amin)) delete p.amin;
+      if (JSON.stringify(p.amax) === JSON.stringify(d.amax)) delete p.amax;
+      if (Object.keys(p).length) s.props[k] = p;
+      else delete s.props[k];
+      draw(g);
+    });
+    on("[data-rf-more]", (b) => {
+      const key = b.dataset.rfMore;
+      const P = full(g, s, s.screen, elOf(s.screen, s.el));
+      const acts = [{ label: t("rf.reset"), onClick: () => resetSection(g, key) }];
+      if (EXTRA.includes(key) || key === "cg" && P.comps.includes("cg")) acts.push({ label: t("ri.remove"), onClick: () => {
+        resetSection(g, key);
+        setField(g, "comps", P.comps.filter((c) => c !== key), { history: false });
+      } });
+      popMenu(b, b.closest(".ri-sec").querySelector("header b").textContent, acts);
+    });
+    on("[data-rf-addc]", (b) => {
+      const e = elOf(s.screen, s.el);
+      const P = full(g, s, s.screen, e);
+      const have = [...compsOf(e), ...e.type === "group" ? ["cg"] : [], ...P.comps];
+      const list = ["cg", ...EXTRA].filter((c) => !have.includes(c));
+      popMenu(b, t("ri.add"), list.map((c) => ({ label: t(`ri.${c}`), onClick: () => {
+        s.fold.delete(c);
+        setField(g, "comps", [...P.comps, c]);
+      } })));
+    });
+    root.querySelectorAll(".rf-insp2 [data-rf-prop]").forEach((c) => {
+      const name = c.dataset.rfProp;
+      if (c.tagName === "BUTTON") {
+        c.addEventListener("click", () => setField(g, name, c.dataset.v ?? c.getAttribute("aria-checked") !== "true"));
+        return;
+      }
+      if (c.type === "range") {
+        c.addEventListener("input", () => {
+          const n = c.parentElement.querySelector("input[type=number]");
+          if (n) n.value = c.value;
+        });
+      }
+      if (c.type === "color") {
+        c.addEventListener("input", () => {
+          c.parentElement.style.setProperty("--c", c.value);
+        });
+      }
+      c.addEventListener("change", () => setField(g, name, c.type === "number" || c.type === "range" ? Number(c.value) : c.value));
+      if (c.type === "number") c.addEventListener("keydown", (ev) => {
+        if (ev.key === "Enter") c.blur();
+      });
+    });
+    root.querySelectorAll(".rf-insp2 [data-rf-scrub]").forEach((lab) => lab.addEventListener("pointerdown", (ev) => {
+      const input = lab.parentElement.querySelector("input[type=number]");
+      if (!input) return;
+      ev.preventDefault();
+      const x0 = ev.clientX, v0 = Number(input.value) || 0, step = Number(input.step) || 1;
+      let moved = false;
+      const mv = (m) => {
+        moved = true;
+        input.value = Number((v0 + Math.round((m.clientX - x0) / 3) * step).toFixed(3));
+      };
+      const up = () => {
+        removeEventListener("pointermove", mv);
+        if (moved) input.dispatchEvent(new Event("change"));
+      };
+      addEventListener("pointermove", mv);
+      addEventListener("pointerup", up, { once: true });
     }));
-    root.querySelector("[data-rf-text]")?.addEventListener("change", (ev) => {
+    on("[data-rf-native]", () => {
+      const k = keyOf(s.screen, s.el);
+      if (!s.moves[k]) return;
+      snap(s);
+      const mv = { ...s.moves[k] };
+      delete mv.s;
+      delete mv.sw;
+      delete mv.sh;
+      if (mv.dx || mv.dy) s.moves[k] = mv;
+      else delete s.moves[k];
+      draw(g);
+    });
+    on("[data-rf-ai]", () => aiChange(g));
+    on("[data-rf-up]", () => root.querySelector("[data-rf-file]").click());
+    root.querySelector("[data-rf-file]")?.addEventListener("change", (ev) => {
+      const f = ev.target.files[0];
+      if (!f) return;
+      const rd = new FileReader();
+      rd.onload = () => {
+        setField(g, "src", rd.result, { redraw: false });
+        setField(g, "srcName", f.name, { history: false });
+        toast(t("ri.uploaded", { name: esc(f.name) }));
+      };
+      rd.readAsDataURL(f);
+    });
+    on("[data-rf-cand]", (b) => {
+      const i = Number(b.dataset.rfCand);
+      const e = elOf(s.screen, s.el);
+      const c = s.gen[keyOf(s.screen, e.key)].cands[i];
+      setField(g, "src", c ? c.src : null, { redraw: false });
+      setField(g, "srcName", c ? c.name : null, { history: false });
+    });
+    root.querySelector(".rf-insp2 [data-rf-text]")?.addEventListener("change", (ev) => {
       const e = elOf(s.screen, s.el);
       const k = keyOf(s.screen, e.key);
       const v = ev.target.value.trim();
@@ -799,6 +1558,7 @@ const REFINE = (() => {
         return;
       }
       const hitBox = e.target.closest("[data-rf-box]");
+      s.frame = null;
       if (id !== s.screen) {
         s.screen = id;
         s.open.add(id);
@@ -817,6 +1577,9 @@ const REFINE = (() => {
       const key = keyOf(id, k);
       const start = { ...s.moves[key] || {} };
       const resize = !!e.target.closest("[data-rf-grip]");
+      const turnIt = !!e.target.closest("[data-rf-rot]");
+      const scaleBy = e.target.closest("[data-rf-scale]")?.dataset.rfScale;
+      const P0 = full(g, s, id, e0);
       const axis = e.target.closest("[data-rf-axis]")?.dataset.rfAxis || "xy";
       const hb = hitBox.getBoundingClientRect();
       const cx = hb.left + hb.width / 2, cy = hb.top + hb.height / 2;
@@ -828,10 +1591,22 @@ const REFINE = (() => {
         if (!moved && Math.hypot(ev.clientX - e.clientX, ev.clientY - e.clientY) < 3) return;
         if (!moved) snap(s);
         moved = true;
-        s.moves[key] = resize ? { ...start, s: Math.max(0.3, (start.s || 1) * (Math.hypot(ev.clientX - cx, ev.clientY - cy) / d0)) } : { ...start, dx: (start.dx || 0) + dx, dy: (start.dy || 0) + dy };
-        const [x, y, w, h] = boxNow(s, id, e0);
-        Object.assign(hitBox.style, { left: `${x}%`, top: `${y}%`, width: `${w}%`, height: `${h}%` });
-        shotEl.querySelectorAll(".rf-patch, .rf-sprite").forEach((n) => n.remove());
+        if (turnIt || scaleBy) {
+          const p = { ...s.props[key] || {} };
+          if (turnIt) {
+            const a = (v) => Math.atan2(v.clientY - cy, v.clientX - cx);
+            p.rot = [P0.rot[0], P0.rot[1], Math.round(P0.rot[2] - (a(ev) - a(e)) * 180 / Math.PI)];
+          } else {
+            const fx2 = 1 + (ev.clientX - e.clientX) / 120, fy = 1 - (ev.clientY - e.clientY) / 120, fu = 1 + (ev.clientX - e.clientX - (ev.clientY - e.clientY)) / 240;
+            const k2 = (v) => Math.round(Math.max(0.1, v) * 100) / 100;
+            p.scale = scaleBy === "x" ? [k2(P0.scale[0] * fx2), P0.scale[1], P0.scale[2]] : scaleBy === "y" ? [P0.scale[0], k2(P0.scale[1] * fy), P0.scale[2]] : [k2(P0.scale[0] * fu), k2(P0.scale[1] * fu), P0.scale[2]];
+          }
+          s.props[key] = p;
+        } else s.moves[key] = resize ? { ...start, s: Math.max(0.3, (start.s || 1) * (Math.hypot(ev.clientX - cx, ev.clientY - cy) / d0)) } : { ...start, dx: (start.dx || 0) + dx, dy: (start.dy || 0) + dy };
+        const [x, y, w, h] = drawBox(g, s, id, e0);
+        const P1 = full(g, s, id, e0);
+        Object.assign(hitBox.style, { left: `${x}%`, top: `${y}%`, width: `${w}%`, height: `${h}%`, transform: P1.rot[2] ? `rotate(${-P1.rot[2]}deg)` : "", transformOrigin: origin(P1) });
+        shotEl.querySelectorAll(".rf-patch, .rf-fill, .rf-sprite").forEach((n) => n.remove());
         hitBox.insertAdjacentHTML("beforebegin", edits(s, id));
       };
       const up = () => {
@@ -841,6 +1616,42 @@ const REFINE = (() => {
       addEventListener("pointermove", move);
       addEventListener("pointerup", up, { once: true });
       e.preventDefault();
+    }));
+    root.querySelectorAll("[data-rf-cap]").forEach((cap) => cap.addEventListener("pointerdown", (e) => {
+      if (e.button !== 0 || s.tool === "prompt") return;
+      e.preventDefault();
+      e.stopPropagation();
+      const id = cap.dataset.rfCap;
+      const fig = cap.closest(".rf-scr");
+      const L2 = layout(g);
+      const p0 = { ...L2.pos[id] };
+      const k = s.view?.k || 1;
+      let moved = false;
+      if (s.frame !== id || s.el) {
+        s.frame = id;
+        s.screen = id;
+        s.el = null;
+        s.open.add(id);
+        fig.classList.add("sel");
+        fig.querySelectorAll(".rf-box").forEach((b) => b.remove());
+      }
+      const mv = (ev) => {
+        const dx = (ev.clientX - e.clientX) / k, dy = (ev.clientY - e.clientY) / k;
+        if (!moved && Math.hypot(dx, dy) < 3) return;
+        moved = true;
+        s.fpos[id] = { x: p0.x + dx, y: p0.y + dy };
+        fig.style.left = `${s.fpos[id].x - L2.box.l}px`;
+        fig.style.top = `${s.fpos[id].y - L2.box.t}px`;
+        const L22 = layout(g);
+        const svg = root.querySelector(".rf-wires");
+        svg.innerHTML = svg.querySelector("defs").outerHTML + wires(L22);
+      };
+      const up = () => {
+        removeEventListener("pointermove", mv);
+        draw(g);
+      };
+      addEventListener("pointermove", mv);
+      addEventListener("pointerup", up, { once: true });
     }));
     const stage = root.querySelector("[data-rf-stage]");
     if (stage) {
@@ -875,7 +1686,8 @@ const REFINE = (() => {
         if (!el2) return;
         const v = s.view;
         const W = stage.clientWidth, H = stage.clientHeight;
-        v.x = W / 2 - (el2.offsetLeft + el2.offsetWidth / 2) * v.k;
+        const off = root.classList.contains("insp-on") && innerWidth > 960 ? root.querySelector(".rf-insp2").offsetWidth : 0;
+        v.x = off + (W - off) / 2 - (el2.offsetLeft + el2.offsetWidth / 2) * v.k;
         v.y = H / 2 - (el2.offsetTop + el2.offsetHeight / 2) * v.k;
         canvas.classList.add("glide");
         apply2();
@@ -959,12 +1771,13 @@ const REFINE = (() => {
   }
   function render(g) {
     const s = st(g);
-    if (!s.log.length) push(g, { who: "ai", text: L(`${g.screens.length} screens of ${g.name} loaded. What should change?`, `${g.name}의 화면 ${g.screens.length}개를 불러왔습니다. 무엇을 바꿀까요?`) });
-    return `<div class="rf">${tree(g)}${board(g)}${panel(g)}</div>`;
+    if (!s.log.length) push(g, { who: "ai", text: L(`${SCR(g).length} screens of ${g.name} loaded. What should change?`, `${g.name}의 화면 ${SCR(g).length}개를 불러왔습니다. 무엇을 바꿀까요?`) });
+    return `<div class="rf ${s.el ? "insp-on" : ""}">${tree(g)}${insp(g)}${board(g)}${panel(g)}</div>`;
   }
   function mount(root, g) {
     const box = root.querySelector(".rf");
     if (!box) return;
+    if (!document.querySelector("link[data-rf-fonts]")) document.head.append(el('<link rel="stylesheet" data-rf-fonts href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Fredoka:wght@600&family=Lilita+One&family=Luckiest+Guy&family=Noto+Sans+KR:wght@800&display=swap">'));
     bind(box, g);
     root.querySelectorAll("[data-rf-open-play]").forEach((b) => b.addEventListener("click", () => play(g)));
     const keys = (e) => {
@@ -999,10 +1812,21 @@ const REFINE = (() => {
         s.tool = "prompt";
         draw(g);
       }
-      if (e.key === "Escape" && (s.ask || s.thread || s.el || s.tool === "prompt")) {
+      if (!e.altKey && TOOLS.includes(e.key.toLowerCase())) {
+        s.gz = e.key.toLowerCase();
+        s.tool = "select";
+        draw(g);
+      }
+      if (e.key === "Escape" && s.anchorPick) {
+        s.anchorPick = false;
+        draw(g);
+        return;
+      }
+      if (e.key === "Escape" && (s.ask || s.thread || s.el || s.frame || s.tool === "prompt")) {
         s.ask = null;
         s.thread = null;
         s.el = null;
+        s.frame = null;
         s.tool = "select";
         draw(g);
       }

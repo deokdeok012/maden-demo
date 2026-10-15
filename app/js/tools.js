@@ -237,7 +237,12 @@ const TOOLS = (() => {
     const shotOf = (n) => MODULE[g.screens.find((id) => MODULE[id].group === "gameplay") || g.screens[0]].img;
     const levels = Math.min(count, 12);
     const h = hash(g.id);
-    const bad = /* @__PURE__ */ new Map([[3 + h % 2, ISSUES[h % 4]], [Math.min(levels, 2 + h % 3), ISSUES[(h + 1) % 4]]]);
+    const bad = /* @__PURE__ */ new Map();
+    [[3 + h % 2, ISSUES[h % 4]], [2 + h % 3, ISSUES[(h + 1) % 4]]].forEach(([n, issue]) => {
+      const k = Math.min(levels, n);
+      const kind = issue === "spike" && k < 2 ? ISSUES.find((x) => x !== "spike" && ![...bad.values()].includes(x)) : issue;
+      if (!bad.has(k)) bad.set(k, kind);
+    });
     let body;
     if (q.state === "idle") body = `<p class="gm-none">${t("qa.none")}</p>`;
     else if (q.state === "running") body = `<p class="g">${t("qa.running", { n: q.at, m: levels })}</p><span class="tn-bar qa-bar"><i style="width:${q.at / levels * 100}%;animation:none"></i></span>`;

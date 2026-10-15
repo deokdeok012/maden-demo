@@ -81,7 +81,8 @@ addStrings({
   const released = (i) => Date.parse(AS_OF) - (i * 5 + 34) % 37 * 864e5;
   const moving = (g) => g.video && g.tallVideo !== false;
   function tile(g, { big = false } = {}) {
-    return `<a class="hm-tile ${big ? "big" : ""}" href="#/game/${g.key}" ${g.video && !moving(g) ? `data-peek="${g.video}"` : ""} aria-label="${esc(g.name)}">
+    const pics = g.video ? [] : [...new Set(Object.values(g.shots || {}))].filter((x) => x !== g.cover);
+    return `<a class="hm-tile ${big ? "big" : ""}" href="#/game/${g.key}" ${g.video && !moving(g) ? `data-peek="${g.video}"` : ""} ${pics.length ? `data-shots="${pics.join("|")}"` : ""} aria-label="${esc(g.name)}">
       ${shot(g.cover, { extra: moving(g) ? `<video class="hm-v" src="${g.video}${g.clipAt ? `#t=${g.clipAt}` : ""}" data-from="${g.clipAt || 0}" muted loop playsinline preload="none"></video>` : "" })}
       <span class="hm-info"><span class="n">${esc(g.name)}</span>
         <span class="hm-meta"><span class="tag">${t(g.genre)}</span><span>${ICON.play}${compact(g.plays)}</span><span>${LIKE}${compact(Math.round(g.plays / 22))}</span></span></span>
@@ -182,6 +183,29 @@ addStrings({
           v.pause();
           v.classList.remove("on");
           v.currentTime = from;
+        });
+      });
+      root.querySelectorAll("[data-shots]").forEach((node) => {
+        let timer = null;
+        node.addEventListener("mouseenter", () => {
+          const box2 = node.querySelector(".shot");
+          const list = [box2.querySelector("img:not(.fill)").getAttribute("src"), ...node.dataset.shots.split("|")];
+          let i = 0;
+          const layer = el('<span class="hm-shots"></span>');
+          box2.append(layer);
+          const next = () => {
+            i = (i + 1) % list.length;
+            const im = el(`<img src="${list[i]}" alt="">`);
+            layer.append(im);
+            requestAnimationFrame(() => im.classList.add("on"));
+            if (layer.children.length > 2) layer.firstElementChild.remove();
+          };
+          next();
+          timer = setInterval(next, 1400);
+        });
+        node.addEventListener("mouseleave", () => {
+          clearInterval(timer);
+          node.querySelector(".hm-shots")?.remove();
         });
       });
       root.querySelectorAll("[data-peek]").forEach((node) => {

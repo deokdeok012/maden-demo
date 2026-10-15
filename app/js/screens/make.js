@@ -2681,7 +2681,26 @@ addStrings({
       const built = made.order.screens.map((x) => x.id).filter((x) => MODULE[x]);
       const screens = sortScreens([...built, ...(made.order.later || []).map((x) => x.id).filter((x) => MODULE[x])]);
       if (store.games.some((g) => g.id === id) || !built.length) return;
-      store.games.unshift({ id, name: made.title, stage: "draft", updated: made.made, cover: made.cover, base: made.order.game.reference.key, art: made.order.art.style.key, screens, built: new Set(built), order: made.order, play: made.url, made: { levels: made.levels, feel: made.feel } });
+      const real = (made.shots || []).map((x) => {
+        const mid = `${id}:${x.key}`;
+        const kind = ["titlescreen", "lobby", "levelmap", "gameplay", "result", "levelup"].includes(x.key) ? x.key : "other";
+        MODULE[mid] = {
+          id: mid,
+          kind,
+          game: id,
+          img: x.img,
+          name: L(x.name, x.name),
+          group: x.gameplay ? "gameplay" : "home",
+          home: x.home,
+          layers: (x.ui || []).map((u, i, all) => {
+            const same = all.filter((v) => v.name === u.name);
+            const name = same.length > 1 ? `${u.name} ${same.indexOf(u) + 1}` : u.name;
+            return { key: `u${i}`, name: L(name, name), type: ["text", "button", "image", "group"].includes(u.type) ? u.type : "group", box: u.box, text: u.text ? L(u.text, u.text) : null };
+          })
+        };
+        return mid;
+      });
+      store.games.unshift({ id, name: made.title, stage: "draft", updated: made.made, cover: made.cover, base: made.order.game.reference.key, art: made.order.art.style.key, screens, built: new Set(built), order: made.order, play: made.url, made: { levels: made.levels, feel: made.feel }, real });
     });
     rerender();
   }).catch(() => {

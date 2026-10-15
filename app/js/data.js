@@ -112,19 +112,21 @@ for (const shot of REAL_SHOTS) {
   ref.shots[shot.kind] = realPic(shot);
   ref.cover = ref.cover || ref.shots[shot.kind];
 }
-const clip = (file) => window.INLINE && window.INLINE[`영상/${file}`] || `../design/자산/실제게임-영상/${file}`;
+const clip = (file) => file.startsWith("@am/") ? `../design/자산/앱매직-레퍼런스/${file.slice(4)}` : window.INLINE && window.INLINE[`영상/${file}`] || `../design/자산/실제게임-영상/${file}`;
 const VIDEO_GAMES = YT_GAMES.map((v) => {
   const c = CLIPS[v.game];
   const cover = c ? clip(c.poster) : `https://i.ytimg.com/vi/${v.id}/frame0.jpg`;
   if (c ? c.tall : v.tall) SHAPE.set(cover, "tall");
   return { key: `yt-${v.id}`, name: v.game, group: "", genre: v.publisher, kind: v.genre, creator: null, desc: null, source: "video", yt: c ? null : v.id, icon: null, video: c ? clip(c.file) : null, cover, shots: { gameplay: cover }, plays: 0, madeIn: 0, wide: false };
 });
+const plain = (name) => String(name).toLowerCase().replace(/[^a-z0-9]+/g, "");
 const storePic = (file) => window.INLINE && window.INLINE[`스토어/${file}`] || `../design/자산/실제게임-스토어/${file}`;
 const FAMILY_GROUP = { puzzle: "puzzle", board: "puzzle", action: "action", strategy: "action", simulation: "simulation", arcade: "casual" };
 const STORE = (typeof STORE_GAMES === "undefined" ? [] : STORE_GAMES).filter((x) => !window.INLINE || !Object.keys(window.INLINE).length || window.INLINE[`스토어/${x.icon}`]).map((x, i) => {
   let h = 7;
   for (const ch of x.name) h = (h * 31 + ch.charCodeAt(0)) % 100003;
-  const c = typeof CLIPS === "undefined" ? null : CLIPS[x.name];
+  const am = typeof AM_REFS === "undefined" ? null : AM_REFS.find((r) => r.video && plain(r.name) === plain(x.name));
+  const c = (typeof CLIPS === "undefined" ? null : CLIPS[x.name]) || (am ? { file: `@am/${am.video}`, tall: !am.wide } : null);
   const frame = c && c.tall && typeof CLEAN_FRAMES !== "undefined" && CLEAN_FRAMES[c.file];
   const cover = frame ? clip(frame[0]) : storePic(x.clean || x.shots[0]);
   if (x.wide && !frame) SHAPE.set(cover, "wide");
