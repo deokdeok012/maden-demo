@@ -31,3 +31,7 @@
 .box-num.down { color: var(--danger, #D70015); }
 @media (max-width: 860px) { .me-bento { grid-template-columns: minmax(0, 1fr); } }
 .me-step { display: block; width: 100%; max-width: 220px; margin-top: 6px; height: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.me-tabrow { position: relative; }
+.me-tabrow .me-cpi { position: absolute; right: 0; top: 2px; }
+@media (max-width: 720px) { .me-tabrow .me-cpi { position: static; display: flex; width: 100%; margin: -8px 0 18px; } }

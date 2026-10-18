@@ -264,7 +264,7 @@ addStrings({
     const g = GAME[key];
     const mods = MODULES.filter((m) => m.game === key);
     const pickable = mods.length ? mods : null;
-    const genre = g.kind && GENRE[g.kind];
+    const genre = g.kind && GENRES.find((x) => x.key === g.kind);
     const node = dialog({
       title: t("pl.rmAsk"),
       body: pickable ? `<div class="pl-rm">${pickable.map((m) => `<button class="pl-rm-opt" data-rm="${m.kind}" aria-pressed="false"><span class="shot"><img src="${m.img}" alt=""></span><span class="n">${m.group === "gameplay" ? t("pl.rmGameplay") : tr(m.name)}</span><i class="check">${ICON.check}</i></button>`).join("")}</div>
@@ -283,7 +283,7 @@ addStrings({
   }
   document.addEventListener("click", (e) => {
     const b = e.target.closest("[data-remix]");
-    if (b) remixDialog(b.dataset.remix);
+    if (b) typeof PROMPT !== "undefined" && PROMPT.remix ? PROMPT.remix(b.dataset.remix) : remixDialog(b.dataset.remix);
   });
   function bindSocial(box, refresh) {
     box.addEventListener("click", (e) => {

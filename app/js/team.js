@@ -118,7 +118,7 @@ const TEAM = (() => {
   const PEOPLE = [
     { key: "mina", online: true, follow: true, hash: "#/" },
     { key: "aiko", online: true, route: ["#/make/board?game=bay", "#/games/bay", "#/make/board?game=bay"], hash: "#/make/board?game=bay" },
-    { key: "emma", online: true, route: ["#/earn", "#/earn/market", "#/games"], hash: "#/earn" },
+    { key: "emma", online: true, route: ["#/earn", "#/market", "#/games"], hash: "#/earn" },
     { key: "lucas", online: false, hash: "#/games" },
     { key: "lena", online: false, hash: "#/make" }
   ].map((p) => ({ ...p, x: 30 + Math.random() * 40, y: 30 + Math.random() * 40 }));

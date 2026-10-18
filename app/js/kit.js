@@ -18,6 +18,7 @@ const STR = {
     overview: "Overview",
     market: "Market",
     creators: "Teams",
+    ranking: "Ranking",
     payouts: "Payouts",
     credits: "Credits",
     teamCredits: "Team credits",
@@ -102,6 +103,7 @@ const STR = {
     overview: "개요",
     market: "마켓",
     creators: "팀",
+    ranking: "랭킹",
     payouts: "지급",
     credits: "크레딧",
     teamCredits: "팀 크레딧",
@@ -189,6 +191,7 @@ const ICON = {
   games: '<svg viewBox="0 0 24 24"><rect x="3.500" y="5" width="7" height="14" rx="2"/><rect x="13.500" y="5" width="7" height="14" rx="2"/></svg>',
   me: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/></svg>',
   earn: '<svg viewBox="0 0 24 24"><path d="M4 19.500h16M6.500 16v-4M12 16V6.500M17.500 16v-7"/></svg>',
+  store: '<svg viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9M4 9h16M4 9v1.5a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0 6 0 2.5 2.5 0 0 0 5 0V9M5.5 12.5V20h13v-7.5M10 20v-4.5h4V20"/></svg>',
   edit: '<svg viewBox="0 0 24 24"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16v4ZM13.5 6.5l4 4"/></svg>',
   spark: '<svg class="spark" viewBox="0 0 24 24"><path d="M10 2.500l1.900 5.600 5.600 1.900-5.600 1.900L10 17.500l-1.900-5.600L2.500 10l5.600-1.900zM18.500 14l.950 2.550L22 17.500l-2.550.950L18.500 21l-.950-2.550L15 17.500l2.550-.950z"/></svg>'
 };
@@ -422,7 +425,7 @@ function subtabs(items, current2) {
 const TABS = {
   home: [["forYou", "#/"], ["charts", "#/charts"], ["following", "#/following"], ["contest", "#/contest"]],
   make: [["newGame", "#/make"], ["trends", "#/trends"], ["assets", "#/assets"]],
-  earn: [["overview", "#/earn"], ["market", "#/earn/market"], ["creators", "#/earn/creators"], ["payouts", "#/earn/payouts"]]
+  earn: [["overview", "#/earn"], ["ranking", "#/earn/creators"], ["payouts", "#/earn/payouts"]]
 };
 function empty(title, text = "", action = "") {
   return `<div class="empty-state"><h2>${title}</h2>${text ? `<p>${text}</p>` : ""}${action}</div>`;
@@ -453,9 +456,9 @@ function pagers(root) {
   });
 }
 let toastTimer;
-function toast(text, onUndo) {
+function toast(text, onUndo, label = t("undo")) {
   document.querySelector(".toast")?.remove();
-  const node = el(`<div class="toast" role="status"><span>${text}</span>${onUndo ? `<button>${t("undo")}</button>` : ""}</div>`);
+  const node = el(`<div class="toast" role="status"><span>${text}</span>${onUndo ? `<button>${label}</button>` : ""}</div>`);
   node.querySelector("button")?.addEventListener("click", () => {
     node.remove();
     onUndo();
@@ -686,6 +689,7 @@ function hud(section) {
       ${logo()}
       <nav class="links">${NAV.map((n) => link(n)).join("")}</nav>
       <span class="sp"></span>
+      <a class="crew-btn hud-market" href="#/market" ${section === "market" ? 'aria-current="page"' : ""}>${ICON.store}<span>${t("market")}</span></a>
       ${typeof CREW === "undefined" ? "" : CREW.button()}
       ${typeof TEAM === "undefined" ? "" : `<div class="tm-dock ${teamOpen ? "open" : ""}"><button class="tm-fab" data-tm-fab aria-expanded="${teamOpen}" aria-label="${t("tm.teamBtn")}"><span class="tm-heads">${TEAM.heads()}</span><span class="tm-fab-label">${t("tm.teamBtn")}</span></button>${TEAM.bar()}</div>`}
       <button class="me" data-menu="account" aria-expanded="${menu === "account"}" aria-label="Account">DG</button>

@@ -1,6 +1,7 @@
 addStrings({
   en: {
     "me.stepOf": "Step {a} of {b}",
+    "me.cpiSetup": "CPI test setup",
     "me.title": "In progress",
     "me.making": "In progress",
     "me.cpi": "In CPI test",
@@ -26,6 +27,7 @@ addStrings({
   },
   ko: {
     "me.stepOf": "{b}단계 중 {a}단계",
+    "me.cpiSetup": "CPI 테스트 세팅",
     "me.title": "진행 중",
     "me.making": "제작 중",
     "me.cpi": "CPI 테스트 중",
@@ -50,7 +52,7 @@ addStrings({
     "me.share": "전체의 {n}%"
   }
 });
-const ME = /* @__PURE__ */ (() => {
+const ME = (() => {
   const TAB_KEYS = ["making", "cpi", "live"];
   const tabOf = (g) => {
     const at = LAUNCH.step(g);
@@ -67,7 +69,8 @@ const ME = /* @__PURE__ */ (() => {
   };
   const thumb = (g) => g.cover || MODULE[g.screens.find((id) => MODULE[id].group === "gameplay") || g.screens[0]].img;
   const busy = (g) => g.building ? `<span class="me-busy ${g.building.ready ? "ready" : ""}"><i class="state ${g.building.ready ? "" : "now"}"></i>${g.building.ready ? t("ready") : t("building")}</span>` : "";
-  const cover = (g, link) => link ? `<a class="gm-cover one" href="#/games/${g.id}">${shot(thumb(g))}${busy(g)}</a>` : `<span class="gm-cover one">${shot(thumb(g))}${busy(g)}</span>`;
+  const editOf = (g) => `#/games/${g.id}?tab=tune`;
+  const cover = (g, link) => link ? `<a class="gm-cover one" href="${editOf(g)}">${shot(thumb(g))}${busy(g)}</a>` : `<span class="gm-cover one">${shot(thumb(g))}${busy(g)}</span>`;
   const num1 = (s) => parseFloat(String(s).replace(/[^0-9.]/g, "")) || 0;
   function overview(tab, list) {
     if (!list.length) return "";
@@ -90,7 +93,7 @@ const ME = /* @__PURE__ */ (() => {
         box(t("me.cpiAvg"), `<b class="box-num">${cpis.length ? `$${avg(cpis).toFixed(2)}` : "—"}</b>`),
         box(t("me.d1Avg"), `<b class="box-num">${d1s.length ? `${Math.round(avg(d1s))}%` : "—"}</b>`),
         box(t("me.status"), `<table class="table me-table"><thead><tr><th>${tr(L("Game", "게임"))}</th><th>${t("me.status")}</th>${rows[0] ? rows[0].s.cells.map(([label]) => `<th class="num">${label}</th>`).join("") : ""}</tr></thead>
-          <tbody>${rows.map((r) => `<tr><td><a href="#/games/${r.g.id}">${gameIcon(GAME[r.g.base], "ico")}${esc(r.g.name)}</a></td><td><span class="tag ${r.s.status === t("lc.review") ? "warn" : "ok"}">${t(`stage.${r.s.stage}`)} · ${r.s.status}</span></td>${r.s.cells.map(([, v]) => `<td class="num">${v}</td>`).join("")}</tr>`).join("")}</tbody></table>`, { cls: "span-3" })
+          <tbody>${rows.map((r) => `<tr class="me-row" data-href="#/games/${r.g.id}?tab=stats"><td><a href="#/games/${r.g.id}?tab=stats">${gameIcon(GAME[r.g.base], "ico")}${esc(r.g.name)}</a></td><td><span class="tag ${r.s.status === t("lc.review") ? "warn" : "ok"}">${t(`stage.${r.s.stage}`)} · ${r.s.status}</span></td>${r.s.cells.map(([, v]) => `<td class="num">${v}</td>`).join("")}</tr>`).join("")}</tbody></table>`, { cls: "span-3" })
       ], "me-bento");
     }
     const total = list.reduce((n, g) => n + monthUsd(g), 0);
@@ -107,7 +110,7 @@ const ME = /* @__PURE__ */ (() => {
       box(t("me.byGame"), `<ul class="rows me-next">${[...list].sort((a, b) => monthUsd(b) - monthUsd(a)).map((g) => `<li><a href="#/games/${g.id}">${gameIcon(GAME[g.base], "ico")}<span class="n">${esc(g.name)}</span><span class="sp"></span><span class="g">${t("me.share", { n: total ? Math.round(monthUsd(g) / total * 100) : 0 })}</span><b>${usd(monthUsd(g))}</b></a></li>`).join("")}</ul>`, {})
     ], "me-bento");
   }
-  const NEXT = [["gm.step.dev", "gm.tabTune", "tune"], ["gm.step.sdk", "gm.step.sdk", ""], ["gm.step.qa", "qa.run", ""], ["gm.step.creative", "gm.step.creative", ""], ["gm.step.aso", "gm.step.aso", "aso"], ["gm.step.submit", "sub.run", ""], ["stage.cpi", "stage.cpi", "publish"]];
+  const NEXT = ["gm.step.dev", "gm.step.sdk", "gm.step.qa", "gm.step.creative", "gm.step.aso", "gm.step.submit", "stage.cpi"];
   function nextOf(g) {
     g.prep ||= { played: false, tuned: false };
     const done = [g.prep.played && g.prep.tuned, g.sdk?.state === "done", g.qa?.state === "done", LAUNCH.ready(g) >= LAUNCH.VIDEOS.min, ASO.done(g), TOOLS.submitOf(g).state === "done", false];
@@ -117,12 +120,12 @@ const ME = /* @__PURE__ */ (() => {
   function card(g, tab) {
     const s = LAUNCH.summary(g);
     const nx = tab === "making" && !g.building ? nextOf(g) : null;
-    const line = g.building ? g.building.ready ? t("ready") : t("building") : nx ? `${t("me.stepOf", { a: nx.step, b: nx.of })} · ${t(nx.row[0])}` : tab === "live" ? `${t("me.revenue")} · ${usd(monthUsd(g))}` : s ? `${s.cells[0][0]} ${s.cells[0][1]} · ${s.cells[1][0]} ${s.cells[1][1]}` : "";
+    const line = g.building ? g.building.ready ? t("ready") : t("building") : nx ? `${t("me.stepOf", { a: nx.step, b: nx.of })} · ${t(nx.row)}` : tab === "live" ? `${t("me.revenue")} · ${usd(monthUsd(g))}` : s ? `${s.cells[0][0]} ${s.cells[0][1]} · ${s.cells[1][0]} ${s.cells[1][1]}` : "";
     const making = tab === "making";
-    const btns = making ? `<a class="btn small primary" href="#/games/${g.id}${nx?.row[2] ? `?tab=${nx.row[2]}` : ""}">${nx ? t(nx.row[1]) : t("gm.tabTune")}</a>` : `<a class="btn small" href="#/games/${g.id}?tab=tune">${t("gm.tabTune")}</a><a class="btn small primary" href="#/games/${g.id}?tab=stats">${t("me.metrics")}</a>`;
-    return `<article class="card gm-card me-card ${making ? "" : "still"}">${cover(g, making)}
-      <div class="gm-info"><span class="me-ci">${making ? `<a class="n" href="#/games/${g.id}">${esc(g.name)}</a>` : `<span class="n">${esc(g.name)}</span>`}${line ? `<span class="g">${line}</span>` : ""}${nx ? `<span class="tn-bar me-step"><i style="width:${(nx.step - 1) / nx.of * 100}%;animation:none"></i></span>` : ""}</span>
-        <span class="me-btns">${btns}</span><button class="icon-btn flat" data-more="${g.id}" aria-label="${t("rename")}">${ICON.more}</button></div></article>`;
+    const btns = making ? "" : `<a class="btn small" href="#/games/${g.id}?tab=tune">${t("gm.tabTune")}</a><a class="btn small primary" href="#/games/${g.id}?tab=stats">${t("me.metrics")}</a>`;
+    return `<article class="card gm-card me-card ${making ? "me-go" : "still"}" ${making ? `data-href="${editOf(g)}"` : ""}>${cover(g, making)}
+      <div class="gm-info"><span class="me-ci">${making ? `<a class="n" href="${editOf(g)}">${esc(g.name)}</a>` : `<span class="n">${esc(g.name)}</span>`}${line ? `<span class="g">${line}</span>` : ""}${nx ? `<span class="tn-bar me-step"><i style="width:${(nx.step - 1) / nx.of * 100}%;animation:none"></i></span>` : ""}</span>
+        ${btns ? `<span class="me-btns">${btns}</span>` : ""}<button class="icon-btn flat" data-more="${g.id}" aria-label="${t("rename")}">${ICON.more}</button></div></article>`;
   }
   function render(query) {
     const tab = TAB_KEYS.includes(query.get("tab")) ? query.get("tab") : "making";
@@ -130,10 +133,14 @@ const ME = /* @__PURE__ */ (() => {
     const by = Object.fromEntries(TAB_KEYS.map((k) => [k, games.filter((g) => tabOf(g) === k).sort((a, b) => !!b.building - !!a.building || b.updated.localeCompare(a.updated))]));
     const list = by[tab];
     return `
-      <div class="me-head"><span class="me-face">DG</span><div><h1>${t("me.title")}</h1><span class="g">${esc(tr(L("Deokgu", "덕구")))} · ${t("me.team")}</span></div><span class="sp"></span>
-        <a class="credits" href="#/credits"><img class="coin" src="${COIN}" alt="">${num(store.credits)}</a><a class="btn primary" href="#/make">${ICON.plus}${t("newGame")}</a></div>
-      <nav class="subtabs me-tabs">${TAB_KEYS.map((k) => `<a href="#/me?tab=${k}" ${k === tab ? 'aria-current="page"' : ""}>${t(`me.${k}`)}<span class="count">${by[k].length}</span></a>`).join("")}</nav>
+      <h1 class="sr-only">${t("me.title")}</h1>
+      <div class="me-tabrow"><nav class="subtabs me-tabs">${TAB_KEYS.map((k) => `<a href="#/me?tab=${k}" ${k === tab ? 'aria-current="page"' : ""}>${t(`me.${k}`)}<span class="count">${by[k].length}</span></a>`).join("")}</nav>
+        ${tab === "making" ? `<a class="btn primary me-cpi" href="#/cpi">${t("me.cpiSetup")}</a>` : ""}</div>
       ${!games.length ? `<div class="empty-art"><img src="${gen("empty-games.jpg")}" alt="">${empty(t("gm.none"), "", `<a class="btn primary" href="#/make">${t("newGame")}</a>`)}</div>` : !list.length ? empty(t("me.none")) : `${overview(tab, list)}<h2 class="me-h">${t("me.games")}<span class="count">${list.length}</span></h2><div class="gm-grid">${list.map((g) => card(g, tab)).join("")}</div>`}`;
   }
+  document.addEventListener("click", (e) => {
+    const row = e.target.closest(".me-row, .me-go");
+    if (row && !e.target.closest("a, button")) go(row.dataset.href);
+  });
   return { render, tabOf, nextOf };
 })();

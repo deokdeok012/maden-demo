@@ -274,8 +274,11 @@
 .st-ico { width: 40px; height: 40px; border-radius: 10px; flex: none; object-fit: cover; background: var(--surface-2); box-shadow: 0 0 0 1px var(--hair); }
 .st-pill { height: 34px; min-width: 84px; padding: 0 14px; font-size: 13px; background: var(--surface-2); color: var(--ink); box-shadow: none; }
 .st-pill:hover { background: var(--ink); color: var(--on-ink); }
+.st-pill.primary { background: var(--accent); color: #fff; }
+.st-pill.primary:hover { background: color-mix(in srgb, var(--accent) 86%, #000); color: #fff; }
 .st-split { gap: 0 var(--s-8, 48px); }
-.st-genres .st-r { grid-template-columns: 24px minmax(0, 1fr) 112px 72px 72px 96px 92px; }
+.st-genres .st-r { grid-template-columns: 24px minmax(0, 360px) 112px 72px 72px 96px minmax(92px, 1fr); }
+.st-genres .st-r > .st-pill { justify-self: end; }
 .st-chart .st-r { grid-template-columns: 24px 56px minmax(0, 1.6fr) minmax(0, 1fr) 88px 168px 92px; }
 .st-themes .st-r { grid-template-columns: 24px minmax(0, 1fr) 96px 44px 60px 92px; }
 .st-growth .st-r { grid-template-columns: minmax(0, 1fr) repeat(3, 84px) 92px; }

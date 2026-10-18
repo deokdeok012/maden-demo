@@ -278,16 +278,16 @@ Play offline, anytime.`;
             keep();
           }, 1600);
         } else {
-          const add = SHOTS.max - list.length;
+          const add = Math.min(1, SHOTS.max - list.length);
           const fresh = pool.filter((src) => !used.has(src));
           for (let n = 0; n < add; n += 1) list.push({ state: "making", wide, src: fresh[n] || pool[(list.length + n) % pool.length] });
-          charge(t("as.shots"), AGENT.art.cost * add, 2000);
-          list.forEach((x, n) => {
+          charge(t("as.shot"), AGENT.art.cost * add, 2e3);
+          list.forEach((x) => {
             if (x.state === "making") later(() => {
               x.state = "done";
               keep();
-              if (list.every((y) => y.state === "done")) toast(t("as.made", { name: t("as.shots") }));
-            }, Math.min(2000, 1200 + n * 100));
+              if (list.every((y) => y.state === "done")) toast(t("as.made", { name: t("as.shot") }));
+            }, 1600);
           });
         }
         return keep();
@@ -303,16 +303,18 @@ Play offline, anytime.`;
       }, 1600);
       return keep();
     };
-    const ask = (k, i, redo) => GEN.open({
+    const ask = (k, i, redo2) => GEN.open({
       kind: k === "shots" ? "shot" : k,
       group: GEN.groupOf(g),
-      cost: AGENT.art.cost * (k === "shots" && !redo ? SHOTS.max - item(g, "shots").list.length : 1),
-      orient: k === "shots" && redo ? item(g, "shots").list[i].wide ? "wide" : "tall" : "tall",
-      makeLabel: redo ? t("as.redo") : null,
-      onMake: (opt) => make(k, redo ? i : null, opt)
+      cost: AGENT.art.cost,
+      orient: k === "shots" && redo2 ? item(g, "shots").list[i].wide ? "wide" : "tall" : "tall",
+      makeLabel: redo2 ? t("as.redo") : null,
+      onMake: (opt) => make(k, redo2 ? i : null, opt)
     });
     const upload = (k, i, many) => {
       const input = el(`<input type="file" accept="image/*" ${many ? "multiple" : ""} hidden>`);
+      document.body.append(input);
+      addEventListener("focus", () => setTimeout(() => input.remove(), 1e3), { once: true });
       input.addEventListener("change", () => {
         const files = [...input.files];
         if (!files.length) return;
@@ -451,8 +453,27 @@ Play offline, anytime.`;
         }
       });
     });
-    return { bind };
+    return { bind, make, writeText };
   }
+  function auto(g) {
+    const c = control(g, () => {
+      const y = window.scrollY;
+      rerender();
+      window.scrollTo(0, y);
+    });
+    const a = init(g);
+    if (item(g, "icon").state !== "done") c.make("icon");
+    if (item(g, "feature").state !== "done") c.make("feature");
+    for (let n = shotsOf(g).length; n < SHOTS.min; n += 1) c.make("shots", null, {});
+    if (UNTITLED.has(a.name) || !a.name) c.writeText("name");
+    if (!a.short) c.writeText("short");
+    if (!a.long) c.writeText("long");
+  }
+  const redo = (g, k, i = null) => control(g, () => {
+    const y = window.scrollY;
+    rerender();
+    window.scrollTo(0, y);
+  }).make(k, i);
   function mount(root, g) {
     const keep = () => {
       const y = window.scrollY;
@@ -473,5 +494,5 @@ Play offline, anytime.`;
     }));
   }
   const bar = (g) => `<span class="as-left ${done(g) ? "ok" : ""}">${done(g) ? `${ICON.check}${t("as.ready")}` : t("as.left", { n: left(g) })}</span><button class="btn primary" data-aso-save>${t("as.save")}</button>`;
-  return { render, mount, init, done, made, stale, mini, icon, shotsOf, bar };
+  return { render, mount, init, done, made, stale, mini, icon, shotsOf, bar, auto, redo, item, making: (g) => ["icon", "feature"].some((k) => item(g, k).state === "making") || item(g, "shots").list.some((x) => x.state === "making") };
 })();

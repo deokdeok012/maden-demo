@@ -758,60 +758,7 @@ addStrings({
     });
     node2.querySelector(".dialog").classList.add("mk-pd-dialog");
   }
-  route("/make", {
-    section: "make",
-    name: "make",
-    render({ query }) {
-      if (query.get("family")) family = PICK_GROUPS.includes(query.get("family")) ? query.get("family") : "all";
-      if (PICK_SORTS.includes(query.get("sort"))) pickSort = query.get("sort");
-      const list = PICKS.filter((g) => family === "all" || g.group === family).sort((a, b) => pickValue(b, pickSort) - pickValue(a, pickSort));
-      const chip = (key, label, n) => `<button class="chip" data-family="${key}" aria-pressed="${family === key}">${label}<span class="count">${n}</span></button>`;
-      return `
-        ${subtabs(TABS.make, "#/make")}
-        <div class="head mk-head"><h1>${t("qPick")}</h1><span class="sp"></span><span class="muted">${t("pickSource")}</span><a class="btn" href="#/make/board">${ICON.plus}${t("fromBoard")}</a></div>
-        <div class="mk-filter"><div class="chips mk-families">${chip("all", t("all"), PICKS.length)}${PICK_GROUPS.map((key) => chip(key, tr(FAMILIES[key].name), PICKS.filter((g) => g.group === key).length)).join("")}</div>
-          <span class="seg mk-sort" role="group" aria-label="${t("pk.sort")}">${PICK_SORTS.map((k) => `<button data-pick-sort="${k}" aria-pressed="${pickSort === k}">${t(`pk.${k}`)}</button>`).join("")}</span>
-          <label class="searchbox">${ICON.search}<input type="search" placeholder="${t("searchGames")}" aria-label="${t("searchGames")}" data-genre-find></label></div>
-        <div class="mk-picks">${list.map(pickCard).join("")}</div>
-        <div class="mk-none" hidden>${empty(t("noMatch"))}</div>`;
-    },
-    mount(root) {
-      root.querySelectorAll("[data-family]").forEach((b) => b.addEventListener("click", () => {
-        family = b.dataset.family;
-        rerender();
-      }));
-      root.querySelectorAll("[data-pick-sort]").forEach((b) => b.addEventListener("click", () => {
-        pickSort = b.dataset.pickSort;
-        rerender();
-      }));
-      const find = root.querySelector("[data-genre-find]");
-      find?.addEventListener("input", () => {
-        const q = find.value.trim().toLowerCase();
-        let shown = 0;
-        root.querySelectorAll(".mk-pick").forEach((c) => {
-          const on = !q || c.dataset.find.includes(q);
-          c.hidden = !on;
-          shown += on;
-        });
-        root.querySelector(".mk-none").hidden = shown > 0;
-      });
-      root.querySelectorAll(".mk-pick").forEach((c) => {
-        c.addEventListener("click", (e) => {
-          if (e.metaKey || e.ctrlKey) return;
-          e.preventDefault();
-          pickDialog(GAME[new URLSearchParams(c.getAttribute("href").split("?")[1]).get("ref")]);
-        });
-        const v = c.querySelector("video");
-        if (!v) return;
-        c.addEventListener("mouseenter", () => v.play().catch(() => {
-        }));
-        c.addEventListener("mouseleave", () => {
-          v.pause();
-          v.currentTime = 0;
-        });
-      });
-    }
-  });
+  route("/make", { section: "make", name: "make", render: (args) => PROMPT.render(args), mount: (root, args) => PROMPT.mount(root, args) });
   function pool() {
     const genre = GENRE[wiz.genre];
     const own = gamesOf(genre.key);
@@ -2700,7 +2647,7 @@ addStrings({
         };
         return mid;
       });
-      store.games.unshift({ id, name: made.title, stage: "draft", updated: made.made, cover: made.cover, base: made.order.game.reference.key, art: made.order.art.style.key, screens, built: new Set(built), order: made.order, play: made.url, made: { levels: made.levels, feel: made.feel }, real });
+      store.games.unshift({ id, name: made.title, stage: "draft", updated: made.made, cover: made.cover, base: made.order.game.reference.key, art: made.order.art.style.key, screens, built: new Set(built), order: made.order, play: made.url, made: { levels: made.levels, feel: made.feel }, real, dim: made.dim || "2d" });
     });
     rerender();
   }).catch(() => {

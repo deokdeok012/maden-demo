@@ -237,6 +237,9 @@ for (const g of PICKS) {
   GAME[g.key] = g;
   for (const [kind, img] of Object.entries({ ...g.shots, gameplay: g.shots.gameplay || g.cover })) if (KIND[kind]) MODULE[`${g.key}:${kind}`] = { id: `${g.key}:${kind}`, kind, game: g.key, img, video: kind === "gameplay" ? g.video : null, ...KIND[kind] };
 }
+for (const [key, file, kind, en, ko] of [["prologue", "story-prologue", "story", "Prologue", "프롤로그"], ["resort", "lobby-resort-ui", "basebuild", "Resort", "리조트"], ["character", "lobby-character-ui", "charselect", "Characters", "캐릭터"]]) {
+  MODULE[`bay:${key}`] = { id: `bay:${key}`, kind, game: "bay", img: still(file), group: "home", price: 0, name: L(en, ko) };
+}
 const ARTS = GAMES.filter((g) => Object.keys(g.shots).length > 1);
 const LOBBY_FOR = { action: "lucky-lucky:lobby", puzzle: "bubble-pop:lobby", simulation: "animal-harbor:lobby", casual: "animal-harbor:lobby", arcade: "crossy-road:lobby", strategy: "clash-royale:lobby", board: "knighthood:lobby" };
 function sortScreens(ids) {

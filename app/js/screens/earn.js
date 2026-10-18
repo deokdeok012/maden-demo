@@ -161,7 +161,7 @@ addStrings({
       <a class="btn primary big" href="#/make">${t("newGame")}</a>
     </div>`;
   }
-  const SUGGEST = [["a1", "developer", "#/games/candy?tab=tune&ask=daily"], ["a2", "level", "#/games/dice?tab=publish"], ["a3", "marketer", "#/earn/market?list=1"]];
+  const SUGGEST = [["a1", "developer", "#/games/candy?tab=tune&ask=daily"], ["a2", "level", "#/games/dice?tab=publish"], ["a3", "marketer", "#/market?list=1"]];
   const REPORT = [["bubble", "r3"], ["bay", "r1"], ["candy", "r2"]];
   route("/earn", {
     section: "earn",
@@ -236,7 +236,7 @@ addStrings({
           <ul class="rows en-gap">
             <li><span>${t("en.itemsSold")}</span><span class="sp"></span><b>${num(sold.reduce((n, x) => n + x.sales, 0))}</b></li>
             <li><span>${t("en.topItem")}</span><span class="sp"></span><b>${esc(top.name)}</b></li>
-          </ul>`, { foot: `<a class="btn" href="#/earn/market?view=mine">${t("market")}</a>` });
+          </ul>`, { foot: `<a class="btn" href="#/market?view=mine">${t("market")}</a>` });
       const pnlOf = (g) => LAUNCH.step(g) === 4 ? LAUNCH.numbersOf(g, "scale") : null;
       const scaled = games.map((g) => [g, pnlOf(g)]).filter(([, p]) => p);
       const rev = scaled.reduce((n, [, p]) => n + p.revenue, 0);
@@ -250,7 +250,7 @@ addStrings({
       const byGame = box(t("en.byGame"), `<table class="table"><thead><tr><th>${t("en.game")}</th><th class="hide-s">${t("en.trend")}</th><th class="num">${t("en.thisMonth")}</th><th class="num">${t("en.change")}</th><th class="num hide-s">${t("en.uaSpend")}</th><th class="num hide-s">${t("en.net")}</th><th class="num hide-s">${t("en.roas")}</th></tr></thead>
           <tbody>
             ${games.map((g) => row(g.id, esc(g.name), icon(g), `#/games/${g.id}`, LAUNCH.step(g) === 4 ? LAUNCH.numbersOf(g, "scale") : null)).join("")}
-            ${row("market", t("en.marketSales"), `<span class="ico en-coin"><img class="coin" src="${COIN}" alt=""></span>`, "#/earn/market")}
+            ${row("market", t("en.marketSales"), `<span class="ico en-coin"><img class="coin" src="${COIN}" alt=""></span>`, "#/market")}
           </tbody></table>`, { cls: "span-2" });
       const progress = box(
         t("en.inProgress"),

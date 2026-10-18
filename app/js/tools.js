@@ -179,20 +179,22 @@ const TOOLS = (() => {
     const extra = s.state === "done" ? `<span class="tag ok">${t("sdk.done")}</span>` : `<button class="btn primary" data-sdk-run ${s.state === "running" ? "disabled" : ""}>${t("sdk.run")}</button>`;
     return box(opts.head || t("sdk.title"), body, { cls: `span-3 sdk-card ${opts.cls || ""}`, extra });
   }
+  function sdkRun(g) {
+    const s = sdkOf(g);
+    if (s.state !== "idle") return;
+    Object.assign(s, { state: "running", at: 0 });
+    const tick = () => {
+      s.at += 1;
+      if (s.at >= SDKS.length) s.state = "done";
+      rerender();
+      if (s.state !== "done") later(tick, 1100);
+    };
+    rerender();
+    later(tick, 1100);
+  }
   function sdkMount(root, g) {
     root.querySelectorAll(".sdk-card [data-flight]").forEach((b) => LAUNCH.wire(b));
-    root.querySelector("[data-sdk-run]")?.addEventListener("click", () => {
-      const s = sdkOf(g);
-      Object.assign(s, { state: "running", at: 0 });
-      const tick = () => {
-        s.at += 1;
-        if (s.at >= SDKS.length) s.state = "done";
-        rerender();
-        if (s.state !== "done") later(tick, 1100);
-      };
-      rerender();
-      later(tick, 1100);
-    });
+    root.querySelector("[data-sdk-run]")?.addEventListener("click", () => sdkRun(g));
   }
   const SUBMIT = ["aab", "listing", "rating", "safety", "privacy", "upload", "review"];
   const submitOf = (g) => g.submit ||= { state: LAUNCH.step(g) > 0 ? "done" : "idle", at: LAUNCH.step(g) > 0 ? SUBMIT.length : 0 };
@@ -210,31 +212,30 @@ const TOOLS = (() => {
     const extra = s.state === "done" ? `<span class="tag ok">${t("sub.done")}</span>` : `<button class="btn primary" data-submit-run ${s.state === "running" || !open ? "disabled" : ""}>${t("sub.run")}</button>`;
     return box(opts.head || t("sub.title"), body, { cls: `span-3 sub-card ${opts.cls || ""}`, extra });
   }
-  function submitMount(root, g) {
-    root.querySelector("[data-submit-run]")?.addEventListener("click", () => {
-      const s = submitOf(g);
-      Object.assign(s, { state: "running", at: 0 });
-      const tick = () => {
-        s.at += 1;
-        if (s.at >= SUBMIT.length) {
-          s.state = "done";
-          toast(t("sub.toast", { name: esc(ASO.init(g).name) }));
-        }
-        rerender();
-        if (s.state !== "done") later(tick, SUBMIT[s.at] === "review" ? 1800 : 600);
-      };
+  function submitRun(g) {
+    const s = submitOf(g);
+    if (s.state === "running" || s.state === "done") return;
+    Object.assign(s, { state: "running", at: 0 });
+    const tick = () => {
+      s.at += 1;
+      if (s.at >= SUBMIT.length) {
+        s.state = "done";
+        toast(t("sub.toast", { name: esc(ASO.init(g).name) }));
+      }
       rerender();
-      later(tick, 600);
-    });
+      if (s.state !== "done") later(tick, SUBMIT[s.at] === "review" ? 1800 : 600);
+    };
+    rerender();
+    later(tick, 600);
+  }
+  function submitMount(root, g) {
+    root.querySelector("[data-submit-run]")?.addEventListener("click", () => submitRun(g));
   }
   const cpiNeeds = (g) => [["sdk", sdkOf(g).state === "done"], ["qa", g.qa?.state === "done"], ["videos", LAUNCH.ready(g) >= LAUNCH.VIDEOS.min], ["aso", ASO.done(g) && !UNTITLED.has(ASO.init(g).name)], ["submit", submitOf(g).state === "done"]];
   const cpiReady = (g) => LAUNCH.step(g) > 0 || cpiNeeds(g).every(([, ok]) => ok);
   const cpiMissing = (g) => `<ul class="cpi-need">${cpiNeeds(g).map(([k, ok]) => `<li class="${ok ? "ok" : ""}"><i>${ok ? ICON.check : ""}</i>${t(`cpi.need.${k}`, { n: LAUNCH.ready(g), m: LAUNCH.VIDEOS.min })}</li>`).join("")}</ul>`;
   const EVENTS = ["level_start", "level_complete", "level_fail", "ad_impression", "iap_purchase"];
-  function qaCard(g, count, opts = {}) {
-    g.qa ||= { state: "idle", at: 0, fixed: /* @__PURE__ */ new Set() };
-    const q = g.qa;
-    const shotOf = (n) => MODULE[g.screens.find((id) => MODULE[id].group === "gameplay") || g.screens[0]].img;
+  function badOf(g, count) {
     const levels = Math.min(count, 12);
     const h = hash(g.id);
     const bad = /* @__PURE__ */ new Map();
@@ -243,6 +244,43 @@ const TOOLS = (() => {
       const kind = issue === "spike" && k < 2 ? ISSUES.find((x) => x !== "spike" && ![...bad.values()].includes(x)) : issue;
       if (!bad.has(k)) bad.set(k, kind);
     });
+    return bad;
+  }
+  function qaRun(g, count) {
+    g.qa ||= { state: "idle", at: 0, fixed: /* @__PURE__ */ new Set() };
+    if (g.qa.state === "running") return;
+    const levels = Math.min(count, 12);
+    Object.assign(g.qa, { state: "running", at: 1, fixed: /* @__PURE__ */ new Set() });
+    spend(`${QA_AGENT.name} · ${g.name}`, QA_AGENT.cost, levels * 350);
+    const tick = () => {
+      if (g.qa.at >= levels) {
+        g.qa.state = "done";
+        return rerender();
+      }
+      g.qa.at += 1;
+      rerender();
+      return later(tick, 350);
+    };
+    rerender();
+    later(tick, 350);
+  }
+  function qaFixAll(g, count) {
+    const bad = badOf(g, count);
+    [...bad.keys()].forEach((n) => {
+      if (!g.qa.fixed.has(n)) {
+        g.qa.fixed.add(n);
+        logVersion(g, `QA · ${t("lv.title", { n })}`);
+      }
+    });
+    rerender();
+    return bad.size;
+  }
+  function qaCard(g, count, opts = {}) {
+    g.qa ||= { state: "idle", at: 0, fixed: /* @__PURE__ */ new Set() };
+    const q = g.qa;
+    const shotOf = (n) => MODULE[g.screens.find((id) => MODULE[id].group === "gameplay") || g.screens[0]].img;
+    const levels = Math.min(count, 12);
+    const bad = badOf(g, count);
     let body;
     if (q.state === "idle") body = `<p class="gm-none">${t("qa.none")}</p>`;
     else if (q.state === "running") body = `<p class="g">${t("qa.running", { n: q.at, m: levels })}</p><span class="tn-bar qa-bar"><i style="width:${q.at / levels * 100}%;animation:none"></i></span>`;
@@ -267,21 +305,7 @@ const TOOLS = (() => {
   }
   function qaMount(root, g, count) {
     const levels = Math.min(count, 12);
-    root.querySelector("[data-qa-run]")?.addEventListener("click", () => {
-      Object.assign(g.qa, { state: "running", at: 1, fixed: /* @__PURE__ */ new Set() });
-      spend(`${QA_AGENT.name} · ${g.name}`, QA_AGENT.cost, levels * 350);
-      const tick = () => {
-        if (g.qa.at >= levels) {
-          g.qa.state = "done";
-          return rerender();
-        }
-        g.qa.at += 1;
-        rerender();
-        return later(tick, 350);
-      };
-      rerender();
-      later(tick, 350);
-    });
+    root.querySelector("[data-qa-run]")?.addEventListener("click", () => qaRun(g, count));
     root.querySelectorAll("[data-qa-fix]").forEach((b) => b.addEventListener("click", () => {
       g.qa.fixed.add(Number(b.dataset.qaFix));
       logVersion(g, `QA · ${t("lv.title", { n: Number(b.dataset.qaFix) })}`);
@@ -373,5 +397,5 @@ const TOOLS = (() => {
     draw(node);
     return node;
   }
-  return { qaCard, qaMount, levelEditor, sdkCard, sdkMount, cpiReady, cpiMissing, submitCard, submitMount, submitOf };
+  return { qaCard, qaMount, levelEditor, sdkCard, sdkMount, cpiReady, cpiMissing, submitCard, submitMount, submitOf, sdkOf, sdkRun, qaRun, qaFixAll, badOf, submitRun, cpiNeeds };
 })();

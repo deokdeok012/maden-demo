@@ -62,6 +62,12 @@ addStrings({
     "gm.step.submit": "Store submit",
     "gm.now": "Now",
     "gm.done": "Done",
+    "gm.cpiSetup": "CPI test setup",
+    "gm.addGame": "Add game",
+    "gm.pickGame": "Choose a game",
+    "gm.pickLead": "Games in progress",
+    "gm.needGame": "Add a game first.",
+    "gm.noMaking": "No games in progress. Start one in Make.",
     "gm.thisGame": "This game",
     "gm.nextTune": "Next: Edit",
     "gm.art": "Art",
@@ -135,6 +141,12 @@ addStrings({
     "gm.step.submit": "스토어 제출",
     "gm.now": "지금",
     "gm.done": "완료",
+    "gm.cpiSetup": "CPI 테스트 세팅",
+    "gm.addGame": "게임 추가",
+    "gm.pickGame": "게임 선택",
+    "gm.pickLead": "제작 중인 게임",
+    "gm.needGame": "게임을 먼저 추가하세요.",
+    "gm.noMaking": "제작 중인 게임이 없습니다. 만들기에서 시작하세요.",
     "gm.thisGame": "이 게임",
     "gm.nextTune": "다음: 수정",
     "gm.art": "아트",
@@ -261,7 +273,8 @@ addStrings({
     const dash = at >= 1 ? `<section class="gm-dash"><h2 class="gm-dash-h">${t("gm.dash")}</h2>${STATS.render(g)}</section>` : "";
     const subSt = stateOf([6]);
     const submit = TOOLS.submitCard(g, { head: head([6], t("gm.step.submit")), cls: `gm-step ${subSt === "now" ? "now" : ""}` });
-    return `${dash}<div class="gm-flow">${bento([dash ? null : results, `<div class="gm-pair">${play}${sdk}${qa}</div>`, videos, aso, submit, cpi].filter(Boolean))}</div>`;
+    const auto = at < 1 && typeof AUTO !== "undefined" ? AUTO.bar(g) : "";
+    return `${dash}${auto}<div class="gm-flow">${bento([dash ? null : results, `<div class="gm-pair">${play}${sdk}${qa}</div>`, videos, aso, submit, cpi].filter(Boolean))}</div>`;
   }
   function historyOf(g) {
     g.history ||= [{ v: 1, at: g.updated, what: t("gm.verDraft") }];
@@ -313,6 +326,47 @@ addStrings({
         </ul>
       </div>`;
   }
+  function pickGame() {
+    const list = store.games.filter((g) => LAUNCH.step(g) === 0 && !g.building && !g.live);
+    const img = (g) => g.cover || (g.real && g.real.length ? MODULE[g.real[0]].img : MODULE[g.screens.find((id) => MODULE[id].group === "gameplay") || g.screens[0]].img);
+    const node = dialog({
+      title: t("gm.pickGame"),
+      body: list.length ? `<p class="g gm-pick-lead">${t("gm.pickLead")}<span class="count">${list.length}</span></p><div class="gm-picks">${list.map((g) => `<button class="gm-pick" data-pick-game="${g.id}"><span class="gm-pick-v">${shot(img(g))}</span><b>${esc(g.name)}</b><span class="g">${esc(ME.nextOf ? t(ME.nextOf(g).row) : "")}</span></button>`).join("")}</div>` : `<p>${t("gm.noMaking")}</p>`,
+      actions: [{ label: t("cancel") }]
+    });
+    node.querySelector(".dialog").classList.add("gm-pick-dialog");
+    node.querySelectorAll("[data-pick-game]").forEach((b) => b.addEventListener("click", () => {
+      dismiss(node);
+      const to = `#/games/${b.dataset.pickGame}`;
+      if (typeof trail !== "undefined") trail[trail.length - 1] = to;
+      location.replace(to);
+    }));
+  }
+  route("/cpi", {
+    section: "me",
+    name: "cpi-setup",
+    render() {
+      const steps = ["gm.step.sdk", "gm.step.qa", "gm.step.creative", "gm.step.aso", "gm.step.submit", "stage.cpi"];
+      const what = { "gm.step.sdk": "Firebase · GameAnalytics · Facebook", "gm.step.qa": tr(L("Levels · Events · Ads", "레벨 · 이벤트 · 광고")), "gm.step.creative": tr(L("4–10 videos", "영상 4~10개")), "gm.step.aso": tr(L("Icon · Screenshots · Name", "아이콘 · 스크린샷 · 이름")), "gm.step.submit": "Google Play", "stage.cpi": `Google Play · ${t("lc.northAmerica")}` };
+      const ghost = (name, i, cls = "") => box(`<span class="gm-no">${i}</span>${t(name)}`, `<div class="gm-ghost-b"><b>${esc(what[name])}</b><span class="g">${t("gm.needGame")}</span></div>`, { cls: `gm-step gm-ghost ${cls}` });
+      return `
+        <div class="head gm-title backbar">
+          <a class="icon-btn" href="#/me?tab=making" aria-label="${t("back")}">${ICON.back}</a>
+          <h1>${t("gm.cpiSetup")}</h1><span class="sp"></span>
+        </div>
+        <ol class="gm-track">${STEPS.slice(0, 8).map((x, i) => `<li class="${i === 0 ? "now" : ""}"><i>${i + 1}</i><span>${t(x)}</span></li>`).join("")}</ol>
+        <div class="gm-flow">${bento([
+        `<div class="gm-pair">${box(`<span class="gm-no">1</span>${t("gm.game")}`, `<button class="gm-addgame" data-add-game><span>${ICON.plus}</span><b>${t("gm.addGame")}</b></button>`, { cls: "gm-step gm-preview now" })}${ghost(steps[0], 3)}${ghost(steps[1], 4)}</div>`,
+        ghost(steps[2], 5, "span-3"),
+        ghost(steps[3], 6, "span-3"),
+        ghost(steps[4], 7, "span-3"),
+        ghost(steps[5], 8, "span-3 gm-go")
+      ])}</div>`;
+    },
+    mount(root) {
+      root.querySelector("[data-add-game]")?.addEventListener("click", pickGame);
+    }
+  });
   route("/games/:id", {
     section: "me",
     name: "game",
@@ -335,9 +389,9 @@ addStrings({
       if (view !== "home") {
         return `
           <div class="head gm-title backbar">
-            <a class="icon-btn" href="#/games/${g.id}" aria-label="${t("back")}">${ICON.back}</a>
-            <h1>${esc(g.name)}</h1><span class="gm-page">${titles[view]}</span><span class="sp"></span>
-            ${view === "tune" ? `<button class="btn primary" data-rf-open-play>${ICON.play}${t("play")}</button>` : ""}${view === "aso" ? ASO.bar(g) : ""}
+            <a class="icon-btn" href="${view === "tune" && g.project ? `#/make?p=${g.project}` : `#/games/${g.id}`}" aria-label="${t("back")}">${ICON.back}</a>
+            <h1>${esc(g.name)}</h1><span class="gm-page">${titles[view]}</span>${view === "tune" && g.live ? `<span class="tag accent">${t("rf.liveTag")}</span>` : ""}<span class="sp"></span>
+            ${view === "tune" ? `<button class="btn primary" data-rf-open-play ${g.live ? "disabled" : ""}>${ICON.play}${t("play")}</button>` : ""}${view === "aso" ? ASO.bar(g) : ""}
           </div>
           ${["share", "stats", "tune", "aso"].includes(view) ? "" : track}
           ${{ tune: REFINE.render, aso: ASO.render, publish: LAUNCH.render, share, stats: STATS.render }[view](g)}`;
@@ -379,6 +433,7 @@ addStrings({
       if (root.querySelector(".qa-card")) TOOLS.qaMount(root, g, TUNE.count(g));
       if (root.querySelector(".sdk-card")) TOOLS.sdkMount(root, g);
       if (root.querySelector(".sub-card")) TOOLS.submitMount(root, g);
+      if (root.querySelector(".au-bar")) AUTO.mount(root, g);
       if (root.querySelector(".ga")) STATS.mount(root, g);
       const on = (sel, fn) => root.querySelectorAll(sel).forEach((b) => b.addEventListener("click", () => fn(b)));
       on("[data-versions]", () => versions(g));

@@ -467,6 +467,11 @@ const TUNE = (() => {
     // 출시 단계(Stage 2 · Scale-Up)에서 레벨을 늘릴 때 쓴다.
     plan: planFor,
     count: (g) => applied(g).count,
+    // 편집 화면의 레벨 표가 쓰는 것: 단위마다 난이도 · 예상 클리어율 · 어려움/휴식/새 요소.
+    rows: (g) => {
+      const a = applied(g);
+      return Array.from({ length: Math.min(a.count, 60) }, (_, i) => levelAt(a, i + 1));
+    },
     work: (g, count) => work(g, { ...applied(g), count }),
     grow(g, count) {
       applied(g).count = count;

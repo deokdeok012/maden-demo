@@ -439,7 +439,7 @@ addStrings({
   const GENRE_ICON = { logic: ["Brain Test"], sort: ["Magic Sort!"], traffic: ["Bus Jam", "Car Out"], smash: ["Royal Smash!"], mahjong: ["Vita Mahjong"], block: ["Block Blast"], match3: ["Royal Match"], merge: ["Gossip Harbor"], board: ["Monopoly GO"], strategy: ["Whiteout Survival"], rpg: ["Pokémon GO"], sandbox: ["Roblox"] };
   const THEME_ICON = [["Hay Day"], ["Meowdoku!", "Pou"], ["Cooking Fever"], ["Z Route", "Last Z"], ["Candy Crush Saga"], ["Coin Master", "Dice Dreams"], ["Brain Out"], ["Car Out", "Parking Jam 3D"], ["Pokémon GO"], ["Epic Plane Evolution", "Stack"]];
   const rowIcon = (src) => src ? `<img class="st-ico" src="${src}" alt="" loading="lazy">` : '<span class="st-ico"></span>';
-  const makeThis = (genre, name) => `<a class="btn st-pill" href="#/make?family=${GENRE[genre].group}" aria-label="${t("st.makeThis")}: ${esc(name)}">${t("st.makeThis")}</a>`;
+  const makeThis = (genre, name) => `<a class="btn primary st-pill" href="#/make?family=${GENRE[genre].group}" aria-label="${t("st.makeThis")}: ${esc(name)}">${t("st.makeThis")}</a>`;
   const sparkline = (weeks) => `<span class="st-spark" aria-hidden="true">${weeks.map((v) => `<i style="height:${Math.max(8, Math.round(v / Math.max(...weeks) * 100))}%"></i>`).join("")}</span>`;
   const stat = (label, value) => `<span class="st-stat"><small>${label}</small><b>${value}</b></span>`;
   page("/trends", {
@@ -538,7 +538,7 @@ addStrings({
   });
   const art = (name) => asset(`kairu/assets/${name}.webp`);
   const KINDS = [
-    { key: "image", ext: "PNG", cost: 4, sec: 6, spec: "1024 × 1024", refs: true, post: L("Transparent background", "배경 투명하게"), prompt: L("A cheerful island girl holding a racket, full body, game sprite", "라켓을 든 밝은 섬 소녀, 전신, 게임 스프라이트") },
+    { key: "image", ext: "PNG", cost: 4, sec: 2, spec: "1024 × 1024", refs: true, post: L("Transparent background", "배경 투명하게"), prompt: L("A cheerful island girl holding a racket, full body, game sprite", "라켓을 든 밝은 섬 소녀, 전신, 게임 스프라이트") },
     { key: "video", ext: "MP4", cost: 10, sec: 9, spec: "9:16 · 0:05", refs: true, post: L("Ad sizes 9:16 · 1:1 · 16:9", "광고 규격 9:16 · 1:1 · 16:9"), prompt: L("Short ad clip: the character smashes a ball on the beach", "해변에서 캐릭터가 공을 세게 치는 짧은 광고 영상") },
     { key: "sound", ext: "WAV", cost: 1, sec: 4, spec: "0:02 · 48 kHz", refs: false, post: L("Trim silence", "앞뒤 무음 자르기"), prompt: L("Bright coin pickup, short and sparkly", "밝고 짧게 반짝이는 코인 획득음") },
     { key: "model3d", ext: "GLB", cost: 10, sec: 8, spec: "", refs: true, post: L("Reduce polygons for mobile", "모바일용으로 면 수 줄이기"), prompt: L("Low-poly character for a mobile game, T-pose", "모바일 게임용 로우폴리 캐릭터, T자세") }

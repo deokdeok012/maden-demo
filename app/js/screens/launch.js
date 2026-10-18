@@ -509,6 +509,23 @@ const LAUNCH = (() => {
     }, CV_TIME[CV_STEPS[c.step]]);
     return repaint(g);
   }
+  function makeVideo(g, extra = {}) {
+    init(g);
+    const i = g.creatives.length;
+    const made = { v: 0, ...extra, ready: false, step: 0, gv: g.ver || 1 };
+    made.clip = clipAt(g, i, made.v);
+    spend(`${crewOf("marketer").who} · ${g.name}`, AGENT.ua.cost, CV_TIME.plan + CV_TIME.gen + CV_TIME.build);
+    g.creatives.push(made);
+    advance(g, made);
+    return made;
+  }
+  function remakeVideo(g, i) {
+    const c = g.creatives[i];
+    const v = (c.v || 0) + 1;
+    Object.assign(c, { v, upload: null, name: null, clip: clipAt(g, i, v), ready: false, step: 0, gv: g.ver || 1 });
+    spend(`${crewOf("marketer").who} · ${g.name}`, AGENT.ua.cost, CV_TIME.plan + CV_TIME.gen + CV_TIME.build);
+    advance(g, c);
+  }
   const stale = (g, c) => c.ready && (c.gv || 1) < (g.ver || 1);
   const staleCount = (g) => (g.creatives || []).filter((c) => stale(g, c)).length;
   function creativeBody(g) {
@@ -854,14 +871,7 @@ const LAUNCH = (() => {
     const card2 = box.closest(".box") || box;
     const fresh = (c) => Object.assign(c, { ready: false, step: 0, gv: g.ver || 1 });
     const charge = () => spend(`${crewOf("marketer").who} · ${g.name}`, AGENT.ua.cost, CV_TIME.plan + CV_TIME.gen + CV_TIME.build);
-    const makeOne = (extra = {}) => {
-      const i = g.creatives.length;
-      const made = fresh({ v: 0, ...extra });
-      made.clip = clipAt(g, i, 0);
-      charge();
-      g.creatives.push(made);
-      advance(g, made);
-    };
+    const makeOne = (extra = {}) => makeVideo(g, extra);
     const short = (n) => store.credits < AGENT.ua.cost * n && dialog({ title: t("lc.makeCreative"), body: `<p>${t("notEnough", { have: num(store.credits) })}</p>`, actions: [{ label: t("cancel") }, { label: t("plans"), primary: true, onClick: () => go("#/plans") }] });
     const addFiles = (files) => {
       const list = files.slice(0, VIDEOS.max - g.creatives.length);
@@ -951,7 +961,7 @@ const LAUNCH = (() => {
     g.stage = state === "idle" ? LAUNCH_STAGES[reached - 1] || "draft" : stage;
     run(g, stage);
   }
-  return { numbersOf, render, mount, open, step, tag, next, init, summary, creativeBody, creativeShot, wire, staleCount, VIDEOS, ready: (g) => {
+  return { numbersOf, render, mount, open, step, tag, next, init, summary, creativeBody, creativeShot, wire, staleCount, VIDEOS, makeVideo, remakeVideo, confirmStart, ready: (g) => {
     init(g);
     return ready(g).length;
   }, where: (g) => whereOf(g, "cpi") };

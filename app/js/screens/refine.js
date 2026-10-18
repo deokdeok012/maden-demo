@@ -1,5 +1,47 @@
 addStrings({
   en: {
+    "rf.left": "About {m} min left",
+    "rf.lk.plan": "Plan",
+    "rf.lk.level": "Levels",
+    "rf.lk.art": "Art",
+    "rf.lk.build": "Build",
+    "rf.lk.qa": "QA",
+    "rf.ld.plan": "Laying out {n} screens from the design plan",
+    "rf.ld.level": "Placing {lv} levels on the difficulty curve",
+    "rf.ld.qa": "Playing all {lv} levels to the end",
+    "rf.drawing": "Drawing {name} · {parts}",
+    "rf.ls.plan": "Core loop and {n} screens planned.",
+    "rf.ls.level": "Levels 1–{lv} laid out on the curve.",
+    "rf.ls.art": "Art drawn in one style.",
+    "rf.ls.build": "Screens connected, game feel added.",
+    "rf.ls.qa": "All {lv} levels played to the end.",
+    "rf.built": "Done. {n} screens, {lv} levels. Play it and tell me what to change.",
+    "rf.madeSum": "Made {name} · {n} screens · {lv} levels",
+    "rf.wait": "Waiting",
+    "rf.drawTag": "Drawing",
+    "rf.liveTag": "Making",
+    "rf.queued": "Noted. I will do it right after the build.",
+    "rf.liveToast": "{name} is ready.",
+    "rf.open": "Open",
+    "rf.pwTip": "Click a screen or a level to play from there.",
+    "rf.q.more": "Add levels",
+    "rf.q.feature": "Add a feature",
+    "rf.q.easy": "Adjust difficulty",
+    "rf.q.feel": "Stronger feel",
+    "rf.q.art": "Change art",
+    "rf.askFeature": "Add a daily reward.",
+    "rf.levels": "Levels",
+    "rf.lvCol": "#",
+    "rf.lvDiff": "Difficulty",
+    "rf.lvClear": "Est. clear",
+    "rf.lvNote": "Note",
+    "rf.lvHard": "Hard",
+    "rf.lvRest": "Rest",
+    "rf.lvNew": "New element",
+    "rf.lvAdd": "Add levels",
+    "rf.lvEdit": "Edit level",
+    "rf.lvDesign": "Level design",
+    "rf.lvEditAsk": "Tune the difficulty of {unit} {n}.",
     "rf.screens": "Screens",
     "rf.prompt": "Prompt",
     "rf.added": "Added",
@@ -116,11 +158,18 @@ addStrings({
     "rf.o.askedW": "Make the change as written.",
     "rf.o.trial": "Try on one screen first",
     "rf.o.trialW": "Change one screen, then decide.",
-    "rf.t.q": "Select (Q)",
+    "rf.saved": "Saved.",
+    "rf.saveFail": "Could not save. The browser storage is full.",
+    "rf.savedAt": "Saved {at}",
+    "rf.aiOpen": "Show Claude",
+    "rf.aiClose": "Hide Claude",
+    "rf.dim": "2D / 3D view",
+    "rf.t.q": "Hand (Q)",
     "rf.t.w": "Move (W)",
     "rf.t.e": "Rotate (E)",
     "rf.t.r": "Scale (R)",
     "rf.t.t": "Rect (T)",
+    "rf.t.y": "Transform (Y)",
     "ri.hide": "Hide",
     "ri.show": "Show",
     "ri.position": "Position",
@@ -223,6 +272,48 @@ addStrings({
     "ri.softness": "Softness"
   },
   ko: {
+    "rf.left": "약 {m}분 남음",
+    "rf.lk.plan": "기획",
+    "rf.lk.level": "레벨",
+    "rf.lk.art": "아트",
+    "rf.lk.build": "조립",
+    "rf.lk.qa": "QA",
+    "rf.ld.plan": "설계안으로 화면 {n}개를 구성하는 중",
+    "rf.ld.level": "난이도 곡선에 레벨 {lv}개를 배치하는 중",
+    "rf.ld.qa": "레벨 {lv}개를 끝까지 플레이하는 중",
+    "rf.drawing": "{name} 그리는 중 · {parts}",
+    "rf.ls.plan": "핵심 루프와 화면 {n}개를 설계했습니다.",
+    "rf.ls.level": "난이도 곡선에 맞춰 레벨 1~{lv}를 배치했습니다.",
+    "rf.ls.art": "아트를 한 스타일로 그렸습니다.",
+    "rf.ls.build": "화면을 잇고 손맛을 넣었습니다.",
+    "rf.ls.qa": "레벨 {lv}개를 끝까지 플레이했습니다.",
+    "rf.built": "완성했습니다. 화면 {n}개 · 레벨 {lv}개. 플레이해 보고 바꿀 것을 말해 주세요.",
+    "rf.madeSum": "{name} 제작 · 화면 {n}개 · 레벨 {lv}개",
+    "rf.wait": "대기",
+    "rf.drawTag": "그리는 중",
+    "rf.liveTag": "만드는 중",
+    "rf.queued": "접수했습니다. 다 만든 뒤 바로 반영할게요.",
+    "rf.liveToast": "{name} 완성.",
+    "rf.open": "열기",
+    "rf.pwTip": "화면이나 레벨을 누르면 거기서부터 플레이합니다.",
+    "rf.q.more": "레벨 추가",
+    "rf.q.feature": "기능 추가",
+    "rf.q.easy": "난이도 조정",
+    "rf.q.feel": "손맛 강화",
+    "rf.q.art": "아트 변경",
+    "rf.askFeature": "일일 보상 기능을 추가해 줘.",
+    "rf.levels": "레벨",
+    "rf.lvCol": "#",
+    "rf.lvDiff": "난이도",
+    "rf.lvClear": "예상 클리어",
+    "rf.lvNote": "특징",
+    "rf.lvHard": "어려움",
+    "rf.lvRest": "휴식",
+    "rf.lvNew": "새 요소",
+    "rf.lvAdd": "레벨 추가",
+    "rf.lvEdit": "레벨 수정",
+    "rf.lvDesign": "레벨 디자인",
+    "rf.lvEditAsk": "{unit} {n} 난이도를 다듬어 줘.",
     "rf.screens": "화면",
     "rf.prompt": "프롬프트",
     "rf.added": "추가",
@@ -339,11 +430,18 @@ addStrings({
     "rf.o.askedW": "적은 대로 바꿉니다.",
     "rf.o.trial": "화면 하나로 먼저 시험",
     "rf.o.trialW": "화면 하나만 바꿔 보고 정합니다.",
-    "rf.t.q": "선택 (Q)",
+    "rf.saved": "저장했습니다.",
+    "rf.saveFail": "저장하지 못했습니다. 브라우저 저장 공간이 가득 찼습니다.",
+    "rf.savedAt": "{at} 저장됨",
+    "rf.aiOpen": "Claude 열기",
+    "rf.aiClose": "Claude 닫기",
+    "rf.dim": "2D / 3D 보기",
+    "rf.t.q": "손 (Q)",
     "rf.t.w": "이동 (W)",
     "rf.t.e": "회전 (E)",
     "rf.t.r": "크기 (R)",
     "rf.t.t": "사각형 (T)",
+    "rf.t.y": "전체 (Y)",
     "ri.hide": "숨기기",
     "ri.show": "보이기",
     "ri.position": "위치",
@@ -484,9 +582,28 @@ const REFINE = (() => {
     return hit ? BY_IMG[hit] : BY_KIND[m.kind] || BY_KIND[m.group === "gameplay" ? "gameplay" : "other"];
   };
   const elOf = (id, key) => layersOf(id).find((x) => x.key === key);
+  const saveKey = (g) => `maden.rf.${g.id}`;
+  function save(g) {
+    const s = st(g);
+    try {
+      localStorage.setItem(saveKey(g), JSON.stringify({ moves: s.moves, texts: s.texts, props: s.props, fpos: s.fpos, lvpos: s.lvpos, lvsize: s.lvsize }));
+      s.savedAt = (/* @__PURE__ */ new Date()).toTimeString().slice(0, 5);
+      toast(t("rf.saved"));
+    } catch {
+      toast(t("rf.saveFail"));
+    }
+    draw(g);
+  }
   const st = (g) => {
     states[g.id] ||= { view: null, past: [], future: [], screen: SCR(g)[0], el: null, frame: null, fpos: {}, gz: "q", open: /* @__PURE__ */ new Set([SCR(g)[0]]), tool: "select", moves: {}, texts: {}, props: {}, fold: /* @__PURE__ */ new Set(), gen: {}, anchorPick: false, log: [], tasks: [], n: 0, thinking: false, ask: null, thread: null };
     const s0 = states[g.id];
+    if (!s0.loaded) {
+      s0.loaded = true;
+      try {
+        Object.assign(s0, JSON.parse(localStorage.getItem(saveKey(g)) || "{}"));
+      } catch {
+      }
+    }
     if (!SCR(g).includes(s0.screen)) {
       s0.screen = SCR(g)[0];
       s0.el = null;
@@ -595,7 +712,7 @@ const REFINE = (() => {
     };
   }
   const full = (g, s, id, e) => ({ ...defOf(g, id, e), ...s.props[keyOf(id, e.key)] || {} });
-  const VIS = ["active", "rot", "scale", "pivot", "imgOn", "color", "alpha", "src", "cgAlpha", "comps", "shOn", "shColor", "shAlpha", "shDist", "olOn", "olColor", "olAlpha", "olDist"];
+  const VIS = ["active", "posZ", "rot", "scale", "pivot", "imgOn", "color", "alpha", "src", "cgAlpha", "comps", "shOn", "shColor", "shAlpha", "shDist", "olOn", "olColor", "olAlpha", "olDist"];
   const TXT = ["txtOn", "font", "mat", "fstyle", "fsize", "tcolor", "cs", "ls", "align", "valign", "wrap"];
   const SECTION = {
     rect: ["posZ", "rot", "scale", "amin", "amax", "pivot"],
@@ -616,7 +733,7 @@ const REFINE = (() => {
     const [sx, sy] = full(g, s, id, e).scale.map((v) => Math.abs(v));
     return [x + (w - w * sx) / 2, y + (h - h * sy) / 2, w * sx, h * sy];
   };
-  const turn = (P) => `perspective(900px) rotateX(${P.rot[0]}deg) rotateY(${P.rot[1]}deg) rotateZ(${-P.rot[2]}deg) scale(${Math.sign(P.scale[0]) || 1}, ${Math.sign(P.scale[1]) || 1})`;
+  const turn = (P) => `perspective(900px) translateZ(${-P.posZ / 4}px) rotateX(${P.rot[0]}deg) rotateY(${P.rot[1]}deg) rotateZ(${-P.rot[2]}deg) scale(${Math.sign(P.scale[0]) || 1}, ${Math.sign(P.scale[1]) || 1})`;
   const origin = (P) => `${P.pivot[0] * 100}% ${(1 - P.pivot[1]) * 100}%`;
   const fx = (P) => {
     const out = [];
@@ -674,40 +791,58 @@ const REFINE = (() => {
     <linearGradient id="rf-gy" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#C9F79A"/><stop offset=".45" stop-color="#6FC22B"/><stop offset="1" stop-color="#3B7410"/></linearGradient>
     <linearGradient id="rf-gp" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7FB0FF" stop-opacity=".75"/><stop offset="1" stop-color="#2F6FE6" stop-opacity=".45"/></linearGradient></defs>`;
   const cube = (x, y, r, cls = "") => `<path class="f1 ${cls}" d="M${x} ${y - r} L${x + r * 0.9} ${y - r / 2} L${x} ${y} L${x - r * 0.9} ${y - r / 2} Z"/><path class="f2 ${cls}" d="M${x - r * 0.9} ${y - r / 2} L${x} ${y} L${x} ${y + r} L${x - r * 0.9} ${y + r / 2} Z"/><path class="f3 ${cls}" d="M${x + r * 0.9} ${y - r / 2} L${x} ${y} L${x} ${y + r} L${x + r * 0.9} ${y + r / 2} Z"/>`;
-  const GIZMOS = {
-    q: "",
-    w: `<span class="rf-gz"><svg class="rf-gzs" viewBox="-22 -104 130 130" width="130" height="130" aria-hidden="true">${GZ_DEFS}
-      <g class="rf-ga x" data-rf-axis="x"><line class="hit" x1="8" y1="0" x2="90" y2="0"/><line class="shaft" x1="9" y1="0" x2="66" y2="0"/><path class="cone" d="M64 -8.5 L90 0 L64 8.5 Z"/><ellipse class="base" cx="64" cy="0" rx="3.2" ry="8.5"/></g>
-      <g class="rf-ga y" data-rf-axis="y"><line class="hit" x1="0" y1="-8" x2="0" y2="-90"/><line class="shaft" x1="0" y1="-9" x2="0" y2="-66"/><path class="cone" d="M-8.5 -64 L0 -90 L8.5 -64 Z"/><ellipse class="base" cx="0" cy="-64" rx="8.5" ry="3.2"/></g>
-      <g class="rf-ga p" data-rf-axis="xy"><path class="plane" d="M14 -14 H34 V-34 H14 Z"/></g>
-      <g class="rf-ga c" data-rf-axis="xy">${cube(0, 0, 10)}</g></svg></span>`,
-    e: `<span class="rf-gz"><svg class="rf-gzs rot" viewBox="-72 -72 144 144" width="144" height="144" aria-hidden="true">
-      <ellipse class="ring x" rx="20" ry="56"/><ellipse class="ring y" rx="56" ry="20"/>
-      <g class="rf-ga z" data-rf-rot><circle class="hit" r="56"/><circle class="ring zr" r="56"/></g>
-      <circle class="ring o" r="66"/><circle class="dot" r="3"/></svg></span>`,
-    r: `<span class="rf-gz"><svg class="rf-gzs" viewBox="-22 -104 130 130" width="130" height="130" aria-hidden="true">
-      <g class="rf-ga x" data-rf-scale="x"><line class="hit" x1="8" y1="0" x2="84" y2="0"/><line class="shaft" x1="9" y1="0" x2="66" y2="0"/>${cube(72, 0, 8, "sx")}</g>
-      <g class="rf-ga y" data-rf-scale="y"><line class="hit" x1="0" y1="-8" x2="0" y2="-84"/><line class="shaft" x1="0" y1="-9" x2="0" y2="-66"/>${cube(0, -72, 8, "sy")}</g>
-      <g class="rf-ga c" data-rf-scale="xy">${cube(0, 0, 11)}</g></svg></span>`,
-    t: `${["tl", "tr", "bl", "br"].map((c) => `<i class="rf-h ${c}" data-rf-grip></i>`).join("")}<i class="rf-pivot"></i>`
+  const arrow = (axis, cls, [dx, dy]) => {
+    const L2 = 66, H = 90, ang = Math.atan2(dy, dx) * 180 / Math.PI;
+    return `<g class="rf-ga ${cls}" data-rf-axis="${axis}"><line class="hit" x1="${dx * 8}" y1="${dy * 8}" x2="${dx * H}" y2="${dy * H}"/><line class="shaft" x1="${dx * 9}" y1="${dy * 9}" x2="${dx * L2}" y2="${dy * L2}"/>
+      <path class="cone" d="M${dx * 64 - dy * 8.5} ${dy * 64 + dx * 8.5} L${dx * H} ${dy * H} L${dx * 64 + dy * 8.5} ${dy * 64 - dx * 8.5} Z"/><ellipse class="base" cx="${dx * 64}" cy="${dy * 64}" rx="3.2" ry="8.5" transform="rotate(${ang} ${dx * 64} ${dy * 64})"/></g>`;
   };
-  const TOOLS = ["q", "w", "e", "r", "t"];
+  const stick = (axis, cls, [dx, dy], f) => `<g class="rf-ga ${cls}" data-rf-scale="${axis}"><line class="hit" x1="${dx * 8}" y1="${dy * 8}" x2="${dx * 84}" y2="${dy * 84}"/><line class="shaft" x1="${dx * 9}" y1="${dy * 9}" x2="${dx * 66}" y2="${dy * 66}"/>${cube(dx * 72, dy * 72, 8, f)}</g>`;
+  const Z = [-0.7071, 0.7071];
+  const svg = (w, body, rot = false) => `<span class="rf-gz"><svg class="rf-gzs ${rot ? "rot" : "mv"}" viewBox="${-w / 2} ${-w / 2} ${w} ${w}" width="${w}" height="${w}" aria-hidden="true">${GZ_DEFS}${body}</svg></span>`;
+  const planes = (d3) => `<g class="rf-ga p" data-rf-axis="xy"><path class="plane" d="M10 -10 H28 V-28 H10 Z"/></g>${d3 ? `<g class="rf-ga pxz" data-rf-axis="xz"><path class="plane" d="M10 4 L28 4 L18 14 L0 14 Z" transform="translate(-2 6)"/></g><g class="rf-ga pyz" data-rf-axis="yz"><path class="plane" d="M-4 -10 L-4 -28 L-14 -18 L-14 0 Z" transform="translate(-6 2)"/></g>` : ""}`;
+  const rings = (d3) => `<circle class="ball" r="50" data-rf-rot="${d3 ? "ball" : "z"}"/>
+      <g class="rf-ga z" data-rf-rot="z"><circle class="hit" r="56"/><circle class="ring zr" r="56"/></g>
+      ${d3 ? `<g class="rf-ga rx" data-rf-rot="x"><ellipse class="hit" rx="18" ry="56"/><ellipse class="ring xr" rx="18" ry="56"/></g><g class="rf-ga ry" data-rf-rot="y"><ellipse class="hit" rx="56" ry="18"/><ellipse class="ring yr" rx="56" ry="18"/></g>` : ""}
+      <g class="rf-ga o" data-rf-rot="z"><circle class="hit" r="68"/><circle class="ring o" r="68"/></g><circle class="dot" r="2.5"/>`;
+  const rect = `${["t", "b", "l", "r"].map((c) => `<i class="rf-edge ${c}" data-rf-grip="${c}"></i>`).join("")}${["tl", "tr", "bl", "br"].map((c) => `<i class="rf-turn ${c}" data-rf-rot="z"></i><i class="rf-h ${c}" data-rf-grip="${c}"></i>`).join("")}<i class="rf-pivot" data-rf-pivot></i>`;
+  const kit = (d3) => {
+    const move = arrow("x", "x", [1, 0]) + arrow("y", "y", [0, -1]) + (d3 ? arrow("z", "z3", Z) : "") + planes(d3);
+    return {
+      q: "",
+      w: svg(200, move),
+      e: svg(150, rings(d3), true),
+      r: svg(200, stick("x", "x", [1, 0], "sx") + stick("y", "y", [0, -1], "sy") + (d3 ? stick("z", "z3", Z, "sz") : "") + `<g class="rf-ga c" data-rf-scale="xy">${cube(0, 0, 11)}</g>`),
+      t: rect,
+      y: svg(150, rings(d3), true) + svg(200, move + `<g class="rf-ga c" data-rf-scale="xy">${cube(0, 0, 9)}</g>`)
+    };
+  };
+  const GIZMOS = kit(false);
+  const GIZMOS3 = kit(true);
+  const is3D = (g) => {
+    if (g.dim) return g.dim === "3d";
+    const b = GAME[g.base] || {};
+    const d = b.desc && typeof b.desc === "object" ? `${b.desc.en} ${b.desc.ko}` : b.desc;
+    return /3D/.test(`${d || ""} ${b.name || ""}`);
+  };
+  const dimOf = (g) => st(g).dim || (is3D(g) ? "3d" : "2d");
+  const TOOLS = ["q", "w", "e", "r", "t", "y"];
   const TOOL_SVG = {
-    q: '<svg viewBox="0 0 24 24"><path d="M6 3l12 8.5-5.2 1.1 3.1 6.2-2.4 1.2-3.1-6.3L6 17z"/></svg>',
+    q: '<svg viewBox="0 0 24 24"><path d="M8 12V5.5a1.5 1.5 0 0 1 3 0V11M11 10V4a1.5 1.5 0 0 1 3 0v6M14 10V5.5a1.5 1.5 0 0 1 3 0V12M17 9.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-2.7L4.3 14a1.5 1.5 0 0 1 2.4-1.8L8 14"/></svg>',
     w: '<svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M12 2l-3 3M12 2l3 3M12 22l-3-3M12 22l3-3M2 12l3-3M2 12l3 3M22 12l-3-3M22 12l-3 3"/></svg>',
     e: '<svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.4-5.7"/><path d="M20 3v4h-4"/></svg>',
     r: '<svg viewBox="0 0 24 24"><rect x="3" y="11" width="10" height="10" rx="1"/><path d="M13 11l8-8M15 3h6v6"/></svg>',
-    t: '<svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="1"/><circle cx="5" cy="5" r="1.8"/><circle cx="19" cy="5" r="1.8"/><circle cx="5" cy="19" r="1.8"/><circle cx="19" cy="19" r="1.8"/></svg>'
+    t: '<svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="1"/><circle cx="5" cy="5" r="1.8"/><circle cx="19" cy="5" r="1.8"/><circle cx="5" cy="19" r="1.8"/><circle cx="19" cy="19" r="1.8"/></svg>',
+    y: '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 6v12M6 12h12M12 6l-2 2M12 6l2 2M18 12l-2-2M18 12l-2 2"/></svg>'
   };
   function boxes(s, id) {
-    if (id !== s.screen || s.tool !== "select") return "";
+    if (id !== s.screen || s.tool !== "select" || liveOf(s.g)) return "";
     const g = s.g;
     return layersOf(id).map((e) => {
       const on = s.el === e.key;
       const P = full(g, s, id, e);
       if (!P.active && !on) return "";
       const [x, y, w, h] = drawBox(g, s, id, e);
-      return `<span class="rf-box ${on ? "on" : ""} ${P.active ? "" : "off"}" data-rf-box="${e.key}" style="left:${x}%;top:${y}%;width:${w}%;height:${h}%;${P.rot[2] ? `transform:rotate(${-P.rot[2]}deg);transform-origin:${origin(P)};` : ""}"><b>${tr(e.name)}</b>${on ? GIZMOS[s.gz || "q"] : ""}</span>`;
+      return `<span class="rf-box ${on ? "on" : ""} ${P.active ? "" : "off"}" data-rf-box="${e.key}" style="left:${x}%;top:${y}%;width:${w}%;height:${h}%;${P.rot[2] ? `transform:rotate(${-P.rot[2]}deg);transform-origin:${origin(P)};` : ""}"><b>${tr(e.name)}</b>${on ? (dimOf(g) === "3d" ? GIZMOS3 : GIZMOS)[s.gz || "q"] : ""}</span>`.replace('class="rf-pivot"', `class="rf-pivot" style="left:${P.pivot[0] * 100}%;top:${(1 - P.pivot[1]) * 100}%"`);
     }).join("");
   }
   function screenView(g, id, { pins = true } = {}) {
@@ -722,11 +857,135 @@ const REFINE = (() => {
       ${thread ? threadOf(g, thread) : ""}
       ${s.ask && s.ask.screen === id ? `<form class="rf-asked" style="left:${s.ask.x}%;top:${s.ask.y}%"><span class="tm-pin-b">${TEAM.ui.face("me")}</span><span class="tm-rin"><input placeholder="${t("rf.here")}" aria-label="${t("rf.here")}"><button class="tm-send" type="submit" aria-label="${t("send")}" disabled>${TEAM.ui.ICONS.send}</button></span></form>` : ""}</div>`;
   }
+  const LIVE = [["plan", "director", 2400], ["level", "level", 2e3], ["art", "designer"], ["build", "developer"], ["qa", "qa", 2e3]];
+  const DRAW = 2600;
+  const LIVE_COST = { plan: 6, level: 8, art: 14, build: 12, qa: 5 };
+  const liveOf = (g) => g && g.live && !g.live.done ? g.live : null;
+  const showing = (g) => document.querySelector(`.rf[data-rf-g="${g.id}"]`);
+  const later = (fn, ms) => setTimeout(fn, params.has("freeze") ? 0 : ms);
+  function carry(g, msgs) {
+    if (g.carried) return;
+    g.carried = true;
+    const s = st(g);
+    const rest = s.log;
+    s.log = [];
+    msgs.forEach((m) => push(g, m));
+    if (!rest.length && !g.live) push(g, { who: "ai", text: L(`${SCR(g).length} screens of ${g.name} loaded. What should change?`, `${g.name}의 화면 ${SCR(g).length}개를 불러왔습니다. 무엇을 바꿀까요?`) });
+    s.log.push(...rest);
+  }
+  function startLive(g, { minutes = 24, levels = 5, before = [] } = {}) {
+    const ids = SCR(g);
+    const half = Math.ceil(ids.length / 2);
+    const L2 = { at: 0, t0: Date.now(), drawing: null, drawAt: 0, drawn: [], queue: { art: ids.slice(0, half), build: ids.slice(half) }, minutes, levels, asks: [], morph: true };
+    L2.total = LIVE.reduce((n, [k, , ms]) => n + (ms || L2.queue[k].length * DRAW), 0);
+    g.live = L2;
+    if (levels !== TUNE.count(g)) TUNE.grow(g, levels);
+    const s = st(g);
+    Object.assign(s, { log: [], screen: ids[0], el: null, frame: null, view: null, open: /* @__PURE__ */ new Set([ids[0]]) });
+    before.forEach((m) => push(g, m));
+    g.carried = true;
+    push(g, { who: "ai", kind: "live" });
+    const ticker = setInterval(() => {
+      if (!liveOf(g)) {
+        clearInterval(ticker);
+        return;
+      }
+      const box = showing(g)?.querySelector("[data-rf-live]");
+      if (!box) return;
+      const pct = Math.min(99, Math.round((Date.now() - L2.t0) / L2.total * 100));
+      box.querySelector(".rf-live-pct").textContent = `${pct}%`;
+      box.querySelector(".rf-live-left").textContent = t("rf.left", { m: Math.max(1, Math.ceil(L2.minutes * (1 - pct / 100))) });
+    }, 400);
+    liveStep(g);
+  }
+  function liveStep(g) {
+    const L2 = g.live;
+    const [k, who, ms] = LIVE[L2.at];
+    spend(`${crewOf(who).who} · ${g.name}`, LIVE_COST[k], ms || L2.queue[k].length * DRAW);
+    if (ms) {
+      if (showing(g)) draw(g);
+      later(() => liveNext(g), ms);
+      return;
+    }
+    const one = () => {
+      const id = L2.queue[k].shift();
+      if (!id) {
+        liveNext(g);
+        return;
+      }
+      Object.assign(L2, { drawing: id, drawAt: Date.now() });
+      st(g).screen = id;
+      if (showing(g)) draw(g);
+      later(() => {
+        L2.drawn.push(id);
+        g.built.add(id);
+        L2.drawing = null;
+        one();
+      }, DRAW);
+    };
+    one();
+  }
+  function liveNext(g) {
+    const L2 = g.live;
+    const [k, who] = LIVE[L2.at];
+    push(g, { who: "ai", kind: "step", step: k, crew: who });
+    L2.at += 1;
+    if (L2.at < LIVE.length) {
+      liveStep(g);
+      return;
+    }
+    L2.done = true;
+    g.screens.forEach((id) => g.built.add(id));
+    const card = st(g).log.find((m) => m.kind === "live");
+    if (card) card.sum = { n: SCR(g).length, lv: TUNE.count(g) };
+    push(g, { who: "ai", kind: "built" });
+    g.live = null;
+    if (showing(g)) rerender();
+    else toast(t("rf.liveToast", { name: esc(g.name) }), () => go(`#/games/${g.id}?tab=tune`), t("rf.open"));
+    L2.asks.forEach((text) => ask(g, text));
+  }
+  function liveCard(g, m) {
+    const L2 = liveOf(g);
+    if (!L2) return m.sum ? `<p class="rf-made">${ICON.check}<span>${t("rf.madeSum", { name: esc(g.name), n: m.sum.n, lv: m.sum.lv })}</span></p>` : "";
+    const el2 = Date.now() - L2.t0;
+    const pct = Math.min(99, Math.round(el2 / L2.total * 100));
+    const k = LIVE[L2.at][0];
+    const doing = L2.drawing ? t("rf.drawing", { name: tr(MODULE[L2.drawing].name), parts: layersOf(L2.drawing).slice(0, 3).map((e) => tr(e.name)).join(" · ") }) : t(`rf.ld.${k}`, { n: SCR(g).length, lv: TUNE.count(g) });
+    return `<div class="rf-live" data-rf-live>
+      <div class="rf-live-top"><span><span class="g">${t("rf.liveTag")}</span><b>${esc(g.name)}</b></span><span class="rf-live-pct">${pct}%</span></div>
+      <div class="rf-live-bar"><i style="--from:${pct}%;--dur:${Math.max(0, L2.total - el2)}ms"></i></div>
+      <span class="g rf-live-left">${t("rf.left", { m: Math.max(1, Math.ceil(L2.minutes * (1 - pct / 100))) })}</span>
+      <ol class="rf-live-steps">${LIVE.map(([key, who], i) => {
+      const c = crewOf(who);
+      const s2 = i < L2.at ? "done" : i === L2.at ? "run" : "";
+      return `<li class="${s2}"><img src="${c.img}" alt=""><span><b>${t(`rf.lk.${key}`)}</b><span class="g">${esc(c.who)}</span></span><i>${s2 === "done" ? ICON.check : s2 === "run" ? '<i class="au-spin"></i>' : ""}</i></li>`;
+    }).join("")}</ol>
+      <p class="rf-live-now"><i class="au-spin"></i><span>${doing}</span></p>
+    </div>`;
+  }
+  function liveView(g, id) {
+    const L2 = liveOf(g);
+    if (!L2 || L2.drawn.includes(id)) return null;
+    const wf = (e, i) => `<i class="rf-wf" style="left:${e.box[0]}%;top:${e.box[1]}%;width:${e.box[2]}%;height:${e.box[3]}%;--i:${i}"><b>${tr(e.name)}</b></i>`;
+    if (L2.drawing === id) return `<div class="rf-shot rf-drawing" data-rf-shot="${id}" style="--t0:-${Date.now() - L2.drawAt}ms">${shot(MODULE[id].img)}<span class="rf-scan"><span class="rf-pen">${TEAM.ui.face("claude")}</span></span>${layersOf(id).map(wf).join("")}</div>`;
+    return `<div class="rf-shot rf-wait" data-rf-shot="${id}" style="--t0:-${Date.now() - L2.t0}ms;--n:${SCR(g).indexOf(id)}">${layersOf(id).map(wf).join("")}<span class="rf-waitlbl">${t("rf.wait")}</span></div>`;
+  }
+  function liveTree(g, L2) {
+    return `<aside class="rf-tree live">
+      <header class="rf-th"><h2>${t("rf.screens")}</h2><span class="count">${L2.drawn.length} / ${SCR(g).length}</span></header>
+      <div class="rf-acc">${SCR(g).map((id) => {
+      const m = MODULE[id];
+      const state = L2.drawn.includes(id) ? "done" : L2.drawing === id ? "now" : "wait";
+      return `<section class="rf-node ${state}"><div class="rf-sh"><span class="rf-thumb">${state === "done" ? shot(m.img) : ""}</span><span class="n">${tr(m.name)}</span><i class="rf-lstate">${state === "done" ? ICON.check : state === "now" ? '<i class="au-spin"></i>' : ""}</i></div></section>`;
+    }).join("")}</div>
+    </aside>`;
+  }
   const EYE = '<svg viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg>';
   const EYE_OFF = '<svg viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 20L20 4"/></svg>';
   function tree(g) {
     const s = st(g);
     s.g = g;
+    if (liveOf(g)) return liveTree(g, liveOf(g));
     return `<aside class="rf-tree">
       <header class="rf-th"><h2>${t("rf.screens")}</h2><span class="count">${SCR(g).length}</span></header>
       <div class="rf-acc">${SCR(g).map((id) => {
@@ -818,7 +1077,7 @@ const REFINE = (() => {
       return `<section class="ri-sec ${open ? "open" : ""}" data-sec="${key}"><header><button class="ri-fold" data-rf-fold="${key}" aria-expanded="${open}"><i class="rf-chev">${ICON.next}</i></button><span class="ri-ci">${CI[key]}</span>${toggle ? ck(toggle, P[toggle]) : ""}<b>${title}</b><span class="sp"></span><button class="icon-btn flat ri-more" data-rf-more="${key}" aria-label="${t("more")}">${ICON.more}</button></header>${open ? `<div class="ri-in">${body2}</div>` : ""}</section>`;
     };
     const pre = presetOf(P);
-    const rect = `${row(t("ri.position"), vec("pos", [px[0], px[1], P.posZ], ["X", "Y", "Z"]))}
+    const rect2 = `${row(t("ri.position"), vec("pos", [px[0], px[1], P.posZ], ["X", "Y", "Z"]))}
       ${row(t("ri.size"), vec("size", size, ["W", "H"]))}
       <div class="ri-row ri-anc sep"><span class="ri-l">${t("ri.anchors")}</span><span class="ri-c"><button class="ri-anchor" data-rf-anchor aria-expanded="${s.anchorPick}" title="${t("ri.preset")}">${anchorIc(pre)}<span>${pre ? `${t(`ri.a.${pre[1]}`)} · ${t(`ri.a.${pre[0]}`)}` : t("ri.custom")}</span><i class="ri-caret"></i></button></span>
         ${s.anchorPick ? `<div class="ri-pre" role="dialog" aria-label="${t("ri.preset")}"><b>${t("ri.preset")}</b><div class="ri-pre-g"><span></span>${COLS.map((c) => `<span class="ri-pre-c">${t(`ri.a.${c}`)}</span>`).join("")}${ROWS.map((r) => `<span class="ri-pre-r">${t(`ri.a.${r}`)}</span>${COLS.map((c) => `<button data-rf-preset="${r}${c}" aria-pressed="${pre === `${r}${c}`}" title="${t(`ri.a.${r}`)} · ${t(`ri.a.${c}`)}">${anchorIc(`${r}${c}`)}</button>`).join("")}`).join("")}</div></div>` : ""}</div>
@@ -875,7 +1134,7 @@ const REFINE = (() => {
       cg: () => sec("cg", t("ri.cg"), cg)
     };
     const body = [
-      sec("rect", t("ri.rect"), rect),
+      sec("rect", t("ri.rect"), rect2),
       comps.includes("image") ? sec("image", t("ri.image"), image, "imgOn") : "",
       comps.includes("text") ? sec("text", t("ri.text"), text, "txtOn") : "",
       comps.includes("button") ? sec("button", t("ri.button"), button, "btnOn") : "",
@@ -959,17 +1218,121 @@ const REFINE = (() => {
         toast(t("notEnough", { have: num(store.credits) }));
         return;
       }
-      spend(`${tr(e.name)} · ${g.name}`, UI_COST, 2000);
+      spend(`${tr(e.name)} · ${g.name}`, UI_COST, 2e3);
       s.gen[k] = { busy: true };
       draw(g);
       setTimeout(() => {
         s.gen[k] = { cands: candsOf(e) };
         if (document.querySelector(".rf")) draw(g);
         toast(t("ri.made", { name: tr(e.name) }));
-      }, 2000);
+      }, 2e3);
     } });
   }
   const CW = 220, CH = Math.round(CW * 19.5 / 9), GX = 90, GY = 150;
+  const GOES = [
+    [/홈|로비|home|lobby|나가기|exit/i, (x) => x.kind === "lobby" || x.home],
+    [/다시|재도전|retry|again|replay|restart/i, (x) => x.group === "gameplay"],
+    [/랭킹|순위|rank|leader/i, (x) => x.kind === "leaderboard"],
+    [/상점|shop|store|offer|상품/i, (x) => x.kind === "shop"],
+    [/프로필|profile/i, (x) => x.kind === "profile"],
+    [/스토리|story/i, (x) => x.kind === "story"],
+    [/꾸미|decor/i, (x) => x.kind === "decor"],
+    [/출석|daily|일일/i, (x) => x.kind === "daily"],
+    [/레벨 ?\d|level ?\d|레벨 버튼|level button/i, (x) => x.kind === "levelmap"],
+    [/시작|start|play|플레이|다음 레벨|next|continue|계속/i, "next"]
+  ];
+  function linksOf(ids, path) {
+    const out = [];
+    ids.forEach((a) => {
+      layersOf(a).forEach((e) => {
+        if (!["button", "text", "group"].includes(e.type)) return;
+        const words = `${tr(e.name)} ${e.text ? tr(e.text) : ""}`;
+        if (/area|영역|board|판$|^판|hud/i.test(tr(e.name))) return;
+        const hit = GOES.find(([re]) => re.test(words));
+        if (!hit) return;
+        const at = path.indexOf(a);
+        const b = hit[1] === "next" ? at >= 0 && MODULE[a].group !== "gameplay" ? path[at + 1] : null : ids.find((id) => id !== a && hit[1](MODULE[id]));
+        if (b && !out.some((x) => x.a === a && x.b === b)) out.push({ a, b, hot: e.box, name: tr(e.name) });
+      });
+    });
+    return out;
+  }
+  const FLOWS = {
+    bay: [
+      ["bay:titlescreen", null, "bay:prologue"],
+      ["bay:titlescreen", null, "bay:lobby", "bay:prologue"],
+      ["bay:prologue", null, "bay:lobby"],
+      ["bay:lobby", "level", "bay:levelmap"],
+      ["bay:lobby", "level", "bay:gameplay", "bay:levelmap"],
+      ["bay:lobby", "profile", "bay:profile"],
+      ["bay:lobby", "gift", "bay:decor"],
+      ["bay:levelmap", "play", "bay:gameplay"],
+      ["bay:levelmap", "tabs", "bay:resort"],
+      ["bay:levelmap", "tabs", "bay:character"],
+      ["bay:gameplay", null, "bay:story"],
+      ["bay:story", "skip", "bay:lobby"],
+      ["bay:decor", "ok", "bay:lobby"]
+    ]
+  };
+  const flowOf = (g) => {
+    const ids = new Set(SCR(g));
+    const f = FLOWS[g.base];
+    return f && ids.has(`${g.base}:lobby`) ? f.filter(([a, , b, ifNo]) => ids.has(a) && ids.has(b) && !(ifNo && ids.has(ifNo))) : null;
+  };
+  function layoutFlow(g, flow) {
+    const ids = SCR(g);
+    const depth = { [ids[0]]: 0 };
+    const parent = {};
+    const queue = [ids[0]];
+    while (queue.length) {
+      const a = queue.shift();
+      flow.filter((e) => e[0] === a).forEach(([, , b]) => {
+        if (depth[b] == null) {
+          depth[b] = depth[a] + 1;
+          parent[b] = a;
+          queue.push(b);
+        }
+      });
+    }
+    ids.forEach((id) => {
+      if (depth[id] == null) depth[id] = Math.max(...Object.values(depth)) + 1;
+    });
+    const gp = ids.find((id) => MODULE[id].group === "gameplay");
+    const main = [];
+    for (let x = gp; x; x = parent[x]) main.unshift(x);
+    for (let x = gp; x; ) {
+      const next = flow.find(([a, , b]) => a === x && depth[b] === depth[a] + 1 && !main.includes(b));
+      if (!next) break;
+      main.push(next[2]);
+      x = next[2];
+    }
+    const STEP_X = CW + GX * 1.5;
+    const STEP_Y = CH + 130;
+    const pos = {};
+    main.forEach((id) => {
+      pos[id] = { x: depth[id] * STEP_X, y: 0 };
+    });
+    const used = {};
+    ids.filter((id) => !main.includes(id)).sort((a, b) => depth[a] - depth[b]).forEach((id) => {
+      const d = depth[id];
+      const taken = used[d] ||= [];
+      const gpCol = depth[gp] === d;
+      const order = gpCol ? [-1, -2, -3] : [-1, 1, -2, 2, -3, 3];
+      const row = order.find((r) => !taken.includes(r));
+      taken.push(row);
+      pos[id] = { x: d * STEP_X, y: row * STEP_Y };
+    });
+    const edges = flow.map(([a, key, b]) => ({ a, b, hot: key ? elOf(a, key)?.box || null : null, back: depth[b] <= depth[a] }));
+    const xs = Object.values(pos).map((p) => p.x);
+    const ys = Object.values(pos).map((p) => p.y);
+    return {
+      pos,
+      edges,
+      hub: ids.find((id) => MODULE[id].kind === "lobby") || ids[0],
+      levelsAt: gp ? { x: pos[gp].x + CW / 2 - LW / 2, y: STEP_Y * 0.92, from: gp } : null,
+      box: { l: Math.min(...xs) - 60, t: Math.min(...ys) - 120, r: Math.max(...xs) + CW + 60, b: Math.max(...ys) + CH + 300 }
+    };
+  }
   function layout(g) {
     const m = (id) => MODULE[id];
     const ids = SCR(g);
@@ -979,12 +1342,25 @@ const REFINE = (() => {
       });
       return L2;
     };
+    const flow = flowOf(g);
+    if (flow) return withLevels(moved(layoutFlow(g, flow)), g);
+    const connect = (path2, rest2, hub2) => {
+      const found = linksOf(ids, path2);
+      const take = (a, b) => found.find((x) => x.a === a && x.b === b);
+      const edges = path2.slice(1).map((b, i) => take(path2[i], b) || { a: path2[i], b });
+      rest2.forEach((b) => edges.push(found.find((x) => x.b === b) || { a: hub2, b }));
+      found.forEach((x) => {
+        if (!edges.includes(x) && !edges.some((y) => y.a === x.a && y.b === x.b)) edges.push(x);
+      });
+      return edges;
+    };
     if (g.real && g.real.length) {
       const pos2 = {};
       ids.forEach((id, i) => {
         pos2[id] = { x: i * (CW + GX), y: 0 };
       });
-      return moved({ pos: pos2, box: { l: -60, t: -80, r: (ids.length - 1) * (CW + GX) + CW + 60, b: CH + 70 }, edges: ids.slice(1).map((id, i) => [ids[i], id, "path"]), hub: ids.find((id) => m(id).home) || ids[0] });
+      const hub2 = ids.find((id) => m(id).home) || ids[0];
+      return withLevels(moved({ pos: pos2, box: { l: -60, t: -80, r: (ids.length - 1) * (CW + GX) + CW + 60, b: CH + 300 }, edges: connect(ids, [], hub2), hub: hub2 }), g);
     }
     const first = (fn) => ids.find((id) => fn(m(id)));
     const entry = first((x) => x.kind === "titlescreen");
@@ -1004,18 +1380,115 @@ const REFINE = (() => {
     }));
     const xs = Object.values(pos).map((p) => p.x);
     const ys = Object.values(pos).map((p) => p.y);
-    const box2 = { l: Math.min(...xs) - 60, t: Math.min(...ys) - 80, r: Math.max(...xs) + CW + 60, b: Math.max(...ys) + CH + 70 };
-    const edges = [...path.slice(1).map((id, i) => [path[i], id, "path"]), ...rest.map((id) => [hub, id, "menu"])];
-    return moved({ pos, box: box2, edges, hub });
+    const box2 = { l: Math.min(...xs) - 60, t: Math.min(...ys) - 80, r: Math.max(...xs) + CW + 60, b: Math.max(...ys) + CH + 300 };
+    return withLevels(moved({ pos, box: box2, edges: connect(path, rest, hub), hub }), g);
   }
+  const LW = Math.round(CW * 1.7);
+  const LEVEL_PICS = { bay: ["ingame-105", "ingame-85", "ingame-169", "ingame-253", "ingame-436", "ingame-470"].map((x) => MODULE["bay:gameplay"].img.replace("ingame-105", x)) };
+  const LV_HEAD = 34, LV_CAP = 30, LV_MAXH = 440, LV_MINH = 110, LV_MAXH2 = 2400, LV_MINW = 320, LV_MAXW = 820;
+  const lvRowH = (g) => LEVEL_PICS[g.base] ? 44 : 40;
+  function withLevels(L2, g) {
+    const gp = Object.keys(L2.pos).find((id) => MODULE[id].group === "gameplay") || L2.hub;
+    const p = L2.pos[gp];
+    const below = Math.max(...Object.values(L2.pos).map((q) => q.y)) + CH + 330;
+    const at = L2.levelsAt || { x: p.x + CW / 2 - LW / 2, y: below, from: gp };
+    L2.box.b = Math.max(L2.box.b, at.y + CH * 0.8 + 90);
+    L2.box.l = Math.min(L2.box.l, at.x - 60);
+    L2.box.r = Math.max(L2.box.r, at.x + LW + 60);
+    const s = st(g);
+    const h = s.lvsize?.h || Math.min(LV_MAXH, LV_HEAD + TUNE.rows(g).length * lvRowH(g));
+    L2.levels = { ...at, ...s.lvpos || {}, w: s.lvsize?.w || LW, h };
+    return L2;
+  }
+  const CAP = 30;
   function wires(L2) {
-    return L2.edges.map(([a, b, kind]) => {
+    return L2.edges.map(({ a, b, hot, back }, n) => {
       const p = L2.pos[a], q = L2.pos[b];
-      if (kind === "path") return `<path d="M${p.x + CW + 6} ${p.y + CH / 2} H${q.x - 10}" marker-end="url(#rf-arrow)"/>`;
-      const up = q.y < p.y;
-      const x1 = p.x + CW / 2, y1 = up ? p.y - 6 : p.y + CH + 34, x2 = q.x + CW / 2, y2 = up ? q.y + CH + 40 : q.y - 26;
-      return `<path class="menu" d="M${x1} ${y1} C${x1} ${(y1 + y2) / 2} ${x2} ${(y1 + y2) / 2} ${x2} ${y2}" marker-end="url(#rf-arrow)"/>`;
-    }).join("");
+      if (!p || !q) return "";
+      const dir = q.y + CH < p.y ? "up" : q.y > p.y + CH ? "down" : q.x > p.x + 10 ? "right" : "back";
+      const hb = hot && { l: p.x + hot[0] / 100 * CW, t: p.y + CAP + hot[1] / 100 * CH, w: hot[2] / 100 * CW, h: hot[3] / 100 * CH };
+      const x1 = hb ? dir === "right" ? hb.l + hb.w : hb.l + hb.w / 2 : dir === "right" ? p.x + CW + 4 : p.x + CW / 2;
+      const y1 = hb ? dir === "up" ? hb.t : dir === "right" ? hb.t + hb.h / 2 : hb.t + hb.h : dir === "up" ? p.y + CAP - 4 : dir === "right" ? p.y + CAP + CH / 2 : p.y + CAP + CH + 4;
+      let x2, y2, c1, c2;
+      const k = (d2) => Math.max(60, Math.min(260, d2 * 0.5));
+      if (q.y + CH < p.y) {
+        x2 = q.x + CW / 2;
+        y2 = q.y + CAP + CH + 10;
+        c1 = [x1 + (hot ? 0 : 40), y1 - k(y1 - y2)];
+        c2 = [x2, y2 + k(y1 - y2)];
+      } else if (q.y > p.y + CH) {
+        x2 = q.x + CW / 2;
+        y2 = q.y + CAP - 10;
+        c1 = [x1, y1 + k(y2 - y1)];
+        c2 = [x2, y2 - k(y2 - y1)];
+      } else if (q.x > p.x + 10) {
+        x2 = q.x - 8;
+        y2 = q.y + CAP + CH / 2;
+        const d2 = k(x2 - x1);
+        c1 = [x1 + d2, y1];
+        c2 = [x2 - d2, y2];
+        if (hb) c1 = [Math.max(x1 + d2, p.x + CW + 30), y1];
+      } else {
+        x2 = q.x + CW / 2 + (n % 3 - 1) * 26;
+        y2 = q.y + CAP + CH + 10;
+        const drop = 120 + n % 3 * 50;
+        c1 = [x1 + 30, Math.max(y1, p.y + CAP + CH) + drop];
+        c2 = [x2, y2 + drop];
+      }
+      const d = `M${x1.toFixed(1)} ${y1.toFixed(1)} C${c1[0].toFixed(1)} ${c1[1].toFixed(1)} ${c2[0].toFixed(1)} ${c2[1].toFixed(1)} ${x2.toFixed(1)} ${y2.toFixed(1)}`;
+      const spot = hot ? `<rect class="hot" x="${(p.x + hot[0] / 100 * CW).toFixed(1)}" y="${(p.y + CAP + hot[1] / 100 * CH).toFixed(1)}" width="${(hot[2] / 100 * CW).toFixed(1)}" height="${(hot[3] / 100 * CH).toFixed(1)}" rx="4"/>` : "";
+      return `<g class="ln ${hot ? "from-btn" : ""} ${back ? "back" : ""}">${spot}<path d="${d}" marker-end="url(#rf-arrow)"/><circle cx="${x1.toFixed(1)}" cy="${y1.toFixed(1)}" r="4"/></g>`;
+    }).join("") + (L2.levels ? lvWire(L2) : "");
+  }
+  function lvWire(L2) {
+    const p = L2.pos[L2.levels.from];
+    const v = L2.levels;
+    const top = v.y + LV_CAP - 4;
+    const mid = Math.max(top + 24, Math.min(top + v.h - 24, p.y + CAP + CH * 0.75));
+    let x1, y1, x2, y2, c1, c2;
+    if (top > p.y + CAP + CH + 40) {
+      x1 = p.x + CW * 0.3;
+      y1 = p.y + CAP + CH + 6;
+      x2 = Math.max(v.x + 40, Math.min(v.x + v.w - 40, x1));
+      y2 = top;
+      const k = Math.max(60, Math.min(160, (y2 - y1) / 2));
+      c1 = [x1, y1 + k];
+      c2 = [x2, y2 - k];
+    } else if (v.x + v.w / 2 >= p.x + CW / 2) {
+      x1 = p.x + CW + 4;
+      y1 = p.y + CAP + CH * 0.75;
+      x2 = v.x - 6;
+      y2 = mid;
+      const k = Math.max(40, Math.min(160, Math.abs(x2 - x1) / 2));
+      c1 = [x1 + k, y1];
+      c2 = [x2 - k, y2];
+    } else {
+      x1 = p.x - 4;
+      y1 = p.y + CAP + CH * 0.75;
+      x2 = v.x + v.w + 6;
+      y2 = mid;
+      const k = Math.max(40, Math.min(160, Math.abs(x1 - x2) / 2));
+      c1 = [x1 - k, y1];
+      c2 = [x2 + k, y2];
+    }
+    const f = (n) => n.toFixed(1);
+    return `<g class="ln lvl"><path d="M${f(x1)} ${f(y1)} C${f(c1[0])} ${f(c1[1])} ${f(c2[0])} ${f(c2[1])} ${f(x2)} ${f(y2)}" marker-end="url(#rf-arrow)"/></g>`;
+  }
+  function levelFrame(g, L2) {
+    const s = st(g);
+    const unit = t(`unit.${TUNE.plan(g).kind}`);
+    const rows = TUNE.rows(g);
+    const sel = s.lvRow || 1;
+    const pics = LEVEL_PICS[g.base] || null;
+    return `<figure class="rf-scr rf-lvf ${s.lvSel ? "sel" : ""}" data-rf-levels style="left:${L2.levels.x - L2.box.l}px;top:${L2.levels.y - L2.box.t}px;width:${L2.levels.w}px">
+      <figcaption data-rf-lvcap>${t("rf.levels")}<span class="rf-lv">${unit} ${num(TUNE.count(g))}</span></figcaption>
+      ${s.lvSel ? `<div class="rf-lvbar" role="toolbar"><button class="rf-qk" data-rf-lvadd>${ICON.plus}${t("rf.lvAdd")}</button><button class="rf-qk" data-rf-lvedit>${ICON.edit}${t("rf.lvEdit")}</button><button class="rf-qk" data-rf-lvdesign>${t("rf.lvDesign")}</button></div>` : ""}
+      <div class="rf-lvt" ${s.lvsize?.h ? `style="height:${s.lvsize.h}px;max-height:none;min-height:0"` : ""}>
+        <div class="rf-lvh"><span>${t("rf.lvCol")}</span><span>${t("rf.lvDiff")}</span><span>${t("rf.lvClear")}</span><span>${t("rf.lvNote")}</span></div>
+        <div class="rf-lvrows">${rows.map((x) => `<button class="rf-lvr ${x.n === sel && s.lvSel ? "on" : ""} ${PW.level === x.n && playOpen(g) ? "playing" : ""}" data-rf-lvrow="${x.n}"><b>${pics ? `<img class="rf-lvi" src="${pics[(x.n - 1) % pics.length]}" alt="">` : ""}${unit} ${x.n}</b><span class="rf-lvd ${x.hard ? "hard" : x.relief ? "rest" : ""}"><i style="width:${Math.round(x.d * 100)}%"></i></span><span class="rf-lvc">${x.clear}%</span><span class="rf-lvn">${x.hard ? `<i class="tag warn">${t("rf.lvHard")}</i>` : x.relief ? `<i class="tag ok">${t("rf.lvRest")}</i>` : x.fresh ? `<i class="tag accent">${t("rf.lvNew")}</i>` : ""}</span></button>`).join("")}</div>
+      </div>
+      <i class="rf-lvsz r" data-rf-lvsz="r"></i><i class="rf-lvsz b" data-rf-lvsz="b"></i><i class="rf-lvsz rb" data-rf-lvsz="rb"></i>
+    </figure>`;
   }
   function board(g) {
     const s = st(g);
@@ -1024,16 +1497,19 @@ const REFINE = (() => {
     const lv = TUNE.count(g);
     const unit = t(`unit.${TUNE.plan(g).kind}`);
     return `<section class="rf-board">
-      ${n ? `<div class="rf-tools"><span class="sp"></span><span class="g">${t("rf.changes", { n })}</span><button class="btn small" data-rf-resetall>${t("rf.reset")}</button><button class="btn primary small" data-rf-applyui>${t("rf.apply")}</button></div>` : ""}
-      <div class="rf-gtools" role="toolbar">${TOOLS.map((k) => `<button class="icon-btn flat" data-rf-gz="${k}" aria-pressed="${(s.gz || "q") === k}" title="${t(`rf.t.${k}`)}" aria-label="${t(`rf.t.${k}`)}">${TOOL_SVG[k]}<i>${k.toUpperCase()}</i></button>`).join("")}</div>
+      ${n ? `<div class="rf-tools"><span class="sp"></span>${s.savedAt ? `<span class="g rf-saved">${t("rf.savedAt", { at: s.savedAt })}</span>` : ""}<span class="g">${t("rf.changes", { n })}</span><button class="btn small" data-rf-resetall>${t("rf.reset")}</button><button class="btn primary small" data-rf-applyui>${t("rf.apply")}</button></div>` : ""}
+      ${liveOf(g) ? "" : `<div class="rf-gtools" role="toolbar"><i class="rf-grip"></i>${TOOLS.map((k) => `<button class="icon-btn flat" data-rf-gz="${k}" aria-pressed="${(s.gz || "q") === k}" title="${t(`rf.t.${k}`)}" aria-label="${t(`rf.t.${k}`)}">${TOOL_SVG[k]}<i>${k.toUpperCase()}</i></button>${k === "q" ? "<hr>" : ""}`).join("")}<hr><button class="rf-dim" data-rf-dim title="${t("rf.dim")}" aria-label="${t("rf.dim")}">${dimOf(g).toUpperCase()}</button></div>`}
       <div class="rf-stage ${s.tool === "prompt" ? "prompting" : ""}" data-rf-stage>
         <div class="rf-canvas" style="width:${L2.box.r - L2.box.l}px;height:${L2.box.b - L2.box.t}px">
           <svg class="rf-wires" viewBox="${L2.box.l} ${L2.box.t} ${L2.box.r - L2.box.l} ${L2.box.b - L2.box.t}" style="width:${L2.box.r - L2.box.l}px;height:${L2.box.b - L2.box.t}px"><defs><marker id="rf-arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1.5L8 5L1 8.5" fill="none" stroke="context-stroke" stroke-width="1.6"/></marker></defs>${wires(L2)}</svg>
           ${SCR(g).map((id) => {
       const p = L2.pos[id];
       const m2 = MODULE[id];
-      return `<figure class="rf-scr ${id === s.screen ? "on" : ""} ${id === L2.hub ? "hub" : ""} ${s.frame === id ? "sel" : ""}" data-rf-scr="${id}" style="left:${p.x - L2.box.l}px;top:${p.y - L2.box.t}px;width:${CW}px"><figcaption data-rf-cap="${id}">${tr(m2.name)}${m2.group === "gameplay" ? `<span class="rf-lv">${unit} ${num(lv)}</span>` : ""}${m2.added ? `<span class="rf-new">${t("rf.added")}</span>` : ""}</figcaption>${screenView(g, id)}</figure>`;
+      const lv2 = liveView(g, id);
+      const drawing = lv2 && liveOf(g).drawing === id;
+      return `<figure class="rf-scr ${id === s.screen && !lv2 ? "on" : ""} ${playOpen(g) && SCR(g)[PW.i] === id ? "playing" : ""} ${id === L2.hub ? "hub" : ""} ${s.frame === id ? "sel" : ""} ${lv2 ? drawing ? "drawing" : "waiting" : ""}" data-rf-scr="${id}" style="left:${p.x - L2.box.l}px;top:${p.y - L2.box.t}px;width:${CW}px"><figcaption data-rf-cap="${id}">${tr(m2.name)}${drawing ? `<span class="rf-drawtag"><i class="au-spin"></i>${t("rf.drawTag")}</span>` : m2.group === "gameplay" && !lv2 ? `<span class="rf-lv">${unit} ${num(lv)}</span>` : ""}${m2.added ? `<span class="rf-new">${t("rf.added")}</span>` : ""}</figcaption>${lv2 || screenView(g, id)}</figure>`;
     }).join("")}
+          ${L2.levels && !liveOf(g) ? levelFrame(g, L2) : ""}
         </div>
       </div>
       <div class="rf-zoom"><button class="icon-btn flat" data-rf-undo ${s.past?.length ? "" : "disabled"} title="⌘Z" aria-label="${t("undo")}">${UNDO_ICON}</button><button class="icon-btn flat flip" data-rf-redo ${s.future?.length ? "" : "disabled"} title="⇧⌘Z" aria-label="${t("rf.redo")}">${UNDO_ICON}</button><i></i>
@@ -1044,6 +1520,10 @@ const REFINE = (() => {
   const MINUS_ICON = '<svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>';
   function msgHtml(g, m) {
     const s = st(g);
+    if (m.kind === "live") return liveCard(g, m);
+    if (m.kind === "plan") return `<div class="rf-plan"><b>${esc(m.title)}</b><ul>${m.rows.map(([k, val]) => `<li><span class="g">${esc(k)}</span><span>${esc(val)}</span></li>`).join("")}</ul></div>`;
+    if (m.kind === "step") return `<span>${t(`rf.ls.${m.step}`, { n: SCR(g).length, lv: TUNE.count(g) })}</span>`;
+    if (m.kind === "built") return `<p>${t("rf.built", { n: SCR(g).length, lv: TUNE.count(g) })}</p><div class="rf-act"><button class="btn small primary" data-rf-play>${ICON.play}${t("play")}</button></div>`;
     const task = m.task ? s.tasks.find((x) => x.id === m.task) : null;
     if (m.kind === "recs") {
       return `<p>${task?.screen ? t("rf.recAt", { screen: tr(MODULE[task.screen].name) }) : t("rf.recLead")}</p>
@@ -1066,15 +1546,15 @@ const REFINE = (() => {
     }
     return esc(typeof m.text === "string" ? m.text : tr(m.text));
   }
+  const QUICK = [["more", "rf.c.more"], ["feature", "rf.askFeature"], ["easy", "rf.c.easy"], ["feel", "rf.c.feel"], ["art", "rf.c.art"]];
   function panel(g) {
     const s = st(g);
     const busy = s.tasks.some((x) => x.task === "run");
-    const log = s.log.map((m) => m.who === "me" ? `<div class="rf-msg mine">${m.task && s.tasks.find((x) => x.id === m.task)?.screen ? `<button class="rf-ref" data-rf-ref="${m.task}">${TEAM.ui.ICONS.spark}#${m.task}</button>` : ""}<span>${esc(m.text)}</span></div>` : `<div class="rf-msg bot">${TEAM.ui.face("claude")}<div>${msgHtml(g, m)}</div></div>`).join("");
+    const log = s.log.map((m) => m.who === "me" ? `<div class="rf-msg mine">${m.task && s.tasks.find((x) => x.id === m.task)?.screen ? `<button class="rf-ref" data-rf-ref="${m.task}">${TEAM.ui.ICONS.spark}#${m.task}</button>` : ""}<span>${esc(m.text)}</span></div>` : m.kind === "step" ? `<div class="rf-msg bot crew"><img class="rf-crew" src="${crewOf(m.crew).img}" alt=""><div><b class="rf-who">${esc(crewOf(m.crew).who)} · ${crewOf(m.crew).name}</b>${msgHtml(g, m)}</div></div>` : `<div class="rf-msg bot">${TEAM.ui.face("claude")}<div>${msgHtml(g, m)}</div></div>`).join("");
     return `<aside class="rf-ai">
-      <header>${TEAM.ui.face("claude")}<b>Claude</b><span class="tm-chip ${busy ? "run" : "done"}">${busy ? t("rf.busy") : t("rf.idle")}</span></header>
+      <header>${TEAM.ui.face("claude")}<b>Claude</b><span class="tm-chip ${busy || liveOf(g) ? "run" : "done"}">${liveOf(g) ? t("rf.liveTag") : busy ? t("rf.busy") : t("rf.idle")}</span></header>
       <div class="rf-log" aria-live="polite">${log}${s.thinking ? `<div class="rf-msg bot">${TEAM.ui.face("claude")}<div class="rf-dots"><i></i><i></i><i></i></div></div>` : ""}</div>
-      ${s.log.length > 1 ? "" : `<div class="rf-chips">${["more", "design", "easy", "feel", "art"].map((k) => `<button class="chip" data-rf-chip="${k}">${t(`rf.c.${k}`)}</button>`).join("")}</div>`}
-      <div class="rf-pinbar"><button class="rf-pinbtn" data-rf-tool="${s.tool === "prompt" ? "select" : "prompt"}" aria-pressed="${s.tool === "prompt"}">${TOOL_ICON.prompt}<span>${t("rf.prompt")}</span></button>${s.tool === "prompt" ? `<span class="g">${t("rf.pinHint")}</span>` : ""}</div>
+      <div class="rf-pinbar"><button class="rf-pinbtn" data-rf-tool="${s.tool === "prompt" ? "select" : "prompt"}" aria-pressed="${s.tool === "prompt"}">${TOOL_ICON.prompt}<span>${t("rf.prompt")}</span></button>${QUICK.map(([k, ask2]) => `<button class="rf-qk" data-rf-quick="${ask2}">${t(`rf.q.${k}`)}</button>`).join("")}${s.tool === "prompt" ? `<span class="g rf-pinhint">${t("rf.pinHint")}</span>` : ""}</div>
       <form class="rf-form"><textarea rows="2" maxlength="400" placeholder="${t("rf.ask")}" aria-label="${t("rf.ask")}"></textarea><button class="tm-send" type="submit" aria-label="${t("send")}">${TEAM.ui.ICONS.send}</button></form>
     </aside>`;
   }
@@ -1123,11 +1603,7 @@ const REFINE = (() => {
   function draw(g) {
     const root = document.querySelector(".rf");
     if (!root) return;
-    const y = { log: root.querySelector(".rf-log")?.scrollTop, acc: root.querySelector(".rf-acc")?.scrollTop, insp: root.querySelector(".ri-body")?.scrollTop };
-    const stick = (() => {
-      const l = root.querySelector(".rf-log");
-      return !l || l.scrollHeight - l.scrollTop - l.clientHeight < 40;
-    })();
+    const y = { acc: root.querySelector(".rf-acc")?.scrollTop, insp: root.querySelector(".ri-body")?.scrollTop };
     const was = root.querySelector(".rf-insp2 .ri-head b")?.textContent;
     root.querySelector(".rf-tree").outerHTML = tree(g);
     root.querySelector(".rf-insp2").outerHTML = insp(g);
@@ -1135,8 +1611,6 @@ const REFINE = (() => {
     root.querySelector(".rf-ai").outerHTML = panel(g);
     if (st(g).el && !root.classList.contains("insp-on")) void root.offsetWidth;
     root.classList.toggle("insp-on", !!st(g).el);
-    const log = root.querySelector(".rf-log");
-    log.scrollTop = stick ? log.scrollHeight : y.log;
     root.querySelector(".rf-acc").scrollTop = y.acc || 0;
     const body = root.querySelector(".ri-body");
     if (body && was === root.querySelector(".rf-insp2 .ri-head b")?.textContent) body.scrollTop = y.insp || 0;
@@ -1240,39 +1714,119 @@ const REFINE = (() => {
     push(g, { who: "ai", kind: "need", task: task.id });
     draw(g);
   }
-  function play(g) {
-    let i = 0;
-    const node = el('<div class="full rf-play"></div>');
-    const paint = () => {
-      const id = SCR(g)[i];
-      const m = MODULE[id];
-      node.innerHTML = `<div class="rf-pwrap"><header><b>${esc(g.name)}</b><span class="sp"></span>${g.play ? "" : `<button class="btn small" data-rf-restart>${t("rf.restart")}</button>`}<button class="icon-btn" data-rf-close aria-label="${t("close")}">${ICON.x}</button></header>
-        <div class="rf-phone">${g.play ? `<span class="shot play"><iframe src="${g.play}" sandbox="allow-scripts" title="${t("play")}"></iframe></span>` : `<button class="rf-proto" data-rf-next aria-label="${t("rf.tapNext")}"><span class="rf-shot">${shot(m.img, { video: m.group === "gameplay" ? m.video : null })}${edits(st(g), id)}</span></button>`}</div>
-        ${g.play ? "" : `<footer><span class="rf-pdots">${SCR(g).map((x, k) => `<i class="${k === i ? "on" : ""}"></i>`).join("")}</span><span class="g">${tr(m.name)} · ${t("rf.tapNext")}</span></footer>`}</div>`;
-      node.querySelector("[data-rf-close]").addEventListener("click", () => dismiss(node));
-      node.querySelector("[data-rf-restart]")?.addEventListener("click", () => {
-        i = 0;
-        paint();
-      });
-      node.querySelector("[data-rf-next]")?.addEventListener("click", () => {
-        i = (i + 1) % SCR(g).length;
-        paint();
-      });
+  const PW = { g: null, node: null, i: 0, level: null, pos: null };
+  const keyOfScr = (id) => String(id).split(":").pop();
+  const playOpen = (g) => !!(PW.node && PW.node.isConnected && PW.g === g);
+  function playPaint() {
+    const { g, node } = PW;
+    const id = SCR(g)[PW.i];
+    const m = MODULE[id];
+    const unit = t(`unit.${TUNE.plan(g).kind}`);
+    node.querySelector(".rf-pw-body").innerHTML = g.play ? "" : `<button class="rf-proto" data-rf-next aria-label="${t("rf.tapNext")}"><span class="rf-shot">${shot(m.img, { video: m.group === "gameplay" ? m.video : null })}${edits(st(g), id)}${PW.level && m.group === "gameplay" ? `<span class="rf-pw-lv">${unit} ${PW.level}</span>` : ""}</span></button>`;
+    node.querySelector(".rf-pw-foot").innerHTML = `<span class="rf-pdots">${SCR(g).map((x, k) => `<i class="${k === PW.i ? "on" : ""}"></i>`).join("")}</span><span class="g">${tr(m.name)}${PW.level ? ` · ${unit} ${PW.level}` : ""}</span>`;
+    node.querySelector("[data-rf-next]")?.addEventListener("click", () => {
+      PW.i = (PW.i + 1) % SCR(g).length;
+      PW.level = null;
+      playPaint();
+    });
+    document.querySelectorAll(".rf-scr").forEach((f) => f.classList.toggle("playing", f.dataset.rfScr === id));
+  }
+  function send(msg) {
+    PW.node?.querySelector("iframe")?.contentWindow?.postMessage({ maden: msg }, "*");
+  }
+  function playScreen(g, id) {
+    if (!playOpen(g)) return play(g, id);
+    PW.i = Math.max(0, SCR(g).indexOf(id));
+    PW.level = null;
+    if (g.play) send({ screen: keyOfScr(id) });
+    playPaint();
+  }
+  function playLevel(g, n) {
+    if (!playOpen(g)) play(g);
+    const gp = SCR(g).find((id) => MODULE[id].group === "gameplay") || SCR(g)[0];
+    PW.i = SCR(g).indexOf(gp);
+    PW.level = n;
+    if (g.play) send({ play: n });
+    playPaint();
+  }
+  function play(g, startId = null) {
+    if (playOpen(g)) {
+      if (startId) playScreen(g, startId);
+      return;
+    }
+    PW.node?.remove();
+    PW.g = g;
+    PW.i = Math.max(0, startId ? SCR(g).indexOf(startId) : 0);
+    PW.level = null;
+    const node = el(`<section class="rf-pw" role="dialog" aria-label="${esc(g.name)}">
+      <header class="rf-pw-head" data-rf-pw-drag><i class="rf-pw-grip"></i><b>${esc(g.name)}</b><span class="sp"></span>
+        <button class="icon-btn flat" data-rf-pw-restart title="${t("rf.restart")}" aria-label="${t("rf.restart")}">${UNDO_ICON}</button>
+        <button class="icon-btn flat" data-rf-close aria-label="${t("close")}">${ICON.x}</button></header>
+      <div class="rf-pw-phone">${g.play ? `<span class="shot play"><iframe src="${g.play}${startId ? `#start=${encodeURIComponent(keyOfScr(startId))}` : ""}" sandbox="allow-scripts" title="${t("play")}"></iframe></span>` : ""}<div class="rf-pw-body"></div></div>
+      <footer class="rf-pw-foot"></footer>
+      <p class="rf-pw-tip g">${t("rf.pwTip")}</p>
+    </section>`);
+    PW.node = node;
+    document.body.append(node);
+    const W = node.offsetWidth;
+    const H = node.offsetHeight;
+    const p = PW.pos || { x: 16, y: Math.max(8, Math.min(170, innerHeight - H - 16)) };
+    const place = (x, y) => {
+      PW.pos = { x: Math.max(8, Math.min(innerWidth - W - 8, x)), y: Math.max(8, Math.min(innerHeight - 60, y)) };
+      node.style.left = `${PW.pos.x}px`;
+      node.style.top = `${PW.pos.y}px`;
     };
-    paint();
-    node.addEventListener("click", (e) => {
-      if (e.target === node) dismiss(node);
+    place(p.x, p.y);
+    node.querySelector("[data-rf-pw-drag]").addEventListener("pointerdown", (e) => {
+      if (e.target.closest("button")) return;
+      e.preventDefault();
+      const sx = e.clientX, sy = e.clientY, ox = PW.pos.x, oy = PW.pos.y;
+      node.classList.add("drag");
+      const mv = (ev) => place(ox + ev.clientX - sx, oy + ev.clientY - sy);
+      const up = () => {
+        node.classList.remove("drag");
+        removeEventListener("pointermove", mv);
+      };
+      addEventListener("pointermove", mv);
+      addEventListener("pointerup", up, { once: true });
+    });
+    const close = () => {
+      node.remove();
+      PW.node = null;
+      document.querySelectorAll(".rf-scr.playing").forEach((f) => f.classList.remove("playing"));
+      document.querySelector(".rf")?.classList.remove("pw-on");
+    };
+    node.querySelector("[data-rf-close]").addEventListener("click", close);
+    node.querySelector("[data-rf-pw-restart]").addEventListener("click", () => {
+      PW.i = 0;
+      PW.level = null;
+      if (g.play) node.querySelector("iframe").src = g.play;
+      playPaint();
     });
     addEventListener("keydown", function esc2(e) {
-      if (e.key === "Escape" && node.isConnected) {
-        dismiss(node);
+      if (e.key === "Escape" && node.isConnected && !document.querySelector(".overlay")) {
+        close();
         removeEventListener("keydown", esc2);
       }
     });
-    document.body.append(node);
+    addEventListener("hashchange", function off() {
+      close();
+      removeEventListener("hashchange", off);
+    }, { once: true });
+    document.querySelector(".rf")?.classList.add("pw-on");
+    playPaint();
   }
   function bind(root, g) {
     const s = st(g);
+    const log = root.querySelector(".rf-log");
+    if (log) {
+      const down = () => {
+        log.scrollTop = log.scrollHeight;
+      };
+      down();
+      requestAnimationFrame(down);
+      log.querySelectorAll("img, video").forEach((m) => m.addEventListener(m.tagName === "IMG" ? "load" : "loadedmetadata", down, { once: true }));
+    }
     const on = (sel, fn) => root.querySelectorAll(sel).forEach((b) => b.addEventListener("click", (e) => fn(b, e)));
     on("[data-rf-screen]", (b) => {
       s.frame = null;
@@ -1285,7 +1839,6 @@ const REFINE = (() => {
         s.el = null;
       }
       draw(g);
-      s.api?.focus(id);
     });
     on("[data-rf-el]", (b) => {
       const [id, k] = b.dataset.rfEl.split("|");
@@ -1294,7 +1847,6 @@ const REFINE = (() => {
       s.el = k;
       s.tool = "select";
       draw(g);
-      s.api?.focus(id);
     });
     on("[data-rf-tool]", (b) => {
       s.tool = b.dataset.rfTool;
@@ -1306,7 +1858,10 @@ const REFINE = (() => {
       s.tool = "select";
       draw(g);
     });
-    on("[data-rf-chip]", (b) => ask(g, b.textContent));
+    on("[data-rf-dim]", () => {
+      s.dim = dimOf(g) === "3d" ? "2d" : "3d";
+      draw(g);
+    });
     on(".rf-zoom [data-rf-undo]", () => {
       if (swapHist(s, s.past, s.future)) draw(g);
     });
@@ -1327,7 +1882,6 @@ const REFINE = (() => {
       s.thread = task.id;
       s.tool = "prompt";
       draw(g);
-      s.api?.focus(task.screen);
     });
     on("[data-rf-pick]", (b) => {
       const [id, i] = b.dataset.rfPick.split(":").map(Number);
@@ -1354,6 +1908,112 @@ const REFINE = (() => {
       draw(g);
     });
     on("[data-rf-play]", () => play(g));
+    on("[data-rf-quick]", (b) => {
+      const area2 = root.querySelector(".rf-form textarea");
+      area2.value = t(b.dataset.rfQuick);
+      root.querySelector(".rf-form").requestSubmit();
+    });
+    const lvf = root.querySelector("[data-rf-levels]");
+    if (lvf) {
+      const rowsEl = lvf.querySelector(".rf-lvrows");
+      const lvt = lvf.querySelector(".rf-lvt");
+      const zk = () => s.view?.k || 1;
+      const rewire = () => {
+        const svg2 = root.querySelector(".rf-wires");
+        svg2.innerHTML = svg2.querySelector("defs").outerHTML + wires(layout(g));
+      };
+      const redraw = () => {
+        const y = rowsEl?.scrollTop || 0;
+        draw(g);
+        const r = root.querySelector(".rf-lvrows");
+        if (r) r.scrollTop = y;
+      };
+      const track = (e, fn, end) => {
+        const mv = (ev) => fn((ev.clientX - e.clientX) / zk(), (ev.clientY - e.clientY) / zk());
+        addEventListener("pointermove", mv);
+        addEventListener("pointerup", () => {
+          removeEventListener("pointermove", mv);
+          end();
+        }, { once: true });
+      };
+      const fullH = () => lvf.querySelector(".rf-lvh").offsetHeight + [...rowsEl.children].reduce((n, r) => n + r.offsetHeight, 0);
+      let dragged = false;
+      lvf.addEventListener("pointerdown", (e) => {
+        e.stopPropagation();
+        if (e.button !== 0 || e.target.closest(".rf-lvbar")) return;
+        dragged = false;
+        const sz = e.target.closest("[data-rf-lvsz]");
+        if (e.target.closest("[data-rf-lvcap]")) {
+          e.preventDefault();
+          const L2 = layout(g);
+          const p0 = { x: L2.levels.x, y: L2.levels.y };
+          track(e, (dx, dy) => {
+            if (!dragged && Math.hypot(dx, dy) < 3) return;
+            dragged = true;
+            lvf.classList.add("moving");
+            s.lvpos = { x: Math.round(p0.x + dx), y: Math.round(p0.y + dy) };
+            lvf.style.left = `${s.lvpos.x - L2.box.l}px`;
+            lvf.style.top = `${s.lvpos.y - L2.box.t}px`;
+            rewire();
+          }, () => {
+            if (dragged) redraw();
+          });
+        } else if (sz) {
+          e.preventDefault();
+          const mode = sz.dataset.rfLvsz;
+          const w0 = lvf.offsetWidth, h0 = lvt.offsetHeight;
+          lvf.classList.add("sizing");
+          track(e, (dx, dy) => {
+            dragged = true;
+            const w = mode === "b" ? w0 : Math.round(Math.max(LV_MINW, Math.min(LV_MAXW, w0 + dx)));
+            const h = mode === "r" ? h0 : Math.round(Math.max(LV_MINH, Math.min(LV_MAXH2, h0 + dy)));
+            s.lvsize = { w, h };
+            lvf.style.width = `${w}px`;
+            lvt.style.height = `${h}px`;
+            lvt.style.maxHeight = "none";
+            lvt.style.minHeight = "0";
+            rewire();
+          }, () => {
+            lvf.classList.remove("sizing");
+            if (dragged) redraw();
+          });
+        } else if (rowsEl && rowsEl.contains(e.target) && rowsEl.scrollHeight > rowsEl.clientHeight) {
+          const y0 = rowsEl.scrollTop;
+          track(e, (dx, dy) => {
+            if (!dragged && Math.abs(dy) < 4) return;
+            dragged = true;
+            lvf.classList.add("scrolling");
+            rowsEl.scrollTop = y0 - dy;
+          }, () => lvf.classList.remove("scrolling"));
+        }
+      });
+      lvf.addEventListener("dblclick", (e) => {
+        const sz = e.target.closest('[data-rf-lvsz="b"], [data-rf-lvsz="rb"]');
+        if (!sz) return;
+        s.lvsize = { w: lvf.offsetWidth, h: Math.max(LV_MINH, fullH()) };
+        redraw();
+      });
+      lvf.addEventListener("click", (e) => {
+        if (dragged) {
+          dragged = false;
+          return;
+        }
+        const row = e.target.closest("[data-rf-lvrow]");
+        if (e.target.closest(".rf-lvbar, [data-rf-lvsz]")) return;
+        s.lvSel = true;
+        s.el = null;
+        s.frame = null;
+        if (row) {
+          s.lvRow = Number(row.dataset.rfLvrow);
+          if (playOpen(g)) playLevel(g, s.lvRow);
+        }
+        redraw();
+      });
+      const unit = t(`unit.${TUNE.plan(g).kind}`);
+      on("[data-rf-lvadd]", () => ask(g, t("rf.c.more")));
+      on("[data-rf-lvedit]", () => ask(g, t("rf.lvEditAsk", { unit, n: s.lvRow || 1 })));
+      on("[data-rf-lvdesign]", () => ask(g, t("rf.c.design")));
+    }
     const form = root.querySelector(".rf-form");
     const area = form.querySelector("textarea");
     if (new URLSearchParams(location.hash.split("?")[1] || "").get("ask") === "daily" && !g.askedDaily) {
@@ -1373,7 +2033,17 @@ const REFINE = (() => {
     });
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (area.value.trim()) ask(g, area.value.trim());
+      const text = area.value.trim();
+      if (!text) return;
+      const L2 = liveOf(g);
+      if (!L2) {
+        ask(g, text);
+        return;
+      }
+      L2.asks.push(text);
+      push(g, { who: "me", text });
+      push(g, { who: "ai", text: t("rf.queued") });
+      draw(g);
     });
     on("[data-rf-eye]", (b, ev) => {
       ev.stopPropagation();
@@ -1526,6 +2196,8 @@ const REFINE = (() => {
     root.querySelectorAll("[data-rf-shot]").forEach((shotEl) => shotEl.addEventListener("pointerdown", (e) => {
       const id = shotEl.dataset.rfShot;
       if (e.button !== 0 || e.target.closest(".tm-pin, .tm-thread, .rf-asked")) return;
+      if (playOpen(g) && s.tool !== "prompt") playScreen(g, id);
+      if (s.lvSel) s.lvSel = false;
       const r = shotEl.getBoundingClientRect();
       const px = (e.clientX - r.left) / r.width * 100;
       const py = (e.clientY - r.top) / r.height * 100;
@@ -1559,6 +2231,32 @@ const REFINE = (() => {
       }
       const hitBox = e.target.closest("[data-rf-box]");
       s.frame = null;
+      if ((s.gz || "q") === "q" && s.view) {
+        e.preventDefault();
+        const sx = e.clientX, sy = e.clientY, ox = s.view.x, oy = s.view.y;
+        const canvas = root.querySelector(".rf-canvas");
+        let panned = false;
+        const pan = (ev) => {
+          if (!panned && Math.hypot(ev.clientX - sx, ev.clientY - sy) < 3) return;
+          panned = true;
+          s.view.x = ox + ev.clientX - sx;
+          s.view.y = oy + ev.clientY - sy;
+          canvas.style.transform = `translate(${s.view.x}px, ${s.view.y}px) scale(${s.view.k})`;
+        };
+        const done = () => {
+          removeEventListener("pointermove", pan);
+          if (panned) return;
+          if (id !== s.screen) {
+            s.screen = id;
+            s.open.add(id);
+            s.el = null;
+          } else s.el = hitBox ? hitBox.dataset.rfBox : null;
+          draw(g);
+        };
+        addEventListener("pointermove", pan);
+        addEventListener("pointerup", done, { once: true });
+        return;
+      }
       if (id !== s.screen) {
         s.screen = id;
         s.open.add(id);
@@ -1576,8 +2274,11 @@ const REFINE = (() => {
       const e0 = elOf(id, k);
       const key = keyOf(id, k);
       const start = { ...s.moves[key] || {} };
-      const resize = !!e.target.closest("[data-rf-grip]");
+      const grip = e.target.closest("[data-rf-grip]")?.dataset.rfGrip;
+      const base0 = boxNow(s, id, e0);
       const turnIt = !!e.target.closest("[data-rf-rot]");
+      const ringAxis = e.target.closest("[data-rf-rot]")?.dataset.rfRot || "z";
+      const pivotIt = !!e.target.closest("[data-rf-pivot]");
       const scaleBy = e.target.closest("[data-rf-scale]")?.dataset.rfScale;
       const P0 = full(g, s, id, e0);
       const axis = e.target.closest("[data-rf-axis]")?.dataset.rfAxis || "xy";
@@ -1591,18 +2292,63 @@ const REFINE = (() => {
         if (!moved && Math.hypot(ev.clientX - e.clientX, ev.clientY - e.clientY) < 3) return;
         if (!moved) snap(s);
         moved = true;
-        if (turnIt || scaleBy) {
+        if (pivotIt) {
+          const bb = hitBox.getBoundingClientRect();
+          const clamp = (v) => Math.round(Math.min(1, Math.max(0, v)) * 100) / 100;
+          s.props[key] = { ...s.props[key] || {}, pivot: [clamp((ev.clientX - bb.left) / bb.width), clamp(1 - (ev.clientY - bb.top) / bb.height)] };
+          const pv = hitBox.querySelector(".rf-pivot");
+          pv.style.left = `${s.props[key].pivot[0] * 100}%`;
+          pv.style.top = `${(1 - s.props[key].pivot[1]) * 100}%`;
+          return;
+        }
+        if (!turnIt && !scaleBy && !grip && axis.includes("z")) {
+          const mx = ev.clientX - e.clientX, my = ev.clientY - e.clientY;
+          const toward = axis === "z" ? mx * -0.707 + my * 0.707 : axis === "xz" ? my : -mx;
+          s.props[key] = { ...s.props[key] || {}, posZ: Math.round(P0.posZ - toward * 4) };
+          if (axis !== "z") s.moves[key] = { ...start, dx: (start.dx || 0) + dx, dy: (start.dy || 0) + dy };
+        } else if (turnIt || scaleBy) {
           const p = { ...s.props[key] || {} };
-          if (turnIt) {
+          if (turnIt && ringAxis === "ball") p.rot = [Math.round(P0.rot[0] - (ev.clientY - e.clientY) * 0.5), Math.round(P0.rot[1] + (ev.clientX - e.clientX) * 0.5), P0.rot[2]];
+          else if (turnIt && ringAxis === "x") p.rot = [Math.round(P0.rot[0] - (ev.clientY - e.clientY) * 0.6), P0.rot[1], P0.rot[2]];
+          else if (turnIt && ringAxis === "y") p.rot = [P0.rot[0], Math.round(P0.rot[1] + (ev.clientX - e.clientX) * 0.6), P0.rot[2]];
+          else if (turnIt) {
             const a = (v) => Math.atan2(v.clientY - cy, v.clientX - cx);
-            p.rot = [P0.rot[0], P0.rot[1], Math.round(P0.rot[2] - (a(ev) - a(e)) * 180 / Math.PI)];
+            let turned = (a(ev) - a(e)) * 180 / Math.PI;
+            turned = (turned + 540) % 360 - 180;
+            p.rot = [P0.rot[0], P0.rot[1], Math.round(P0.rot[2] - turned)];
           } else {
             const fx2 = 1 + (ev.clientX - e.clientX) / 120, fy = 1 - (ev.clientY - e.clientY) / 120, fu = 1 + (ev.clientX - e.clientX - (ev.clientY - e.clientY)) / 240;
             const k2 = (v) => Math.round(Math.max(0.1, v) * 100) / 100;
-            p.scale = scaleBy === "x" ? [k2(P0.scale[0] * fx2), P0.scale[1], P0.scale[2]] : scaleBy === "y" ? [P0.scale[0], k2(P0.scale[1] * fy), P0.scale[2]] : [k2(P0.scale[0] * fu), k2(P0.scale[1] * fu), P0.scale[2]];
+            const fz = 1 + ((ev.clientX - e.clientX) * -0.707 + (ev.clientY - e.clientY) * 0.707) / 120;
+            p.scale = scaleBy === "x" ? [k2(P0.scale[0] * fx2), P0.scale[1], P0.scale[2]] : scaleBy === "y" ? [P0.scale[0], k2(P0.scale[1] * fy), P0.scale[2]] : scaleBy === "z" ? [P0.scale[0], P0.scale[1], k2(P0.scale[2] * fz)] : [k2(P0.scale[0] * fu), k2(P0.scale[1] * fu), k2(P0.scale[2] * fu)];
           }
           s.props[key] = p;
-        } else s.moves[key] = resize ? { ...start, s: Math.max(0.3, (start.s || 1) * (Math.hypot(ev.clientX - cx, ev.clientY - cy) / d0)) } : { ...start, dx: (start.dx || 0) + dx, dy: (start.dy || 0) + dy };
+        } else if (grip) {
+          const [bx, by, bw, bh] = base0;
+          const mx = (ev.clientX - e.clientX) / r.width * 100, my = (ev.clientY - e.clientY) / r.height * 100;
+          let [nx, ny, nw, nh] = base0;
+          if (grip.includes("l")) {
+            nx = bx + mx;
+            nw = bw - mx;
+          }
+          if (grip.includes("r")) nw = bw + mx;
+          if (grip.includes("t")) {
+            ny = by + my;
+            nh = bh - my;
+          }
+          if (grip.includes("b")) nh = bh + my;
+          if (nw < 2) {
+            if (grip.includes("l")) nx = bx + bw - 2;
+            nw = 2;
+          }
+          if (nh < 2) {
+            if (grip.includes("t")) ny = by + bh - 2;
+            nh = 2;
+          }
+          const [x0, y0, w0, h0] = e0.box;
+          const sc = start.s || 1;
+          s.moves[key] = { ...start, dx: nx - x0, dy: ny - y0, sw: nw / (w0 * sc), sh: nh / (h0 * sc) };
+        } else s.moves[key] = { ...start, dx: (start.dx || 0) + dx, dy: (start.dy || 0) + dy };
         const [x, y, w, h] = drawBox(g, s, id, e0);
         const P1 = full(g, s, id, e0);
         Object.assign(hitBox.style, { left: `${x}%`, top: `${y}%`, width: `${w}%`, height: `${h}%`, transform: P1.rot[2] ? `rotate(${-P1.rot[2]}deg)` : "", transformOrigin: origin(P1) });
@@ -1643,8 +2389,8 @@ const REFINE = (() => {
         fig.style.left = `${s.fpos[id].x - L2.box.l}px`;
         fig.style.top = `${s.fpos[id].y - L2.box.t}px`;
         const L22 = layout(g);
-        const svg = root.querySelector(".rf-wires");
-        svg.innerHTML = svg.querySelector("defs").outerHTML + wires(L22);
+        const svg2 = root.querySelector(".rf-wires");
+        svg2.innerHTML = svg2.querySelector("defs").outerHTML + wires(L22);
       };
       const up = () => {
         removeEventListener("pointermove", mv);
@@ -1681,24 +2427,17 @@ const REFINE = (() => {
         v.k = nk;
         apply2();
       };
-      const focus = (id) => {
-        const el2 = canvas.querySelector(`[data-rf-scr="${id}"]`);
-        if (!el2) return;
-        const v = s.view;
-        const W = stage.clientWidth, H = stage.clientHeight;
-        const off = root.classList.contains("insp-on") && innerWidth > 960 ? root.querySelector(".rf-insp2").offsetWidth : 0;
-        v.x = off + (W - off) / 2 - (el2.offsetLeft + el2.offsetWidth / 2) * v.k;
-        v.y = H / 2 - (el2.offsetTop + el2.offsetHeight / 2) * v.k;
-        canvas.classList.add("glide");
-        apply2();
-        setTimeout(() => canvas.classList.remove("glide"), 320);
-      };
-      s.api = { fit, focus, zoom: (f) => zoomAt(stage.getBoundingClientRect().left + stage.clientWidth / 2, stage.getBoundingClientRect().top + stage.clientHeight / 2, f) };
+      s.api = { fit, zoom: (f) => zoomAt(stage.getBoundingClientRect().left + stage.clientWidth / 2, stage.getBoundingClientRect().top + stage.clientHeight / 2, f) };
       if (s.view) apply2();
       else fit();
       stage.addEventListener("wheel", (e) => {
         if (e.target.closest(".tm-thread, .rf-asked")) return;
         e.preventDefault();
+        const rows = !(e.ctrlKey || e.metaKey) && e.target.closest(".rf-lvf") ? canvas.querySelector(".rf-lvrows") : null;
+        if (rows) {
+          rows.scrollTop += (e.deltaMode === 1 ? 40 : 1) * e.deltaY / s.view.k;
+          return;
+        }
         if (e.ctrlKey || e.metaKey) zoomAt(e.clientX, e.clientY, Math.exp(-e.deltaY * 22e-4));
         else {
           s.view.x -= e.deltaX;
@@ -1706,6 +2445,12 @@ const REFINE = (() => {
           apply2();
         }
       }, { passive: false });
+      stage.addEventListener("click", (e) => {
+        if (e.target === stage && s.lvSel) {
+          s.lvSel = false;
+          draw(g);
+        }
+      });
       stage.addEventListener("pointerdown", (e) => {
         if (!(e.button === 1 || window.__rfSpace || e.button === 0 && e.target === stage)) return;
         e.preventDefault();
@@ -1769,25 +2514,56 @@ const REFINE = (() => {
       });
     }
   }
+  const AI_OFF = () => {
+    try {
+      return localStorage.getItem("maden.rfAi") === "off";
+    } catch {
+      return false;
+    }
+  };
   function render(g) {
     const s = st(g);
     if (!s.log.length) push(g, { who: "ai", text: L(`${SCR(g).length} screens of ${g.name} loaded. What should change?`, `${g.name}의 화면 ${SCR(g).length}개를 불러왔습니다. 무엇을 바꿀까요?`) });
-    return `<div class="rf ${s.el ? "insp-on" : ""}">${tree(g)}${insp(g)}${board(g)}${panel(g)}</div>`;
+    return `<div class="rf ${s.el ? "insp-on" : ""} ${AI_OFF() ? "ai-off" : ""} ${liveOf(g) ? "live" : ""}" data-rf-g="${g.id}">${tree(g)}${insp(g)}${board(g)}${panel(g)}<button class="rf-aitab" data-rf-aitab aria-expanded="${!AI_OFF()}" title="Claude" aria-label="${t(AI_OFF() ? "rf.aiOpen" : "rf.aiClose")}">${TEAM.ui.face("claude")}<i>${ICON.next}</i></button></div>`;
   }
   function mount(root, g) {
     const box = root.querySelector(".rf");
     if (!box) return;
+    box.querySelector("[data-rf-aitab]").addEventListener("click", (e) => {
+      const off = !box.classList.toggle("ai-off") ? false : true;
+      try {
+        localStorage.setItem("maden.rfAi", off ? "off" : "on");
+      } catch {
+      }
+      e.currentTarget.setAttribute("aria-expanded", String(!off));
+      e.currentTarget.setAttribute("aria-label", t(off ? "rf.aiOpen" : "rf.aiClose"));
+    });
     if (!document.querySelector("link[data-rf-fonts]")) document.head.append(el('<link rel="stylesheet" data-rf-fonts href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Fredoka:wght@600&family=Lilita+One&family=Luckiest+Guy&family=Noto+Sans+KR:wght@800&display=swap">'));
     bind(box, g);
+    if (g.live?.morph || g.morph) {
+      if (g.live) g.live.morph = false;
+      g.morph = false;
+      const b = box.querySelector(".rf-board");
+      b.style.viewTransitionName = "rf-morph";
+      setTimeout(() => {
+        b.style.viewTransitionName = "";
+      }, 900);
+    }
     root.querySelectorAll("[data-rf-open-play]").forEach((b) => b.addEventListener("click", () => play(g)));
     const keys = (e) => {
       if (!document.querySelector(".rf")) {
         removeEventListener("keydown", keys);
         return;
       }
-      if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
       const s = st(g);
-      if ((e.metaKey || e.ctrlKey) && (e.key === "z" || e.key === "Z")) {
+      const letter = /^Key[A-Z]$/.test(e.code || "") ? e.code.slice(3).toLowerCase() : (e.key || "").toLowerCase();
+      if ((e.metaKey || e.ctrlKey) && letter === "s") {
+        e.preventDefault();
+        save(g);
+        return;
+      }
+      if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+      if ((e.metaKey || e.ctrlKey) && letter === "z") {
         e.preventDefault();
         if (e.shiftKey ? swapHist(s, s.future, s.past) : swapHist(s, s.past, s.future)) draw(g);
         return;
@@ -1808,12 +2584,12 @@ const REFINE = (() => {
         e.preventDefault();
         return;
       }
-      if (e.key === "p" || e.key === "P") {
+      if (letter === "p") {
         s.tool = "prompt";
         draw(g);
       }
-      if (!e.altKey && TOOLS.includes(e.key.toLowerCase())) {
-        s.gz = e.key.toLowerCase();
+      if (!e.altKey && TOOLS.includes(letter)) {
+        s.gz = letter;
         s.tool = "select";
         draw(g);
       }
@@ -1844,5 +2620,5 @@ const REFINE = (() => {
       if (!s.log.length) ask(g, t("rf.c.design"));
     }
   }
-  return { render, mount, play };
+  return { render, mount, play, startLive, carry };
 })();

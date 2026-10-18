@@ -42,6 +42,14 @@ addStrings({
     "ac.unlistText": "It is removed from Market. Teams who have it keep it.",
     "ac.unlistedToast": "{name} unlisted",
     "ac.browse": "Browse",
+    "ac.purchased": "Purchased",
+    "ac.noOwned": "Nothing purchased yet.",
+    "ac.uiKits": "UI kits",
+    "ac.charSection": "Characters and backgrounds",
+    "ac.freeSection": "Free",
+    "ac.featured": "Featured",
+    "ac.pieces": "{n} pieces",
+    "ac.view": "View",
     "ac.mine": "My items",
     "ac.searchMarket": "Search Market",
     "ac.noResults": "No items found.",
@@ -230,6 +238,14 @@ addStrings({
     "ac.unlistText": "마켓에서 내려갑니다. 이미 받은 팀은 계속 사용할 수 있습니다.",
     "ac.unlistedToast": "{name} 판매 중지됨",
     "ac.browse": "둘러보기",
+    "ac.purchased": "구매한 에셋",
+    "ac.noOwned": "아직 구매한 에셋이 없습니다.",
+    "ac.uiKits": "UI 키트",
+    "ac.charSection": "캐릭터 · 배경",
+    "ac.freeSection": "무료",
+    "ac.featured": "추천",
+    "ac.pieces": "{n}개 구성",
+    "ac.view": "보기",
     "ac.mine": "내 상품",
     "ac.searchMarket": "마켓 검색",
     "ac.noResults": "상품이 없습니다.",
@@ -434,7 +450,25 @@ addStrings({
       ["ui", "avatar-frame", L("Profile frame", "프로필 테두리"), "aiko", 50],
       ["ui", "settings", L("Settings icon", "설정 아이콘"), "tuan", 0]
     ];
+    const ui = (set, i) => gen(`ui/${set}-${i}.webp`);
+    const KITS = [
+      ["beach-ui", "ui", L("Beach UI kit", "해변 UI 키트"), "lena", 900, ["cta-1", "settings-1", "bar-2", "noads-1", "race-1", "gift-2", "panel-1", "booster-1", "rewards-1", "offers-1"], true],
+      ["buttons", "ui", L("Play buttons", "플레이 버튼"), "lena", 80, ["cta-1", "cta-2", "cta-3"]],
+      ["gears", "ui", L("Settings buttons", "설정 버튼"), "tuan", 0, ["settings-1", "settings-2", "settings-3"]],
+      ["bars", "ui", L("Currency bars", "재화 막대"), "aiko", 120, ["bar-1", "bar-2", "bar-3"]],
+      ["badges", "ui", L("Event badges", "이벤트 배지"), "mina", 150, ["race-1", "race-2", "race-3"]],
+      ["noads", "ui", L("No ads badges", "광고 제거 배지"), "emma", 60, ["noads-1", "noads-2", "noads-3"]],
+      ["offers", "ui", L("Offer badges", "상품 배지"), "emma", 90, ["offers-1", "offers-2", "offers-3"]],
+      ["rewards", "ui", L("Daily reward icons", "일일 보상 아이콘"), "mina", 90, ["rewards-1", "rewards-2", "rewards-3"]],
+      ["gifts", "ui", L("Gift bubbles", "선물 말풍선"), "aiko", 0, ["gift-1", "gift-2", "gift-3"]],
+      ["popups", "ui", L("Popup panels", "팝업 패널"), "tuan", 120, ["panel-1", "panel-2", "panel-3"]],
+      ["boosters", "ui", L("Booster buttons", "부스터 버튼"), "lena", 100, ["booster-1", "booster-2", "booster-3"]],
+      ["round", "ui", L("Round buttons", "동그란 버튼"), "tuan", 0, ["icon-1", "icon-2", "icon-3"]],
+      ["cannons", "char", L("Cannons", "대포"), "aiko", 150, ["cannon-1", "cannon-2", "cannon-3"]],
+      ["heroines", "char", L("Beach heroines", "해변 주인공"), "mina", 250, ["hero-1", "hero-2", "hero-3"]]
+    ].map(([key, kind2, name, creator, price, sets, hero]) => deal({ key: `kit/${key}`, kind: kind2, name: tr(name), img: ui(...sets[0].split(/-(?=\d$)/)), pics: sets.map((x) => ui(...x.split(/-(?=\d$)/))), creator, price, hero: !!hero }));
     return [
+      ...KITS,
       ...games.map((g) => deal({ key: `game/${g.key}`, kind: "game", name: g.name, img: g.cover, video: g.video, creator: g.creator, price: 300 + hash(g.key) % 3 * 100 })),
       ...MODULES.filter((m) => own.has(m.game)).map((m) => deal({ key: `screen/${m.id}`, kind: "screen", name: tr(KIND[m.kind].name), sub: GAME[m.game].name, img: m.img, creator: GAME[m.game].creator, price: m.price })),
       ...ART.map(([kind2, file, name, creator, price]) => deal({ key: `art/${file}`, kind: kind2, name: typeof name === "string" ? name : tr(name), img: art(file), creator, price }))
@@ -494,6 +528,19 @@ addStrings({
   const grid = (list) => [list.filter((x) => !SQUARE.has(x.kind)), list.filter((x) => SQUARE.has(x.kind))].filter((part) => part.length).map((part) => `<div class="mt-grid ${SQUARE.has(part[0].kind) ? "sq" : ""}">${part.map(card).join("")}</div>`).join("");
   const section = (title, list, to) => list.length ? `<section><div class="head"><h2>${title}</h2><span class="sp"></span><button class="btn small" data-type="${to}">${t("seeAll")}</button></div>
     <div class="mt-rail ${SQUARE.has(list[0].kind) ? "sq" : ""}">${list.map(card).join("")}</div></section>` : "";
+  function featured(x) {
+    const c = STUDIO[x.creator];
+    return `<section class="mt-hero"><button class="mt-hero-in" data-item="${x.key}">
+      <span class="mt-hero-txt"><span class="tag">${t("ac.featured")}</span><b>${esc(x.name)}</b><span class="g">${t("ac.pieces", { n: x.pics.length * 3 })} · ${esc(c.name)}</span>
+        <span class="mt-hero-buy"><span class="btn primary">${t("ac.view")}</span><span class="mt-hero-price">${priceTag(x.price)}</span></span></span>
+      <span class="mt-hero-pics">${x.pics.slice(0, 8).map((src, i) => `<img class="p${i}" src="${src}" alt="" loading="lazy">`).join("")}</span>
+    </button></section>`;
+  }
+  function owned() {
+    const list = CATALOG.filter((x) => store.owned.has(x.key));
+    if (!list.length) return `<div class="card">${empty(t("ac.noOwned"), "", `<button class="btn" data-view="browse">${t("ac.browse")}</button>`)}</div>`;
+    return grid(list);
+  }
   function browse() {
     const needle = find.trim().toLowerCase();
     const list = order(CATALOG.filter((x) => (type === "all" || x.kind === type) && (!needle || `${x.name} ${x.sub || ""} ${STUDIO[x.creator].name}`.toLowerCase().includes(needle))));
@@ -501,17 +548,27 @@ addStrings({
     const bar = `<div class="mt-bar"><div class="chips">${["all", ...TYPES].map((k) => `<button class="chip" data-type="${k}" aria-pressed="${type === k}">${k === "all" ? t("all") : t(`ac.type.${k}`)}<i>${k === "all" ? CATALOG.length : counts[k]}</i></button>`).join("")}</div>
       <span class="sp"></span><span class="seg">${["popular", "new", "free"].map((k) => `<button data-sort="${k}" aria-pressed="${sort === k}">${t(`ac.sort.${k}`)}</button>`).join("")}</span></div>`;
     if (type === "all" && !needle) {
-      return `${bar}
+      const hero = CATALOG.find((x) => x.hero);
+      const kits = CATALOG.filter((x) => x.pics && !x.hero);
+      const cats = TYPES.map((k) => {
+        const first2 = order(CATALOG.filter((x) => x.kind === k))[0];
+        return `<button class="mt-cat ${SQUARE.has(k) ? "sq" : ""}" data-type="${k}"><span class="pic"><img src="${first2.img}" alt="" loading="lazy"></span><b>${t(`ac.type.${k}`)}</b><span class="g">${num(counts[k])}</span></button>`;
+      }).join("");
+      return `${hero ? featured(hero) : ""}
+        <div class="mt-cats">${cats}</div>
+        ${bar}
+        ${section(t("ac.uiKits"), order(kits.filter((x) => x.kind === "ui")).slice(0, 6), "ui")}
         ${section(t("ac.popularGames"), order(CATALOG.filter((x) => x.kind === "game")).slice(0, 6), "game")}
         ${section(t("ac.popularScreens"), order(CATALOG.filter((x) => x.kind === "screen")).slice(0, 6), "screen")}
-        ${section(t("ac.artSection"), order(CATALOG.filter((x) => SQUARE.has(x.kind))).slice(0, 6), "char")}`;
+        ${section(t("ac.charSection"), order(CATALOG.filter((x) => x.kind === "char" || x.kind === "bg")).slice(0, 6), "char")}
+        ${section(t("ac.freeSection"), CATALOG.filter((x) => !x.price && SQUARE.has(x.kind)).sort((a, b) => b.sales - a.sales).slice(0, 6), "ui")}`;
     }
     return `${bar}${list.length ? grid(list) : `<div class="card">${empty(t("ac.noResults"), "", `<button class="btn" data-clear>${t("ac.clear")}</button>`)}</div>`}`;
   }
   function mine(query) {
     const mineList = query.get("empty") ? [] : myListings();
     const shown = mineList.filter(({ item }) => kind === "all" || item.kind === kind);
-    if (!mineList.length) return `<div class="card">${empty(t("ac.noListings"), t("ac.noListingsText"), `<a class="btn primary" href="#/earn/market?list=1">${t("ac.listItem")}</a>`)}</div>`;
+    if (!mineList.length) return `<div class="card">${empty(t("ac.noListings"), t("ac.noListingsText"), `<a class="btn primary" href="#/market?list=1">${t("ac.listItem")}</a>`)}</div>`;
     const kinds = TYPES.filter((k) => mineList.some(({ item }) => item.kind === k));
     return `
       <dl class="card ac-stats">
@@ -540,18 +597,18 @@ addStrings({
     return `
       <div class="head mt-head"><h1>${t("market")}</h1><span class="sp"></span>
         ${shelf === "browse" ? `<label class="searchbox">${ICON.search}<input type="search" value="${esc(find)}" placeholder="${t("ac.searchMarket")}" aria-label="${t("search")}"></label>` : ""}
-        <a class="btn primary" href="#/earn/market?list=1">${ICON.plus}${t("ac.listItem")}</a></div>
-      <span class="seg mt-view">${["browse", "mine"].map((k) => `<button data-view="${k}" aria-pressed="${shelf === k}">${t(`ac.${k}`)}</button>`).join("")}</span>
-      <div data-market>${shelf === "browse" ? browse() : mine(query)}</div>`;
+        <a class="btn primary" href="#/market?list=1">${ICON.plus}${t("ac.listItem")}</a></div>
+      <span class="seg mt-view">${["browse", "owned", "mine"].map((k) => `<button data-view="${k}" aria-pressed="${shelf === k}">${t(k === "owned" ? "ac.purchased" : `ac.${k}`)}${k === "owned" && store.owned.size ? `<i>${store.owned.size}</i>` : ""}</button>`).join("")}</span>
+      <div data-market>${shelf === "browse" ? browse() : shelf === "owned" ? owned() : mine(query)}</div>`;
   }
   function openItem(key) {
     const x = CATALOG.find((i) => i.key === key);
     if (!x) return;
     const c = STUDIO[x.creator];
-    const owned = store.owned.has(key);
+    const owned2 = store.owned.has(key);
     dialog({
       title: esc(x.name),
-      body: `<div class="mt-detail ${SQUARE.has(x.kind) ? "sq" : ""}">${thumb(x)}
+      body: `<div class="mt-detail ${SQUARE.has(x.kind) ? "sq" : ""} ${x.pics ? "kit" : ""}">${x.pics ? `<span class="mt-kit">${x.pics.map((src) => `<span><img src="${src}" alt=""></span>`).join("")}</span>` : thumb(x)}
         <dl class="ac-dl">
           ${pair(t("ac.type"), t(`ac.kind.${x.kind}`))}
           ${x.sub ? pair(t("ac.from"), esc(x.sub)) : ""}
@@ -561,7 +618,7 @@ addStrings({
           ${pair(t("ac.use"), t("ac.useValue"))}
           ${pair(t("ac.price"), priceTag(x.price), "total")}
         </dl></div>`,
-      actions: owned ? [{ label: t("close") }] : [{ label: t("cancel") }, {
+      actions: owned2 ? [{ label: t("close") }] : [{ label: t("cancel") }, {
         label: x.price ? t("ac.buy") : t("ac.get"),
         note: x.price ? `<img class="coin" src="${COIN}" alt="">${num(x.price)}` : "",
         primary: true,
@@ -593,7 +650,7 @@ addStrings({
     if (it && !draft.name) draft.name = it.name;
     const at = it ? step : 1;
     const head = `<div class="head ac-wrap backbar">
-      <a class="icon-btn" href="#/earn/market${at > 1 ? `?list=${at - 1}` : ""}" aria-label="${t("back")}">${ICON.back}</a>
+      <a class="icon-btn" href="#/market${at > 1 ? `?list=${at - 1}` : ""}" aria-label="${t("back")}">${ICON.back}</a>
       <h1>${t("ac.listItem")}</h1><span class="sp"></span>
       <ol class="ac-steps">${["ac.item", "ac.details", "ac.review"].map((key, i) => `<li ${i + 1 === at ? 'aria-current="step"' : ""}><i>${i + 1 < at ? ICON.check : i + 1}</i>${t(key)}</li>`).join("")}</ol>
     </div>`;
@@ -623,7 +680,7 @@ addStrings({
             <button class="chip" type="button" data-free aria-pressed="${draft.price === 0}">${t("free")}</button></span>
           <span class="mt-hint ${ok ? "" : "bad"}">${ok ? same.length ? t("ac.priceHint", { lo: num(Math.min(...same)), hi: num(Math.max(...same)) }) : "" : t("ac.priceError")}</span>
         </label>
-        <a class="btn primary big ${ok && draft.name.trim() ? "" : "off"}" href="#/earn/market?list=3" data-next>${t("ac.next")}</a>
+        <a class="btn primary big ${ok && draft.name.trim() ? "" : "off"}" href="#/market?list=3" data-next>${t("ac.next")}</a>
       </div></div>`;
     }
     return `${head}<div class="ac-flow">${preview}<div class="ac-side">
@@ -684,21 +741,21 @@ addStrings({
       draft = { key: null, price: 100, name: "" };
       kind = "all";
       shelf = "mine";
-      go("#/earn/market");
+      go("#/market");
       toast(t("ac.listedToast", { name: esc(item.name) }), () => {
         listings = listings.filter((l) => l !== entry);
         rerender();
       });
     });
   }
-  page("/earn/market", {
-    section: "earn",
+  page("/market", {
+    section: "market",
     name: "market",
     render({ query }) {
       const step = Number(query.get("list"));
-      if (arrived && ["browse", "mine"].includes(query.get("view"))) shelf = query.get("view");
+      if (arrived && ["browse", "owned", "mine"].includes(query.get("view"))) shelf = query.get("view");
       if (arrived && TYPES.includes(query.get("type"))) type = query.get("type");
-      return step ? flow(step, query) : `${subtabs(TABS.earn, "#/earn/market")}${market(query)}`;
+      return step ? flow(step, query) : market(query);
     },
     mount(root, { query }) {
       const keep = (fn) => {
@@ -732,7 +789,7 @@ addStrings({
       on(root, "data-pick", (key) => {
         draft.key = key;
         draft.name = sellable().find((x) => x.key === key).name;
-        go("#/earn/market?list=2");
+        go("#/market?list=2");
       });
       on(root, "data-list", confirmNew);
       root.querySelector(".mt-head .searchbox input")?.addEventListener("input", (e) => {
@@ -848,7 +905,7 @@ addStrings({
         genre = GROUPS.includes(query.get("genre")) ? query.get("genre") : genre;
       }
       return `${subtabs(TABS.earn, "#/earn/creators")}
-        <div class="head"><h1>${t("creators")}</h1><span class="sp"></span>
+        <div class="head"><h1>${t("ranking")}</h1><span class="sp"></span>
           <span class="seg" role="group">${[["creators", "creators"], ["countries", "ac.countries"]].map(([key, label]) => `<button data-view="${key}" aria-pressed="${view === key}">${t(label)}</button>`).join("")}</span>
         </div>
         ${view === "countries" ? "" : `<div class="ac-bar">
@@ -1216,7 +1273,7 @@ addStrings({
           <div class="ac-buy-h"><h2>${t("ac.buyTitle")}</h2><span class="sp"></span><span class="ac-bal"><span class="g">${t("ac.balance")}</span><b><img class="coin" src="${COIN}" alt="">${num(round1(store.credits))}</b></span><a class="btn small" href="#/credits">${t("ac.history2")}</a></div>
           <div class="ac-packs">${PACKS.map((p, i) => `<button class="ac-pack ${p.tag === "ac.popular" ? "hot" : ""}" data-pack="${i}">
               ${p.tag ? `<span class="tag ${p.tag === "ac.best" ? "ok" : "accent"}">${t(p.tag)}</span>` : '<span class="tag ghost"></span>'}
-              <span class="ac-coins">${Array.from({ length: Math.min(4, i + 1) }, () => `<img class="coin" src="${COIN}" alt="">`).join("")}</span>
+              <span class="ac-stack">${Array.from({ length: Math.min(4, i + 1) }, () => `<img class="coin" src="${COIN}" alt="">`).join("")}</span>
               <b class="ac-pack-n">${num(p.n)}</b>
               <span class="ac-pack-b">${p.bonus ? t("ac.bonus", { n: p.bonus }) : "&nbsp;"}</span>
               <span class="ac-pack-p">$${num(p.usd)}</span>
